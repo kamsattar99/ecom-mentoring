@@ -3,19 +3,31 @@ import { motion } from "framer-motion";
 export default function HeroSection() {
   return (
     <section className="relative pt-[90px] pb-[60px] md:pt-[160px] md:pb-[80px] overflow-hidden">
-      {/* Background: soft radial glows + noise texture */}
+      {/* Background: layered radial glows for premium depth */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-[#faf9f7]" />
-        {/* Radial glow behind headline */}
-        <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-[#f3eefc] rounded-full blur-[140px] opacity-50" />
-        {/* Warm accent glow */}
-        <div className="absolute top-[30%] left-[20%] w-[400px] h-[400px] bg-[#f8e8d4] rounded-full blur-[120px] opacity-30" />
-        <div className="absolute top-[20%] right-[15%] w-[350px] h-[350px] bg-[#ede4f7] rounded-full blur-[100px] opacity-30" />
-        {/* Subtle noise texture */}
-        <div className="absolute inset-0 opacity-[0.018]"
-          style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")" }}
+        {/* Base gradient: warm cream to pale lavender */}
+        <div className="absolute inset-0" style={{ background: "radial-gradient(circle at 50% 42%, rgba(245, 229, 210, 0.22), transparent 28%), radial-gradient(circle at 72% 30%, rgba(124, 87, 255, 0.10), transparent 24%), radial-gradient(circle at 22% 72%, rgba(255, 244, 232, 0.18), transparent 22%), linear-gradient(180deg, #fbfaf8 0%, #f6f4f8 100%)" }} />
+        {/* Central cream glow behind headline + CTA */}
+        <div className="absolute top-[30%] left-1/2 -translate-x-1/2 w-[900px] h-[700px] rounded-full blur-[160px] opacity-40" style={{ background: "radial-gradient(ellipse, rgba(248, 240, 228, 0.6) 0%, transparent 70%)" }} />
+        {/* Lavender haze behind Hands-On area */}
+        <div className="absolute top-[25%] left-[48%] -translate-x-1/2 w-[500px] h-[300px] rounded-full blur-[120px] opacity-30" style={{ background: "radial-gradient(ellipse, rgba(138, 100, 220, 0.18) 0%, transparent 70%)" }} />
+        {/* Top-right lavender glow near dashboard card */}
+        <div className="absolute top-[10%] right-[8%] w-[400px] h-[400px] rounded-full blur-[130px] opacity-25" style={{ background: "radial-gradient(circle, rgba(160, 130, 230, 0.2) 0%, transparent 65%)" }} />
+        {/* Bottom-left warm cream glow */}
+        <div className="absolute bottom-[15%] left-[5%] w-[450px] h-[450px] rounded-full blur-[140px] opacity-22" style={{ background: "radial-gradient(circle, rgba(255, 238, 210, 0.3) 0%, transparent 65%)" }} />
+        {/* Subtle warm glow bottom-right */}
+        <div className="absolute bottom-[20%] right-[12%] w-[350px] h-[350px] rounded-full blur-[120px] opacity-20" style={{ background: "radial-gradient(circle, rgba(240, 225, 250, 0.25) 0%, transparent 60%)" }} />
+        {/* Ultra-light grain/noise overlay for texture */}
+        <div className="absolute inset-0 opacity-[0.03]"
+          style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")" }}
         />
       </div>
+
+      {/* Blur halos behind floating cards for depth integration */}
+      <div className="absolute top-[14%] left-[4%] xl:left-[8%] w-[340px] h-[260px] rounded-3xl blur-[50px] opacity-20 hidden lg:block" style={{ background: "radial-gradient(ellipse, rgba(200, 180, 240, 0.4) 0%, transparent 70%)" }} />
+      <div className="absolute top-[10%] right-[4%] xl:right-[8%] w-[320px] h-[240px] rounded-3xl blur-[50px] opacity-18 hidden lg:block" style={{ background: "radial-gradient(ellipse, rgba(180, 160, 230, 0.35) 0%, transparent 70%)" }} />
+      <div className="absolute bottom-[12%] left-[3%] xl:left-[6%] w-[320px] h-[240px] rounded-3xl blur-[45px] opacity-16 hidden lg:block" style={{ background: "radial-gradient(ellipse, rgba(248, 230, 200, 0.4) 0%, transparent 70%)" }} />
+      <div className="absolute bottom-[14%] right-[3%] xl:right-[6%] w-[310px] h-[230px] rounded-3xl blur-[45px] opacity-16 hidden lg:block" style={{ background: "radial-gradient(ellipse, rgba(210, 190, 240, 0.35) 0%, transparent 70%)" }} />
 
       {/* Floating Analytics Cards - positioned closer to content */}
       {/* Top Left - Total Sales */}
