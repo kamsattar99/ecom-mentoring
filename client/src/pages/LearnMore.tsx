@@ -280,33 +280,89 @@ export default function LearnMore() {
         </p>
       </section>
 
-      {/* Bottom CTA */}
-      <div className="text-center px-4 pt-16 pb-20 md:pt-20 md:pb-28">
-        <a
-          href="/apply"
-          className="inline-flex items-center gap-2 text-white text-[15px] md:text-[16px] font-medium px-10 py-4 rounded-full transition-all duration-300 hover:-translate-y-[2px]"
-          style={{
-            background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)",
-            boxShadow:
-              "0 8px 24px rgba(88,62,141,0.25), 0 2px 6px rgba(88,62,141,0.1)",
-          }}
-        >
-          Apply For Mentorship
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-          >
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
-        </a>
-        <p className="mt-4 text-[13px] text-[#999] font-medium">
-          Applications reviewed within 24 hours. No commitment required.
-        </p>
-      </div>
+      {/* Bottom CTA Section */}
+      <section className="relative py-16 md:py-24 px-4">
+        {/* Background gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#f3eef9] via-[#ede6f5] to-[#f9f5ee] opacity-80" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(200,170,240,0.3),transparent_60%),radial-gradient(ellipse_at_top_right,rgba(230,200,250,0.25),transparent_60%)]" />
+
+        <div className="relative max-w-[700px] mx-auto rounded-3xl bg-white/60 backdrop-blur-sm border border-white/70 shadow-[0_8px_48px_rgba(88,62,141,0.08)] px-6 md:px-12 py-12 md:py-16">
+          {/* Badge */}
+          <div className="text-center mb-6">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#e8e4f0] text-[13px] font-medium text-[#333] shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-[#583E8D]"></span>
+              Limited Mentor Capacity
+            </span>
+          </div>
+
+          {/* Headline */}
+          <h2 className="font-serif font-bold text-[clamp(28px,4.5vw,44px)] leading-[1.15] tracking-[-0.02em] text-[#17191c] text-center mb-5">
+            Ready To Stop Guessing And <em className="italic text-[#583E8D]">Start Building?</em>
+          </h2>
+
+          {/* Subtext */}
+          <p className="text-center text-[15px] md:text-[16px] text-[#666] leading-relaxed max-w-[560px] mx-auto mb-8">
+            Apply to work 1:1 with experienced e-commerce mentors who can help you clarify your next move across product research, store setup, ads, creatives and scaling.
+          </p>
+
+          {/* CTA Button */}
+          <div className="text-center mb-5">
+            <a
+              href="/apply"
+              className="inline-flex items-center gap-2 text-white text-[15px] md:text-[16px] font-medium px-10 py-4 rounded-full transition-all duration-300 hover:-translate-y-[2px]"
+              style={{
+                background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)",
+                boxShadow: "0 8px 24px rgba(88,62,141,0.25), 0 2px 6px rgba(88,62,141,0.1)",
+              }}
+            >
+              Apply For Mentorship
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          {/* Reassurance text */}
+          <p className="text-center text-[13px] text-[#888] font-medium mb-4">
+            Applications are reviewed before calls are booked. No pressure if it is not the right fit.
+          </p>
+
+          {/* View curriculum link */}
+          <div className="text-center mb-8">
+            <a href="/#curriculum" className="inline-flex items-center gap-1 text-[14px] font-medium text-[#333] underline underline-offset-4 decoration-[#333]/30 hover:decoration-[#333] transition-colors">
+              View curriculum
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          {/* Divider */}
+          <div className="border-t border-[#e8e4f0] mb-8" />
+
+          {/* Trust pills */}
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-[#e8e4f0] text-[13px] text-[#444] font-medium shadow-sm">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#583E8D" strokeWidth="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+              Proven frameworks
+            </span>
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-[#e8e4f0] text-[13px] text-[#444] font-medium shadow-sm">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#583E8D" strokeWidth="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+              </svg>
+              Direct mentor access
+            </span>
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-[#e8e4f0] text-[13px] text-[#444] font-medium shadow-sm">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#583E8D" strokeWidth="2">
+                <path d="M18 20V10M12 20V4M6 20v-6" />
+              </svg>
+              Store & ad reviews
+            </span>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
