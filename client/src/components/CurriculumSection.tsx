@@ -4,48 +4,78 @@ import { Plus, Minus, Check } from "lucide-react";
 
 const stages = [
   {
-    title: "Finding Winning Products",
+    title: "Product Research & Validation",
     week: "Week 01",
-    content:
-      "Learn our proprietary product research framework. Access validation sheets, trend analysis tools, and criteria that separate winners from losers before you spend a penny on ads.",
+    description: "Learn how to find products with real demand using proven research and validation frameworks before spending money on ads.",
+    bullets: [
+      "Product validation framework",
+      "Competitor analysis methods",
+      "Trend spotting & market timing",
+      "Choosing products with real potential",
+    ],
   },
   {
-    title: "Store Setup & Branding",
+    title: "Store Setup & Brand Positioning",
     week: "Week 02",
-    content:
-      "Build a high-converting Shopify store from scratch. We cover theme selection, product page optimization, checkout flow, trust signals, and brand identity that makes customers buy.",
+    description: "Build a high-converting Shopify store with brand positioning, trust elements and checkout optimisation that turns visitors into buyers.",
+    bullets: [
+      "Theme selection & customisation",
+      "Product page conversion structure",
+      "Trust signals & checkout flow",
+      "Brand identity & positioning",
+    ],
   },
   {
-    title: "Paid Ads That Sell",
+    title: "Creative Testing & Paid Ads",
     week: "Week 03",
-    content:
-      "Master Meta and TikTok ads with our proven creative frameworks, audience targeting strategies, and budget allocation rules. Know exactly when to kill, test, or scale.",
+    description: "Master Meta and TikTok ads with proven creative frameworks, audience targeting strategies and budget allocation rules.",
+    bullets: [
+      "Ad creative frameworks & hooks",
+      "Audience targeting strategy",
+      "Budget allocation rules",
+      "When to kill, test or scale",
+    ],
   },
   {
-    title: "Scaling Strategies",
+    title: "Scaling & Optimisation",
     week: "Week 04",
-    content:
-      "Go from $100/day to $1,000+/day profitably. Learn horizontal and vertical scaling, CBO strategies, lookalike audiences, and how to manage increasing ad spend without losing margins.",
+    description: "Go from $100/day to $1,000+/day profitably with horizontal and vertical scaling strategies that protect your margins.",
+    bullets: [
+      "Horizontal & vertical scaling",
+      "CBO & lookalike strategies",
+      "Margin protection at scale",
+      "Data-driven decision making",
+    ],
   },
   {
-    title: "Systems & Automation",
+    title: "Systems, Automation & Team Structure",
     week: "Week 05",
-    content:
-      "Build SOPs, automate fulfillment, set up email flows, and create systems that run without you. This is how you buy back your time and scale without burnout.",
+    description: "Build SOPs, automate fulfilment, set up email flows and create systems that run without you — so you can scale without burnout.",
+    bullets: [
+      "SOPs for every stage",
+      "Email & SMS automation",
+      "Fulfilment & operations",
+      "When and how to delegate",
+    ],
   },
   {
-    title: "Long-Term Brand Building",
+    title: "Long-Term Brand Growth",
     week: "Week 06",
-    content:
-      "Transition from a product store to a real brand. Learn retention marketing, customer lifetime value optimization, influencer partnerships, and building assets you can sell.",
+    description: "Transition from a product store to a real brand with retention marketing, customer lifetime value and long-term asset building.",
+    bullets: [
+      "Retention & repeat customers",
+      "Customer lifetime value",
+      "Influencer & content strategy",
+      "Building a sellable asset",
+    ],
   },
 ];
 
 const courseOverview = [
-  "Direct access to 1-on-1 mentorship",
-  "Proven system for finding products, scaling ads, and building brands",
-  "Exclusive Tools & Supplier Connections — Shortcuts you won't find on YouTube.",
-  "Mindset & Accountability Coaching — Build the discipline and focus to stick with it.",
+  "Direct access to 1:1 mentorship and strategic support",
+  "A complete roadmap covering products, stores, ads and scaling",
+  "Proven frameworks, templates and operating systems",
+  "Accountability and feedback tailored to your business",
 ];
 
 export default function CurriculumSection() {
@@ -67,20 +97,20 @@ export default function CurriculumSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
-          <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-[#f3eef9] border border-[#583E8D]/10 mb-5">
-            <span className="text-[12px] text-[#583E8D] font-medium">Curriculum Overview</span>
+          <div className="inline-flex items-center px-3.5 py-1.5 rounded-full border border-[#583E8D]/12 bg-white/80 backdrop-blur-sm mb-5 shadow-[0_2px_8px_rgba(88,62,141,0.05)]">
+            <span className="text-[12px] text-[#583E8D] font-semibold tracking-wide uppercase">Curriculum Overview</span>
           </div>
-          <h2 className="font-serif text-[clamp(36px,4.5vw,56px)] leading-[1.08] tracking-[-0.02em] text-[#17191c]">
-            Unlock the secret sauce behind{" "}
-            <span className="text-[#583E8D] italic">world-class products.</span>
+          <h2 className="font-serif text-[clamp(32px,4.5vw,52px)] leading-[1.08] tracking-[-0.02em] text-[#17191c] max-w-[700px] mx-auto">
+            The 6-Stage System Behind{" "}
+            <span className="text-[#583E8D] italic">Profitable E-commerce Growth</span>
           </h2>
-          <p className="text-[15px] text-[#777b86] mt-4 max-w-[480px] mx-auto">
-            A 6-stage system that takes you from zero to a profitable, scalable e-commerce brand.
+          <p className="text-[15px] md:text-[16px] text-[#5a5a6a] mt-5 max-w-[560px] mx-auto leading-[1.6]">
+            A structured framework designed to help you validate products, build your store, launch ads, scale profitably, and create a business with long-term potential.
           </p>
         </motion.div>
 
         {/* Two-column layout */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-10 items-start">
           {/* Left — Accordion stages */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -125,12 +155,12 @@ export default function CurriculumSection() {
                       <span className="text-[13px] font-bold">{String(i + 1).padStart(2, "0")}</span>
                     </div>
                     <div>
-                      <p className={`text-[16px] md:text-[17px] font-medium transition-colors duration-200 ${
+                      <p className={`text-[15px] md:text-[16px] font-semibold transition-colors duration-200 ${
                         openIndex === i ? "text-[#583E8D]" : "text-[#17191c]"
                       }`}>
-                        Stage {i + 1}: {stage.title}
+                        {stage.title}
                       </p>
-                      <p className="text-[13px] text-[#777b86] mt-0.5">{stage.week}</p>
+                      <p className="text-[12px] text-[#777b86] mt-0.5 font-medium">{stage.week}</p>
                     </div>
                   </div>
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ml-4 transition-all duration-300 ${
@@ -155,15 +185,30 @@ export default function CurriculumSection() {
                       className="overflow-hidden"
                     >
                       <div className="px-5 md:px-6 pb-5 md:pb-6 pl-[76px] md:pl-[84px]">
-                        <p className="text-[14px] leading-[1.65] text-[#4c4c4c]">
-                          {stage.content}
+                        <p className="text-[14px] leading-[1.65] text-[#4c4c4c] mb-4">
+                          {stage.description}
                         </p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                          {stage.bullets.map((bullet, bi) => (
+                            <div key={bi} className="flex items-center gap-2.5">
+                              <div className="w-4.5 h-4.5 rounded-full flex items-center justify-center shrink-0 bg-[#f3eef9]">
+                                <Check size={10} className="text-[#583E8D]" strokeWidth={3} />
+                              </div>
+                              <span className="text-[13px] text-[#3a3a3e] font-medium">{bullet}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
               </motion.div>
             ))}
+
+            {/* Trust line below accordion */}
+            <p className="text-[13px] text-[#583E8D]/70 italic text-center pt-4">
+              Designed to remove guesswork at every stage.
+            </p>
           </motion.div>
 
           {/* Right — Dark apply card */}
@@ -185,52 +230,50 @@ export default function CurriculumSection() {
               <div className="relative z-10">
                 {/* Header badge */}
                 <div className="flex items-center justify-between mb-6">
-                  <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[12px] font-medium text-white"
+                  <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-[11px] font-semibold tracking-wide text-white uppercase"
                     style={{ background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)", boxShadow: "0 4px 12px rgba(88,62,141,0.3)" }}
                   >
-                    The Best Mentoring Guarantee
+                    Limited Mentorship Spots
                   </span>
-                  <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-white/8 border border-white/5 text-[12px] text-white/70">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M12 2l3 7h7l-5.5 4.5 2 7L12 16l-6.5 4.5 2-7L2 9h7z" />
-                    </svg>
-                    AI
-                  </div>
                 </div>
 
-                <h3 className="text-[24px] md:text-[28px] font-medium leading-[1.2] tracking-[-0.01em] mb-7">
-                  Apply for Mentorship Today
+                <h3 className="text-[22px] md:text-[26px] font-semibold leading-[1.2] tracking-[-0.01em] mb-3">
+                  Apply For Ecom Mentoring
                 </h3>
 
+                <p className="text-[13px] text-white/55 leading-[1.6] mb-7">
+                  This is for founders who want hands-on support, not more guesswork.
+                </p>
+
                 {/* Feature grid */}
-                <div className="grid grid-cols-2 gap-3 mb-8">
+                <div className="grid grid-cols-2 gap-2.5 mb-7">
                   {[
-                    { icon: "🎓", label: "Beginner Friendly" },
-                    { icon: "🔓", label: "Full Access" },
-                    { icon: "👥", label: "1-on-1 Mentorship" },
-                    { icon: "✅", label: "Proven System" },
+                    { label: "1:1 Mentorship" },
+                    { label: "Beginner Friendly" },
+                    { label: "Proven Frameworks" },
+                    { label: "Practical Support" },
                   ].map((item) => (
-                    <div key={item.label} className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-white/5 border border-white/5">
-                      <span className="text-[14px]">{item.icon}</span>
-                      <span className="text-[13px] text-white/80">{item.label}</span>
+                    <div key={item.label} className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-white/5 border border-white/6">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#7B5BB5]" />
+                      <span className="text-[12px] text-white/75 font-medium">{item.label}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* Divider */}
-                <div className="border-t border-white/8 pt-7 mb-7">
-                  <p className="text-[11px] font-semibold tracking-[0.08em] text-white/40 uppercase mb-5">
-                    A Quick Overview of the Course
+                <div className="border-t border-white/8 pt-6 mb-7">
+                  <p className="text-[11px] font-semibold tracking-[0.08em] text-white/40 uppercase mb-4">
+                    What you get
                   </p>
-                  <div className="space-y-4">
+                  <div className="space-y-3.5">
                     {courseOverview.map((item, i) => (
-                      <div key={i} className="flex gap-3.5">
-                        <div className="w-5.5 h-5.5 rounded-full flex items-center justify-center shrink-0 mt-0.5"
-                          style={{ background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)", boxShadow: "0 2px 6px rgba(88,62,141,0.25)" }}
+                      <div key={i} className="flex gap-3">
+                        <div className="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5"
+                          style={{ background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)" }}
                         >
-                          <Check size={11} className="text-white" strokeWidth={3} />
+                          <Check size={10} className="text-white" strokeWidth={3} />
                         </div>
-                        <p className="text-[14px] leading-[1.55] text-white/75">{item}</p>
+                        <p className="text-[13px] leading-[1.55] text-white/70">{item}</p>
                       </div>
                     ))}
                   </div>
@@ -241,7 +284,7 @@ export default function CurriculumSection() {
                   href="https://e-commercementoring.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between w-full text-white text-[15px] font-medium px-6 py-4.5 rounded-xl transition-all duration-300 hover:shadow-[0_8px_24px_rgba(88,62,141,0.3)] hover:-translate-y-0.5"
+                  className="flex items-center justify-between w-full text-white text-[15px] font-medium px-6 py-4 rounded-xl transition-all duration-300 hover:shadow-[0_8px_24px_rgba(88,62,141,0.3)] hover:-translate-y-0.5"
                   style={{ background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)" }}
                 >
                   <span>Apply Now</span>
@@ -251,6 +294,11 @@ export default function CurriculumSection() {
                     </svg>
                   </span>
                 </a>
+
+                {/* Micro trust */}
+                <p className="text-[11px] text-white/35 text-center mt-4">
+                  Applications reviewed within 24 hours. No commitment required.
+                </p>
               </div>
             </div>
           </motion.div>
