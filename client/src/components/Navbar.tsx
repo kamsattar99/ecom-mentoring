@@ -29,7 +29,7 @@ export default function Navbar() {
     >
       <div className="container flex items-center justify-between h-[68px]">
         {/* Logo */}
-        <a href="#" className="flex items-center group">
+        <a href="/" className="flex items-center group">
           <img
             src="/manus-storage/ecom-mentoring-logo_b617fdab.webp"
             alt="eMentoring"
