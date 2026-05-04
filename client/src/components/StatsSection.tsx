@@ -1,31 +1,30 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "$30M+", label: "Student revenue generated" },
-  { value: "1,000+", label: "Entrepreneurs mentored" },
-  { value: "4.9/5", label: "Average student rating" },
-  { value: "90 days", label: "Avg. time to first profit" },
+  { value: "2M+", label: "YouTube Subscribers" },
+  { value: "500+", label: "Free Videos Published" },
+  { value: "10+", label: "Years Experience" },
 ];
 
 export default function StatsSection() {
   return (
-    <section className="py-[60px] md:py-[80px] bg-white">
+    <section className="py-[48px] md:py-[64px] bg-white border-b border-[#f0f0f0]">
       <div className="container">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4"
+          className="grid grid-cols-3 gap-4 md:gap-8 max-w-[680px] mx-auto"
         >
           {stats.map((stat, i) => (
             <div key={i} className="text-center relative">
-              <p className="font-serif text-[clamp(28px,4vw,40px)] leading-[1] tracking-[-0.02em] text-[#17191c] mb-2">
+              <p className="font-serif text-[clamp(32px,5vw,48px)] leading-[1] tracking-[-0.02em] text-[#17191c] mb-2">
                 {stat.value}
               </p>
-              <p className="text-[13px] text-[#777b86]">{stat.label}</p>
+              <p className="text-[13px] md:text-[14px] text-[#777b86]">{stat.label}</p>
               {i < stats.length - 1 && (
-                <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-10 bg-[#e8e8e8]" />
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-px h-10 bg-[#e8e8e8]" />
               )}
             </div>
           ))}
