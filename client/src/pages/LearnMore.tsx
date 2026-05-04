@@ -4,7 +4,7 @@ const mentors = [
   {
     name: "Nail",
     role: "Brand Builder & E-Commerce Mentor",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face",
+    image: "https://i.ibb.co/Hf4Z2FjB/Gemini-Generated-Image-c5x4sfc5x4sfc5x4.png",
     paragraphs: [
       "Nail began his entrepreneurial journey after graduating from university in Poland and working in international trade. Driven by independence, he entered dropshipping in 2018, achieving early success across multiple platforms and investor partnerships.",
       "In September 2023, he launched his first flagship brand, turning a Shopify venture into one of the most recognised brands in his country. He followed with launches in February and December 2025.",
@@ -14,7 +14,7 @@ const mentors = [
   {
     name: "Kamil Sattar",
     role: "The Ecom King — Founder & Lead Mentor",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=500&fit=crop&crop=face",
+    image: "https://i.ibb.co/jPTyKVyk/Screenshot-2026-01-12-at-14-04-02.png",
     featured: true,
     paragraphs: [
       'Kamil Sattar is an <strong>8-figure e-commerce entrepreneur</strong> with over <strong>10 years of hands-on experience</strong> building and scaling profitable online brands.',
@@ -25,7 +25,7 @@ const mentors = [
   {
     name: "Inders",
     role: "E-Commerce Growth Mentor",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face",
+    image: "https://i.ibb.co/gZzwW6Hd/Gemini-Generated-Image-yzo8xlyzo8xlyzo8.png",
     paragraphs: [
       "Starting his entrepreneurial journey by reselling shoes, Inders learned early the fundamentals of supply, demand, and consumer psychology.",
       "What began as flipping sneakers evolved into building and scaling e-commerce brands across multiple niches.",
