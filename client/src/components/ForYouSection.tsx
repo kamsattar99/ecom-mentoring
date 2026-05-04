@@ -167,7 +167,7 @@ export default function ForYouSection() {
             If the left side sounds like you, the next step is to apply.
           </p>
           <a
-            href="/apply"
+            href="/learn-more"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl text-white text-[14px] font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(88,62,141,0.25)]"

@@ -281,7 +281,7 @@ export default function CurriculumSection() {
 
                 {/* Apply button */}
                 <a
-                  href="/apply"
+                  href="/learn-more"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between w-full text-white text-[15px] font-medium px-6 py-4 rounded-xl transition-all duration-300 hover:shadow-[0_8px_24px_rgba(88,62,141,0.3)] hover:-translate-y-0.5"
