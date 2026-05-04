@@ -51,7 +51,7 @@ export default function PainPoints() {
             </div>
           </motion.div>
 
-          {/* Right - Shopify-style dashboard mockup */}
+          {/* Right - Shopify analytics dashboard images */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -59,78 +59,51 @@ export default function PainPoints() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            {/* Warm gradient glow behind the mockup */}
+            {/* Warm gradient glow behind */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#f8e8d4]/60 via-[#ede4f7]/40 to-transparent rounded-[32px] blur-[40px] scale-110" />
             
-            {/* Dashboard mockup */}
-            <div className="relative bg-white rounded-[20px] shadow-[0_20px_60px_rgba(0,0,0,0.08)] overflow-hidden border border-[#e8e8e8]/60">
-              {/* Browser chrome */}
-              <div className="flex items-center gap-2 px-4 py-3 border-b border-[#f0f0f0]">
-                <div className="flex gap-1.5">
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
-                </div>
-                <div className="flex-1 flex justify-center">
-                  <div className="px-4 py-1 rounded-md bg-[#f7f7f8] text-[11px] text-[#777b86]">
-                    mystore.myshopify.com/admin
-                  </div>
-                </div>
-              </div>
+            {/* Stacked analytics cards */}
+            <div className="relative space-y-4">
+              {/* Top row - Total Sales (large) */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+              >
+                <img
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-total-sales-Rdmh5wtQRyFfGinKfiFvwP.webp"
+                  alt="Total Sales - $250,000"
+                  className="w-full max-w-[420px] rounded-2xl shadow-[0_12px_40px_rgba(0,0,0,0.06)]"
+                />
+              </motion.div>
 
-              {/* Shopify admin content */}
-              <div className="p-5">
-                {/* Header */}
-                <div className="flex items-center justify-between mb-5">
-                  <div className="flex items-center gap-2">
-                    <div className="w-7 h-7 rounded bg-[#96bf48] flex items-center justify-center">
-                      <span className="text-white text-[10px] font-bold">S</span>
-                    </div>
-                    <span className="text-[13px] font-medium text-[#17191c]">My Store</span>
-                  </div>
-                  <div className="text-[11px] text-[#777b86]">Analytics</div>
-                </div>
-
-                {/* Stats row */}
-                <div className="grid grid-cols-3 gap-3 mb-5">
-                  <div className="p-3 rounded-xl bg-[#f7f7f8]">
-                    <p className="text-[10px] text-[#777b86] mb-1">Total Sales</p>
-                    <p className="text-[16px] font-semibold text-[#17191c]">£24,847</p>
-                    <p className="text-[10px] text-green-600">↑ 32%</p>
-                  </div>
-                  <div className="p-3 rounded-xl bg-[#f7f7f8]">
-                    <p className="text-[10px] text-[#777b86] mb-1">Orders</p>
-                    <p className="text-[16px] font-semibold text-[#17191c]">384</p>
-                    <p className="text-[10px] text-green-600">↑ 18%</p>
-                  </div>
-                  <div className="p-3 rounded-xl bg-[#f7f7f8]">
-                    <p className="text-[10px] text-[#777b86] mb-1">Conv. Rate</p>
-                    <p className="text-[16px] font-semibold text-[#17191c]">4.2%</p>
-                    <p className="text-[10px] text-green-600">↑ 0.6%</p>
-                  </div>
-                </div>
-
-                {/* Chart area */}
-                <div className="rounded-xl bg-[#f7f7f8] p-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-[11px] font-medium text-[#17191c]">Revenue (7 days)</span>
-                    <span className="text-[10px] text-[#777b86]">May 2026</span>
-                  </div>
-                  <div className="flex items-end gap-[6px] h-[60px]">
-                    {[35, 45, 30, 60, 50, 75, 90].map((h, i) => (
-                      <div
-                        key={i}
-                        className="flex-1 rounded-t-sm bg-[#583E8D]"
-                        style={{ height: `${h}%`, opacity: 0.3 + (i * 0.1) }}
-                      />
-                    ))}
-                  </div>
-                  <div className="flex justify-between mt-2">
-                    {["M", "T", "W", "T", "F", "S", "S"].map((d, i) => (
-                      <span key={i} className="text-[9px] text-[#a3a6af] flex-1 text-center">{d}</span>
-                    ))}
-                  </div>
-                </div>
+              {/* Bottom row - Two smaller cards */}
+              <div className="grid grid-cols-2 gap-4">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                >
+                  <img
+                    src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-sessions-device-38MypvLYE5mt2H82mSxXPK.webp"
+                    alt="Sessions by Device"
+                    className="w-full rounded-2xl shadow-[0_12px_40px_rgba(0,0,0,0.06)]"
+                  />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.6 }}
+                >
+                  <img
+                    src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-sales-country-3wvFYXTrqPCU22m66QfsHX.webp"
+                    alt="Sessions by Country"
+                    className="w-full rounded-2xl shadow-[0_12px_40px_rgba(0,0,0,0.06)]"
+                  />
+                </motion.div>
               </div>
             </div>
           </motion.div>

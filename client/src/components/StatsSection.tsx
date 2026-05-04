@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "£30M+", label: "Student revenue generated" },
+  { value: "$30M+", label: "Student revenue generated" },
   { value: "1,000+", label: "Entrepreneurs mentored" },
   { value: "4.9/5", label: "Average student rating" },
   { value: "90 days", label: "Avg. time to first profit" },
