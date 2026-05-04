@@ -172,8 +172,26 @@ export default function LearnMore() {
         </div>
       </section>
 
+      {/* Stats Brag Banner */}
+      <section className="w-full bg-[#583E8D] py-14 md:py-20">
+        <div className="max-w-[1000px] mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 text-center">
+          <div>
+            <p className="text-white font-bold text-[clamp(36px,5vw,56px)] leading-none tracking-tight">1000+</p>
+            <p className="text-white/80 text-[15px] mt-2 font-medium">Students.</p>
+          </div>
+          <div>
+            <p className="text-white font-bold text-[clamp(36px,5vw,56px)] leading-none tracking-tight">$20M+</p>
+            <p className="text-white/80 text-[15px] mt-2 font-medium">Student Revenue</p>
+          </div>
+          <div>
+            <p className="text-white font-bold text-[clamp(36px,5vw,56px)] leading-none tracking-tight">9+</p>
+            <p className="text-white/80 text-[15px] mt-2 font-medium">Years In the Industry</p>
+          </div>
+        </div>
+      </section>
+
       {/* Bottom CTA */}
-      <div className="text-center px-4 pb-20 md:pb-28">
+      <div className="text-center px-4 pt-16 pb-20 md:pt-20 md:pb-28">
         <a
           href="/apply"
           className="inline-flex items-center gap-2 text-white text-[15px] md:text-[16px] font-medium px-10 py-4 rounded-full transition-all duration-300 hover:-translate-y-[2px]"
