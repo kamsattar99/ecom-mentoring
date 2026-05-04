@@ -83,10 +83,10 @@ export default function LearnMore() {
           </p>
 
           {/* Video Container */}
-          <div className="relative rounded-2xl overflow-hidden border border-[#e8e4f0] shadow-[0_8px_40px_rgba(88,62,141,0.08),0_2px_12px_rgba(0,0,0,0.04)] bg-white">
+          <div className="relative rounded-2xl overflow-hidden border border-[#e8e4f0] shadow-[0_8px_40px_rgba(88,62,141,0.08),0_2px_12px_rgba(0,0,0,0.04)]">
 
             <div
-              className="aspect-video min-h-[280px] sm:min-h-0"
+              className="aspect-video"
               dangerouslySetInnerHTML={{
                 __html: `<vturb-smartplayer id="vid-69d95194d7a6aac50a9b93e2" style="display: block; margin: 0 auto; width: 100%; height: 100%;"></vturb-smartplayer>`,
               }}
