@@ -17,11 +17,13 @@ export default function Footer() {
           {/* Brand column */}
           <div>
             <div className="flex items-center mb-5">
-              <img
-                src="/manus-storage/ecom-mentoring-footer-logo_6a87be9b.webp"
-                alt="eMentoring"
-                className="h-[48px] w-auto"
-              />
+              <a href="/">
+                <img
+                  src="/manus-storage/ecom-mentoring-footer-logo_6a87be9b.webp"
+                  alt="eMentoring"
+                  className="h-[48px] w-auto"
+                />
+              </a>
             </div>
             <p className="text-[13px] text-white/70 leading-[1.75] max-w-[260px] mb-7">
               Hands-on e-commerce mentorship for serious founders who want structure, feedback and a clear path to scaling.
