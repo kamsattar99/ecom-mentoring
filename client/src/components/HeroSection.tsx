@@ -17,7 +17,7 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 30, x: -20 }}
         animate={{ opacity: 1, y: 0, x: 0 }}
         transition={{ duration: 0.9, delay: 0.8 }}
-        className="absolute top-[12%] left-[2%] hidden lg:block"
+        className="absolute top-[12%] left-[10%] hidden lg:block"
       >
         <img
           src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-total-sales-Rdmh5wtQRyFfGinKfiFvwP.webp"
@@ -31,7 +31,7 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 30, x: 20 }}
         animate={{ opacity: 1, y: 0, x: 0 }}
         transition={{ duration: 0.9, delay: 1.0 }}
-        className="absolute top-[8%] right-[2%] hidden lg:block"
+        className="absolute top-[8%] right-[10%] hidden lg:block"
       >
         <img
           src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-sessions-device-38MypvLYE5mt2H82mSxXPK.webp"
@@ -45,7 +45,7 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 30, x: -10 }}
         animate={{ opacity: 1, y: 0, x: 0 }}
         transition={{ duration: 0.9, delay: 1.2 }}
-        className="absolute bottom-[15%] left-[3%] hidden lg:block"
+        className="absolute bottom-[15%] left-[8%] hidden lg:block"
       >
         <img
           src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-customers-time-X3ms7jG8yZk3tc2x3jGNVj.webp"
@@ -59,7 +59,7 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 30, x: 10 }}
         animate={{ opacity: 1, y: 0, x: 0 }}
         transition={{ duration: 0.9, delay: 1.4 }}
-        className="absolute bottom-[18%] right-[3%] hidden lg:block"
+        className="absolute bottom-[18%] right-[8%] hidden lg:block"
       >
         <img
           src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-sales-country-3wvFYXTrqPCU22m66QfsHX.webp"
