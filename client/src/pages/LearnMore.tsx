@@ -95,7 +95,7 @@ export default function LearnMore() {
               </span>
             </div>
             <div
-              className="aspect-video"
+              className="aspect-video min-h-[280px] sm:min-h-0"
               dangerouslySetInnerHTML={{
                 __html: `<vturb-smartplayer id="vid-69d95194d7a6aac50a9b93e2" style="display: block; margin: 0 auto; width: 100%; height: 100%;"></vturb-smartplayer>`,
               }}
