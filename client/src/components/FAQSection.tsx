@@ -33,7 +33,7 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faqs" className="py-[80px] md:py-[120px] bg-[#f7f7f8]">
+    <section id="faqs" className="py-[80px] md:py-[120px] bg-white">
       <div className="container">
         <div className="grid lg:grid-cols-[1fr_1.5fr] gap-16 items-start">
           {/* Left - Header */}
@@ -44,20 +44,20 @@ export default function FAQSection() {
             transition={{ duration: 0.5 }}
             className="lg:sticky lg:top-24"
           >
-            <p className="text-[14px] text-[#583E8D] font-medium mb-4">FAQs</p>
-            <h2 className="font-serif text-[clamp(36px,4vw,44px)] leading-[1.1] tracking-[-0.015em] text-[#17191c] mb-5">
+            <p className="text-[13px] text-[#583E8D] font-medium mb-3">FAQs</p>
+            <h2 className="font-serif text-[clamp(32px,4vw,48px)] leading-[1.1] tracking-[-0.015em] text-[#17191c] mb-5">
               Common questions, answered
             </h2>
-            <p className="text-[16px] leading-[1.5] text-[#4c4c4c] mb-8">
+            <p className="text-[15px] leading-[1.5] text-[#4c4c4c] mb-6">
               Everything you need to know before applying. Still have questions? Reach out directly.
             </p>
             <a
               href="https://e-commercementoring.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#17191c] text-white text-[15px] font-medium px-6 py-3 rounded-full hover:bg-[#2d2f33] transition-all duration-200"
+              className="inline-flex items-center gap-2 text-[14px] font-medium text-[#17191c] hover:opacity-70 transition-opacity"
             >
-              Apply Now →
+              Contact us <span className="text-[#a3a6af]">→</span>
             </a>
           </motion.div>
 
@@ -80,9 +80,9 @@ export default function FAQSection() {
                     {faq.q}
                   </span>
                   {openIndex === i ? (
-                    <Minus size={18} className="text-[#583E8D] shrink-0" />
+                    <Minus size={16} className="text-[#583E8D] shrink-0" />
                   ) : (
-                    <Plus size={18} className="text-[#777b86] shrink-0" />
+                    <Plus size={16} className="text-[#777b86] shrink-0" />
                   )}
                 </button>
                 <AnimatePresence>

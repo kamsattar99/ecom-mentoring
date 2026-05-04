@@ -69,9 +69,8 @@ export default function CurriculumSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="curriculum" className="py-[80px] md:py-[120px] bg-[#f7f7f8]">
+    <section id="curriculum" className="py-[80px] md:py-[120px] bg-[#f9f9fa]">
       <div className="container">
-        {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -79,17 +78,16 @@ export default function CurriculumSection() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-[640px] mx-auto mb-16"
         >
-          <p className="text-[14px] text-[#583E8D] font-medium mb-4">Curriculum</p>
+          <p className="text-[13px] text-[#583E8D] font-medium mb-3">Curriculum</p>
           <h2 className="font-serif text-[clamp(36px,4vw,52px)] leading-[1.1] tracking-[-0.015em] text-[#17191c] mb-5">
             Six stages to a profitable store
           </h2>
-          <p className="text-[16px] leading-[1.5] text-[#4c4c4c]">
+          <p className="text-[15px] leading-[1.5] text-[#4c4c4c]">
             A structured roadmap that takes you from zero to scaling — with mentorship at every step.
           </p>
         </motion.div>
 
-        {/* Accordion */}
-        <div className="max-w-[720px] mx-auto">
+        <div className="max-w-[720px] mx-auto bg-white rounded-[24px] p-6 md:p-8">
           {stages.map((stage, i) => (
             <motion.div
               key={stage.number}
@@ -97,22 +95,22 @@ export default function CurriculumSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: i * 0.05 }}
-              className="border-b border-[#e8e8e8] last:border-b-0"
+              className="border-b border-[#f0f0f0] last:border-b-0"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full flex items-center justify-between py-6 text-left group"
+                className="w-full flex items-center justify-between py-5 text-left group"
               >
-                <div className="flex items-center gap-5">
-                  <span className="text-[14px] font-medium text-[#583E8D]">
+                <div className="flex items-center gap-4">
+                  <span className="text-[13px] font-medium text-[#583E8D] w-6">
                     {stage.number}
                   </span>
-                  <span className="text-[17px] font-medium text-[#17191c] group-hover:text-[#583E8D] transition-colors">
+                  <span className="text-[16px] font-medium text-[#17191c] group-hover:text-[#583E8D] transition-colors">
                     {stage.title}
                   </span>
                 </div>
                 <ChevronDown
-                  size={18}
+                  size={16}
                   className={`text-[#777b86] transition-transform duration-300 ${
                     openIndex === i ? "rotate-180" : ""
                   }`}
@@ -127,14 +125,14 @@ export default function CurriculumSection() {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="pb-6 pl-[52px]">
-                      <ul className="space-y-3">
+                    <div className="pb-5 pl-10">
+                      <ul className="space-y-2.5">
                         {stage.items.map((item) => (
                           <li
                             key={item}
-                            className="text-[15px] leading-[1.5] text-[#4c4c4c] flex items-start gap-3"
+                            className="text-[14px] leading-[1.5] text-[#4c4c4c] flex items-start gap-3"
                           >
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#583E8D] mt-2 shrink-0" />
+                            <span className="w-1 h-1 rounded-full bg-[#583E8D] mt-2 shrink-0" />
                             {item}
                           </li>
                         ))}

@@ -19,7 +19,7 @@ const notForYou = [
 
 export default function ForYouSection() {
   return (
-    <section className="py-[80px] md:py-[120px] bg-white">
+    <section className="py-[80px] md:py-[120px] bg-[#f9f9fa]">
       <div className="container">
         {/* Section header */}
         <motion.div
@@ -29,7 +29,6 @@ export default function ForYouSection() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-[640px] mx-auto mb-16"
         >
-          <p className="text-[14px] text-[#583E8D] font-medium mb-4">Is this for you?</p>
           <h2 className="font-serif text-[clamp(36px,4vw,52px)] leading-[1.1] tracking-[-0.015em] text-[#17191c]">
             We're selective for a reason
           </h2>
@@ -43,16 +42,16 @@ export default function ForYouSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="p-8 rounded-[24px] bg-[#f7f7f8]"
+            className="p-8 rounded-[24px] bg-white"
           >
-            <h3 className="text-[18px] font-medium text-[#17191c] mb-6">This is for you if...</h3>
+            <h3 className="text-[17px] font-medium text-[#17191c] mb-6">This is for you if...</h3>
             <ul className="space-y-4">
               {forYou.map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <div className="w-5 h-5 rounded-full bg-[#EDE8F5] flex items-center justify-center shrink-0 mt-0.5">
-                    <Check size={12} className="text-[#583E8D]" />
+                    <Check size={11} className="text-[#583E8D]" />
                   </div>
-                  <span className="text-[15px] text-[#4c4c4c] leading-[1.4]">{item}</span>
+                  <span className="text-[14px] text-[#4c4c4c] leading-[1.5]">{item}</span>
                 </li>
               ))}
             </ul>
@@ -64,16 +63,16 @@ export default function ForYouSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="p-8 rounded-[24px] bg-[#f7f7f8]"
+            className="p-8 rounded-[24px] bg-white"
           >
-            <h3 className="text-[18px] font-medium text-[#17191c] mb-6">This is NOT for you if...</h3>
+            <h3 className="text-[17px] font-medium text-[#17191c] mb-6">This is NOT for you if...</h3>
             <ul className="space-y-4">
               {notForYou.map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <div className="w-5 h-5 rounded-full bg-red-50 flex items-center justify-center shrink-0 mt-0.5">
-                    <X size={12} className="text-red-400" />
+                    <X size={11} className="text-red-400" />
                   </div>
-                  <span className="text-[15px] text-[#4c4c4c] leading-[1.4]">{item}</span>
+                  <span className="text-[14px] text-[#4c4c4c] leading-[1.5]">{item}</span>
                 </li>
               ))}
             </ul>

@@ -2,9 +2,9 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import LogoBar from "@/components/LogoBar";
 import IntroSection from "@/components/IntroSection";
-import WhatYouGet from "@/components/WhatYouGet";
 import PainPoints from "@/components/PainPoints";
 import StatsSection from "@/components/StatsSection";
+import WhatYouGet from "@/components/WhatYouGet";
 import CurriculumSection from "@/components/CurriculumSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ForYouSection from "@/components/ForYouSection";
@@ -25,8 +25,8 @@ export default function Home() {
       <WhatYouGet />
       <CurriculumSection />
       <TestimonialsSection />
-      <ForYouSection />
       <FeaturedIn />
+      <ForYouSection />
       <FAQSection />
       <CTASection />
       <Footer />

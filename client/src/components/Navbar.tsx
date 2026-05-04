@@ -13,9 +13,10 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { label: "Curriculum", href: "#curriculum" },
-    { label: "Reviews", href: "#reviews" },
-    { label: "FAQs", href: "#faqs" },
+    { label: "Product", href: "#curriculum" },
+    { label: "Resources", href: "#reviews" },
+    { label: "Customers", href: "#testimonials" },
+    { label: "Pricing", href: "#faqs" },
   ];
 
   return (
@@ -27,39 +28,46 @@ export default function Navbar() {
       }`}
     >
       <div className="container flex items-center justify-between h-[64px]">
-        {/* Logo */}
+        {/* Logo — like Steep's clean wordmark */}
         <a href="#" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-[#583E8D] flex items-center justify-center">
-            <span className="text-white font-bold text-sm">E</span>
+          <div className="w-7 h-7 rounded-full bg-[#583E8D] flex items-center justify-center">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+            </svg>
           </div>
-          <span className="font-medium text-[#17191c] text-[15px] tracking-[-0.009em]">
-            Ecom<span className="text-[#583E8D]">Mentor</span>
+          <span className="font-medium text-[#17191c] text-[16px] tracking-[-0.02em]">
+            Ecom Mentor
           </span>
         </a>
 
-        {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8">
+        {/* Desktop Links — centered */}
+        <div className="hidden md:flex items-center gap-7">
           {links.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="text-[15px] text-[#4c4c4c] hover:text-[#17191c] transition-colors duration-200"
+              className="text-[14px] text-[#4c4c4c] hover:text-[#17191c] transition-colors duration-200"
             >
               {link.label}
             </a>
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="hidden md:block">
+        {/* CTA — like Steep's "Book a demo" + "Get started" */}
+        <div className="hidden md:flex items-center gap-4">
+          <a
+            href="#curriculum"
+            className="text-[14px] text-[#4c4c4c] hover:text-[#17191c] transition-colors duration-200"
+          >
+            Book a demo
+          </a>
           <a
             href="https://e-commercementoring.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#17191c] text-white text-[15px] font-medium px-6 py-3 rounded-full hover:bg-[#2d2f33] transition-all duration-200 hover:-translate-y-[1px]"
+            className="inline-flex items-center bg-[#17191c] text-white text-[13px] font-medium px-5 py-2.5 rounded-full hover:bg-[#2d2f33] transition-all duration-200"
           >
-            Apply Now
-            <span className="text-xs">→</span>
+            Get started
           </a>
         </div>
 
@@ -97,9 +105,9 @@ export default function Navbar() {
                 href="https://e-commercementoring.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-3 inline-flex items-center justify-center gap-2 bg-[#17191c] text-white text-[15px] font-medium px-6 py-3 rounded-full"
+                className="mt-3 inline-flex items-center justify-center bg-[#17191c] text-white text-[14px] font-medium px-6 py-3 rounded-full"
               >
-                Apply Now →
+                Get started
               </a>
             </div>
           </motion.div>
