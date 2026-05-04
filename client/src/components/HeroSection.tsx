@@ -32,7 +32,7 @@ export default function HeroSection() {
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-total-sales-Rdmh5wtQRyFfGinKfiFvwP.webp"
             alt="Total Sales: $250,000"
-            className="w-[260px] rounded-2xl border border-white/70"
+            className="w-[320px] rounded-2xl border border-white/70"
             style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.1), 0 4px 12px rgba(88,62,141,0.06)" }}
           />
         </motion.div>
@@ -52,7 +52,7 @@ export default function HeroSection() {
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-sessions-device-38MypvLYE5mt2H82mSxXPK.webp"
             alt="Sessions by Device"
-            className="w-[240px] rounded-2xl border border-white/70"
+            className="w-[300px] rounded-2xl border border-white/70"
             style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.1), 0 4px 12px rgba(88,62,141,0.06)" }}
           />
         </motion.div>
@@ -72,7 +72,7 @@ export default function HeroSection() {
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-customers-time-X3ms7jG8yZk3tc2x3jGNVj.webp"
             alt="Customers over Time"
-            className="w-[240px] rounded-2xl border border-white/70"
+            className="w-[300px] rounded-2xl border border-white/70"
             style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.1), 0 4px 12px rgba(88,62,141,0.06)" }}
           />
         </motion.div>
@@ -92,7 +92,7 @@ export default function HeroSection() {
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-sales-country-3wvFYXTrqPCU22m66QfsHX.webp"
             alt="Sessions by Country"
-            className="w-[230px] rounded-2xl border border-white/70"
+            className="w-[290px] rounded-2xl border border-white/70"
             style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.1), 0 4px 12px rgba(88,62,141,0.06)" }}
           />
         </motion.div>
