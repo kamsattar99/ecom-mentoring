@@ -53,21 +53,15 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* CTA — like Steep's "Book a demo" + "Get started" */}
+        {/* CTA */}
         <div className="hidden md:flex items-center gap-4">
-          <a
-            href="#curriculum"
-            className="text-[14px] text-[#4c4c4c] hover:text-[#17191c] transition-colors duration-200"
-          >
-            Book a demo
-          </a>
           <a
             href="https://e-commercementoring.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center bg-[#17191c] text-white text-[13px] font-medium px-5 py-2.5 rounded-full hover:bg-[#2d2f33] transition-all duration-200"
           >
-            Get started
+            Apply Now
           </a>
         </div>
 
@@ -107,7 +101,7 @@ export default function Navbar() {
                 rel="noopener noreferrer"
                 className="mt-3 inline-flex items-center justify-center bg-[#17191c] text-white text-[14px] font-medium px-6 py-3 rounded-full"
               >
-                Get started
+                Apply Now
               </a>
             </div>
           </motion.div>

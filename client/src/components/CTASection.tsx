@@ -23,20 +23,14 @@ export default function CTASection() {
               Join 1,000+ entrepreneurs who chose execution over theory. Apply now and get matched with a mentor who's been where you want to go.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex items-center justify-center">
               <a
                 href="https://e-commercementoring.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#17191c] text-white text-[15px] font-medium px-8 py-4 rounded-full hover:bg-[#2d2f33] transition-all duration-200 hover:-translate-y-[1px]"
               >
-                Get started
-              </a>
-              <a
-                href="#curriculum"
-                className="inline-flex items-center gap-2 text-[15px] font-medium text-[#17191c] hover:opacity-70 transition-opacity"
-              >
-                Book a demo
+                Apply Now
               </a>
             </div>
 

@@ -113,13 +113,7 @@ export default function HeroSection() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#17191c] text-white text-[15px] font-medium px-8 py-4 rounded-full hover:bg-[#2d2f33] transition-all duration-200 hover:-translate-y-[1px]"
           >
-            Get started
-          </a>
-          <a
-            href="#curriculum"
-            className="inline-flex items-center gap-2 text-[#17191c] text-[15px] font-medium hover:opacity-70 transition-opacity duration-200"
-          >
-            Book a demo
+            Apply Now
           </a>
         </motion.div>
 
