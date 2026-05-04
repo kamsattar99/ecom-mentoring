@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <section className="relative pt-[130px] pb-[60px] md:pt-[160px] md:pb-[80px] overflow-hidden">
+    <section className="relative pt-[90px] pb-[60px] md:pt-[160px] md:pb-[80px] overflow-hidden">
       {/* Background: soft radial glows + noise texture */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-[#faf9f7]" />
