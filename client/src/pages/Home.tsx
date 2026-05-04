@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AtoZSystem from "@/components/AtoZSystem";
 import LogoBar from "@/components/LogoBar";
@@ -14,7 +13,6 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
-      <Navbar />
       <HeroSection />
       <LogoBar />
       <AtoZSystem />

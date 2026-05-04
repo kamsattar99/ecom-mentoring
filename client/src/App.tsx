@@ -7,17 +7,32 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Apply from "./pages/Apply";
 import LearnMore from "./pages/LearnMore";
+import Navbar from "./components/Navbar";
+import { useLocation } from "wouter";
 
+function Layout({ children }: { children: React.ReactNode }) {
+  const [location] = useLocation();
+  const hideNavbar = location === "/apply";
+
+  return (
+    <>
+      {!hideNavbar && <Navbar />}
+      {children}
+    </>
+  );
+}
 
 function Router() {
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/learn-more"} component={LearnMore} />
-      <Route path={"/apply"} component={Apply} />
-      <Route path={"/404"} component={NotFound} />
-      <Route component={NotFound} />
-    </Switch>
+    <Layout>
+      <Switch>
+        <Route path={"/"} component={Home} />
+        <Route path={"/learn-more"} component={LearnMore} />
+        <Route path={"/apply"} component={Apply} />
+        <Route path={"/404"} component={NotFound} />
+        <Route component={NotFound} />
+      </Switch>
+    </Layout>
   );
 }
 
