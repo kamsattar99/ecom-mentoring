@@ -11,6 +11,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import EarningsDisclaimer from "./pages/EarningsDisclaimer";
 import TermsOfService from "./pages/TermsOfService";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import { useLocation } from "wouter";
 
 function Layout({ children }: { children: React.ReactNode }) {
@@ -21,6 +22,7 @@ function Layout({ children }: { children: React.ReactNode }) {
     <>
       {!hideNavbar && <Navbar />}
       {children}
+      {!hideNavbar && <Footer />}
     </>
   );
 }
