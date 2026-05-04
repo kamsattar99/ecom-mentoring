@@ -32,17 +32,7 @@ const deliverables = [
       </svg>
     ),
   },
-  {
-    title: "Private Community",
-    description: "Connect with other serious operators. Share wins and build your network.",
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="white" strokeWidth="1.8" strokeLinecap="round" />
-        <circle cx="9" cy="7" r="4" stroke="white" strokeWidth="1.8" />
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="white" strokeWidth="1.8" strokeLinecap="round" />
-      </svg>
-    ),
-  },
+
   {
     title: "Ad Account Reviews",
     description: "We look at your actual data and tell you exactly what to change.",
@@ -53,16 +43,7 @@ const deliverables = [
       </svg>
     ),
   },
-  {
-    title: "Lifetime Access",
-    description: "All recordings, templates, and frameworks — yours forever.",
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M9 12l2 2 4-4" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
+
 ];
 
 export default function WhatYouGet() {
