@@ -34,7 +34,7 @@ export default function Navbar() {
           <img
             src="/manus-storage/ecom-mentoring-logo_b617fdab.webp"
             alt="eMentoring"
-            className="h-[36px] w-auto"
+            className="h-[48px] w-auto"
           />
         </a>
 

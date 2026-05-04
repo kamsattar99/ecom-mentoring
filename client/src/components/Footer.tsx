@@ -22,7 +22,7 @@ export default function Footer() {
               <img
                 src="/manus-storage/ecom-mentoring-logo_b617fdab.webp"
                 alt="eMentoring"
-                className="h-[36px] w-auto brightness-0 invert"
+                className="h-[48px] w-auto brightness-0 invert"
               />
             </div>
             <p className="text-[14px] text-[#6b6f78] leading-[1.7] max-w-[280px] mb-7">
