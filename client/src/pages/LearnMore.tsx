@@ -53,51 +53,115 @@ export default function LearnMore() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#f8f6fc] via-white to-[#f8f6fc]">
-      {/* Header */}
-      <div className="pt-20 md:pt-28 pb-8 md:pb-12 text-center px-4">
-        <h1 className="font-serif font-bold text-[clamp(24px,4.5vw,48px)] leading-[1.15] tracking-[-0.02em] text-[#17191c] max-w-[800px] mx-auto">
-          The Proven System Our Students Use to Build Profitable Dropshipping
-          Brands Step by Step
-        </h1>
-      </div>
+      {/* Video Section */}
+      <section className="pt-24 md:pt-32 pb-16 md:pb-20 px-4">
+        <div className="max-w-[900px] mx-auto">
+          {/* Eyebrow Badge */}
+          <div className="text-center mb-5">
+            <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#583E8D]/8 border border-[#583E8D]/15 text-[#583E8D] text-[12px] font-medium tracking-wide uppercase">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-[#583E8D]">
+                <polygon points="5 3 19 12 5 21 5 3" />
+              </svg>
+              Watch Before Applying
+            </span>
+          </div>
 
-      {/* Video Embed */}
-      <div className="max-w-[900px] mx-auto px-4 pb-10 md:pb-14">
-        <div
-          className="rounded-2xl overflow-hidden shadow-xl"
-          dangerouslySetInnerHTML={{
-            __html: `<vturb-smartplayer id="vid-69d95194d7a6aac50a9b93e2" style="display: block; margin: 0 auto; width: 100%;"></vturb-smartplayer>`,
-          }}
-        />
-      </div>
+          {/* Headline */}
+          <h1 className="font-serif font-bold text-[clamp(26px,4.5vw,44px)] leading-[1.15] tracking-[-0.02em] text-[#17191c] text-center max-w-[700px] mx-auto mb-4">
+            See How The Ecom Mentorship Works
+          </h1>
 
-      {/* Apply Now CTA */}
-      <div className="text-center px-4 pb-16 md:pb-20">
-        <a
-          href="/apply"
-          className="inline-flex items-center gap-2 text-white text-[15px] md:text-[16px] font-medium px-10 py-4 rounded-full transition-all duration-300 hover:-translate-y-[2px]"
-          style={{
-            background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)",
-            boxShadow:
-              "0 8px 24px rgba(88,62,141,0.25), 0 2px 6px rgba(88,62,141,0.1)",
-          }}
-        >
-          Apply Now
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-          >
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
-        </a>
-        <p className="mt-4 text-[13px] text-[#999] font-medium">
-          Limited spots available — application takes 2 minutes.
-        </p>
-      </div>
+          {/* Subheading */}
+          <p className="text-center text-[15px] md:text-[16px] text-[#555] leading-relaxed max-w-[600px] mx-auto mb-10">
+            Watch this short breakdown to understand the roadmap, support and expectations before you apply.
+          </p>
+
+          {/* Video Container */}
+          <div className="relative rounded-2xl overflow-hidden border border-[#e8e4f0] shadow-[0_8px_40px_rgba(88,62,141,0.08),0_2px_12px_rgba(0,0,0,0.04)] bg-white">
+            {/* Video note pill */}
+            <div className="absolute top-4 left-4 z-10">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm border border-[#e8e4f0] text-[11px] text-[#666] font-medium shadow-sm">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-[#583E8D]">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                12-minute mentorship breakdown
+              </span>
+            </div>
+            <div
+              className="aspect-video"
+              dangerouslySetInnerHTML={{
+                __html: `<vturb-smartplayer id="vid-69d95194d7a6aac50a9b93e2" style="display: block; margin: 0 auto; width: 100%; height: 100%;"></vturb-smartplayer>`,
+              }}
+            />
+          </div>
+
+          {/* Video tip */}
+          <p className="text-center text-[12px] text-[#999] mt-4 font-medium">
+            Tip: watch at 1.25x–1.5x speed if you're short on time.
+          </p>
+
+          {/* What you'll learn points */}
+          <div className="flex flex-wrap justify-center gap-3 md:gap-5 mt-8 mb-10">
+            {[
+              "How the mentorship is structured",
+              "What support you get each week",
+              "What we expect from applicants",
+            ].map((point) => (
+              <span
+                key={point}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#e8e4f0] text-[13px] text-[#444] font-medium shadow-sm"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-[#583E8D] shrink-0">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                {point}
+              </span>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <div className="text-center">
+            <a
+              href="/apply"
+              className="inline-flex items-center gap-2 text-white text-[15px] md:text-[16px] font-medium px-10 py-4 rounded-full transition-all duration-300 hover:-translate-y-[2px]"
+              style={{
+                background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)",
+                boxShadow:
+                  "0 8px 24px rgba(88,62,141,0.25), 0 2px 6px rgba(88,62,141,0.1)",
+              }}
+            >
+              Apply For Mentorship
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <p className="mt-4 text-[13px] text-[#888] font-medium max-w-[400px] mx-auto">
+              Application takes around 2 minutes. We'll review your goals, budget and current stage.
+            </p>
+          </div>
+
+          {/* Trust Row */}
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4 mt-8">
+            {["1:1 mentorship", "Structured roadmap", "Store & ad reviews", "Application required"].map((item) => (
+              <span
+                key={item}
+                className="inline-flex items-center gap-1.5 text-[12px] text-[#777] font-medium"
+              >
+                <span className="w-1 h-1 rounded-full bg-[#583E8D]" />
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Meet Our Mentors Section */}
       <section className="py-16 md:py-24 px-4">
