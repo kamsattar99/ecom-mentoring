@@ -84,16 +84,7 @@ export default function LearnMore() {
 
           {/* Video Container */}
           <div className="relative rounded-2xl overflow-hidden border border-[#e8e4f0] shadow-[0_8px_40px_rgba(88,62,141,0.08),0_2px_12px_rgba(0,0,0,0.04)] bg-white">
-            {/* Video note pill */}
-            <div className="absolute top-4 left-4 z-10">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm border border-[#e8e4f0] text-[11px] text-[#666] font-medium shadow-sm">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-[#583E8D]">
-                  <circle cx="12" cy="12" r="10" />
-                  <polyline points="12 6 12 12 16 14" />
-                </svg>
-                12-minute mentorship breakdown
-              </span>
-            </div>
+
             <div
               className="aspect-video min-h-[280px] sm:min-h-0"
               dangerouslySetInnerHTML={{
