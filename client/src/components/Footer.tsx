@@ -18,9 +18,9 @@ export default function Footer() {
           <div>
             <div className="flex items-center mb-5">
               <img
-                src="/manus-storage/ecom-mentoring-logo_b617fdab.webp"
+                src="/manus-storage/ecom-mentoring-footer-logo_6a87be9b.webp"
                 alt="eMentoring"
-                className="h-[44px] w-auto brightness-0 invert"
+                className="h-[48px] w-auto"
               />
             </div>
             <p className="text-[13px] text-white/70 leading-[1.75] max-w-[260px] mb-7">
