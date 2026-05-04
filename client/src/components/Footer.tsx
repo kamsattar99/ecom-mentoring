@@ -71,7 +71,7 @@ export default function Footer() {
             <h4 className="text-[11px] font-bold text-white/50 uppercase tracking-[0.12em] mb-5">Resources</h4>
             <ul className="space-y-3.5">
               <li><a href="https://www.youtube.com/@TheEcomKing" target="_blank" rel="noopener noreferrer" className="text-[13px] text-white/70 hover:text-white transition-colors duration-200">YouTube Channel</a></li>
-              <li><a href="#" className="text-[13px] text-white/70 hover:text-white transition-colors duration-200">Free Training</a></li>
+              <li><a href="https://youtu.be/TNuXk8TI1Ac" target="_blank" rel="noopener noreferrer" className="text-[13px] text-white/70 hover:text-white transition-colors duration-200">Free Training</a></li>
 
             </ul>
           </div>
