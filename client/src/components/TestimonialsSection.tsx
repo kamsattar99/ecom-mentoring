@@ -33,7 +33,7 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section id="reviews" className="py-[80px] md:py-[120px] bg-white relative overflow-hidden">
+    <section id="reviews" className="py-[80px] md:py-[120px] relative overflow-hidden" style={{ background: "linear-gradient(180deg, #ffffff 0%, #f8f5fc 40%, #f3eef9 70%, #ffffff 100%)" }}>
       {/* Background decorations */}
       <div className="absolute top-[10%] left-[-5%] w-[500px] h-[500px] opacity-25 pointer-events-none"
         style={{ background: "radial-gradient(circle, rgba(88,62,141,0.08) 0%, transparent 60%)" }}

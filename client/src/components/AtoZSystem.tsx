@@ -53,7 +53,7 @@ const platforms = [
 
 export default function AtoZSystem() {
   return (
-    <section className="py-[80px] md:py-[120px] bg-white">
+    <section className="py-[80px] md:py-[120px] relative overflow-hidden" style={{ background: "linear-gradient(180deg, #faf9f7 0%, #f9f6fd 50%, #f8f5fc 100%)" }}>
       <div className="container">
         {/* Section header */}
         <motion.div

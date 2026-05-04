@@ -33,7 +33,7 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faqs" className="py-[80px] md:py-[120px] bg-white relative overflow-hidden">
+    <section id="faqs" className="py-[80px] md:py-[120px] relative overflow-hidden" style={{ background: "linear-gradient(180deg, #ffffff 0%, #f9f6fd 50%, #f5f1fa 100%)" }}>
       {/* Background decorations */}
       <div className="absolute top-[5%] right-[-5%] w-[500px] h-[500px] opacity-20 pointer-events-none"
         style={{ background: "radial-gradient(circle, rgba(88,62,141,0.08) 0%, transparent 60%)" }}

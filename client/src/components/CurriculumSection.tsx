@@ -52,7 +52,7 @@ export default function CurriculumSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section id="curriculum" className="py-[80px] md:py-[120px] bg-[#faf9f7] relative overflow-hidden">
+    <section id="curriculum" className="py-[80px] md:py-[120px] relative overflow-hidden" style={{ background: "linear-gradient(180deg, #faf9f7 0%, #f6f2fb 50%, #f3eef9 100%)" }}>
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-[500px] h-[500px] opacity-15 pointer-events-none"
         style={{ background: "radial-gradient(circle, rgba(88,62,141,0.06) 0%, transparent 60%)" }}

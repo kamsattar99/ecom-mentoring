@@ -48,7 +48,7 @@ const deliverables = [
 
 export default function WhatYouGet() {
   return (
-    <section className="py-[80px] md:py-[120px] bg-[#faf9f7] relative overflow-hidden">
+    <section className="py-[80px] md:py-[120px] relative overflow-hidden" style={{ background: "linear-gradient(180deg, #f8f5fc 0%, #f3eef9 50%, #faf9f7 100%)" }}>
       {/* Background decorations */}
       <div className="absolute top-[10%] right-[-5%] w-[400px] h-[400px] opacity-30 pointer-events-none"
         style={{ background: "radial-gradient(circle, rgba(88,62,141,0.08) 0%, transparent 60%)" }}

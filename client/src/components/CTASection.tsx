@@ -3,7 +3,7 @@ import { ArrowRight, Shield, Clock, Users } from "lucide-react";
 
 export default function CTASection() {
   return (
-    <section className="py-[80px] md:py-[120px] bg-[#faf9f7] relative overflow-hidden">
+    <section className="py-[80px] md:py-[120px] relative overflow-hidden" style={{ background: "linear-gradient(180deg, #f5f1fa 0%, #ede8f5 50%, #f5f1fa 100%)" }}>
       {/* Background decorations */}
       <div className="absolute top-[10%] left-[-5%] w-[400px] h-[400px] opacity-20 pointer-events-none"
         style={{ background: "radial-gradient(circle, rgba(88,62,141,0.06) 0%, transparent 60%)" }}

@@ -63,7 +63,7 @@ const painPoints = [
 
 export default function PainPoints() {
   return (
-    <section className="py-[80px] md:py-[120px] bg-[#faf9f7]">
+    <section className="py-[80px] md:py-[120px] relative overflow-hidden" style={{ background: "linear-gradient(180deg, #f8f5fc 0%, #f3eef9 50%, #faf9f7 100%)" }}>
       <div className="container">
         {/* Header */}
         <motion.div
