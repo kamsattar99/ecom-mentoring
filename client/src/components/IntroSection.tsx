@@ -1,75 +1,63 @@
 import { motion } from "framer-motion";
-import { Search, TrendingUp, Store } from "lucide-react";
+import { Target, Users, TrendingUp } from "lucide-react";
 
 const pillars = [
   {
-    icon: Search,
-    title: "Product Finder Library",
-    description:
-      "Stop guessing. Access our validation frameworks, research sheets, and hand-picked product criteria to find winners fast — before the herd.",
-    accent: "from-[#2563EB] to-[#06B6D4]",
+    icon: Target,
+    title: "Proven System",
+    description: "Follow a step-by-step framework that has generated over £30M+ in student revenue across multiple niches.",
+  },
+  {
+    icon: Users,
+    title: "1:1 Mentorship",
+    description: "Work directly with experienced operators who actively run profitable stores — not retired theorists.",
   },
   {
     icon: TrendingUp,
-    title: "Advanced Scaling Playbooks",
-    description:
-      "Go beyond launch basics. Use our ad blueprints, creative angles, and data rules to know when to kill, tweak, or scale confidently.",
-    accent: "from-[#06B6D4] to-[#22D3EE]",
-  },
-  {
-    icon: Store,
-    title: "High-Converting Stores",
-    description:
-      "Build a store that actually makes sales. We show you the exact layouts, product pages, and checkout setups that turn visitors into paying customers.",
-    accent: "from-[#8B5CF6] to-[#A78BFA]",
+    title: "Scale With Confidence",
+    description: "From product research to paid ads to scaling — every stage is mapped, measured, and mentored.",
   },
 ];
 
 export default function IntroSection() {
   return (
-    <section className="relative py-24 md:py-32">
+    <section className="py-[80px] md:py-[120px] bg-white">
       <div className="container">
-        {/* Section Header */}
+        {/* Section header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="max-w-3xl mb-16"
+          transition={{ duration: 0.5 }}
+          className="text-center max-w-[640px] mx-auto mb-16"
         >
-          <p className="text-xs font-mono uppercase tracking-[0.2em] text-[#06B6D4] mb-4">
-            The System
-          </p>
-          <h2 className="font-display font-bold text-3xl md:text-5xl leading-tight">
-            A Complete Operating System for{" "}
-            <span className="gradient-text">Ecom Success</span>
+          <p className="text-[14px] text-[#583E8D] font-medium mb-4">Introducing Ecom Mentor</p>
+          <h2 className="font-serif text-[clamp(36px,4vw,52px)] leading-[1.1] tracking-[-0.015em] text-[#17191c] mb-5">
+            The A-to-Z system for high-value ecom results
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Not another course. A full mentorship system built for serious founders who want a proven roadmap and personal guidance.
+          <p className="text-[16px] leading-[1.5] text-[#4c4c4c]">
+            Everything you need to build, launch, and scale a profitable e-commerce brand — with direct guidance at every step.
           </p>
         </motion.div>
 
-        {/* Pillars Grid */}
+        {/* Three pillars */}
         <div className="grid md:grid-cols-3 gap-6">
           {pillars.map((pillar, i) => (
             <motion.div
               key={pillar.title}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="glass-card rounded-xl p-8 group transition-all duration-300 relative overflow-hidden"
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="p-8 rounded-[24px] bg-[#f7f7f8] hover:bg-[#EDE8F5]/50 transition-colors duration-300"
             >
-              {/* Gradient accent line at top */}
-              <div className={`absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r ${pillar.accent} opacity-60 group-hover:opacity-100 transition-opacity`} />
-              
-              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#2563EB]/15 to-[#06B6D4]/15 border border-[#2563EB]/25 flex items-center justify-center mb-6 group-hover:border-[#2563EB]/50 group-hover:shadow-[0_0_15px_rgba(37,99,235,0.15)] transition-all duration-300">
-                <pillar.icon size={22} className="text-[#06B6D4]" />
+              <div className="w-10 h-10 rounded-xl bg-[#EDE8F5] flex items-center justify-center mb-5">
+                <pillar.icon size={20} className="text-[#583E8D]" />
               </div>
-              <h3 className="font-display font-bold text-xl mb-3 text-foreground">
+              <h3 className="text-[18px] font-medium text-[#17191c] mb-3">
                 {pillar.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-[15px] leading-[1.5] text-[#4c4c4c]">
                 {pillar.description}
               </p>
             </motion.div>

@@ -15,14 +15,14 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       <Navbar />
       <HeroSection />
       <LogoBar />
       <IntroSection />
-      <WhatYouGet />
       <PainPoints />
       <StatsSection />
+      <WhatYouGet />
       <CurriculumSection />
       <TestimonialsSection />
       <ForYouSection />

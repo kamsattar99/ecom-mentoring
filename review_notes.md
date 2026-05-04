@@ -1,27 +1,30 @@
-# Website Review Notes
+# Website Redesign Review Notes (v2 - Steep-Inspired)
 
-## Sections Verified (All Rendering Correctly)
-1. Hero Section - Dark background, gradient text, CTA button, Trustpilot stars, student avatars
-2. Logo Bar - Trustpilot rating, platform logos (Shopify, Meta, TikTok, Google Ads), student count
-3. Intro Section - "A Complete Operating System for Ecom Success" with 3 pillar cards
-4. What You Get - 6 deliverable cards (Weekly 1:1 Calls, Direct Chat, SOPs, Community, Ad Reviews, Lifetime Access)
-5. Pain Points - Split layout with emotional headline and pain point list items
-6. Stats Section - 4 stat cards + featured testimonial quote ($700K)
-7. Curriculum Section - 6 stages with interactive tab selector
-8. Testimonials Section - 4 before/after testimonial cards with revenue badges
-9. For You Section - Two-column "For You" vs "Not For You" comparison
-10. Featured In - Business Insider, Forbes, Entrepreneur, LAD Bible, Yahoo Finance
-11. FAQ Section - 6 expandable FAQ items
-12. CTA Section - Final call to action with included items list
-13. Footer - Brand info, navigation, legal links, tagline
+## Overall Assessment
+The website has been successfully redesigned in the Steep.app-inspired light canvas style with the Ecom King's brand purple (#583E8D). 
 
-## Design System Applied
-- Dark background (oklch 0.1)
-- Gradient text (blue to cyan)
-- Glass morphism cards
-- Energy line dividers
-- Syne display font + Plus Jakarta Sans body + DM Mono monospace
-- Orange accent for urgency/pain points
-- Smooth framer-motion animations
+## Sections Verified (All Rendering Correctly):
+1. **Navbar** - Clean, minimal with pill-shaped CTA button
+2. **Hero** - Beautiful serif headline with italic accent, pill badge, social proof avatars + stars
+3. **Logo Bar** - "As featured in" with media names in muted text
+4. **Intro Section** - "The A-to-Z system" with 3 feature cards on light grey bg
+5. **Pain Points** - Split layout with numbered items on grey cards
+6. **Stats Section** - Clean serif numbers with border dividers
+7. **What You Get** - 6 deliverable cards with purple accent icons on grey bg
+8. **Curriculum** - Accordion-style with numbered stages, expandable
+9. **Testimonials** - Before/after format with result badges, 4 cards in 2x2 grid
+10. **For You / Not For You** - Two columns with check/X icons
+11. **Featured In / Built by The Ecom King** - Stats (2M+, 500+, 10+)
+12. **FAQ** - Split layout, left headline + right accordion
+13. **CTA** - Purple-tinted card with checklist and dual buttons
+14. **Footer** - Minimal with logo, links, copyright, disclaimer
+
+## Design System Applied:
+- Font: DM Sans (body) + Instrument Serif (headlines)
+- Colors: White canvas, #f7f7f8 alternating sections, #583E8D purple accent
+- Rounded corners: 24px cards, pill buttons
+- Subtle shadows and borders
+- Clean spacing with generous whitespace
+- Smooth framer-motion animations on scroll
 
 ## Status: COMPLETE - Ready for checkpoint

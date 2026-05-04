@@ -1,87 +1,43 @@
-import { motion } from "framer-motion";
-
 export default function Footer() {
   return (
-    <footer className="relative py-16 border-t border-border/30">
+    <footer className="py-12 border-t border-[#e8e8e8] bg-white">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="grid md:grid-cols-4 gap-10 md:gap-8">
-            {/* Brand */}
-            <div className="md:col-span-2">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 rounded-sm bg-gradient-to-br from-[#2563EB] to-[#06B6D4] flex items-center justify-center">
-                  <span className="text-white font-bold text-sm font-display">E</span>
-                </div>
-                <span className="font-display font-bold text-lg text-foreground">
-                  Ecom<span className="gradient-text">Mentor</span>
-                </span>
-              </div>
-              <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
-                Our mentoring aims to deliver 10x the impact of any information product. We believe in execution over theory, proof over hype, and systems over luck.
-              </p>
-              <p className="mt-4 text-xs text-muted-foreground/60 leading-relaxed max-w-sm">
-                Earnings Disclaimer: Results vary. The figures mentioned on this page are not guaranteed. Your success depends on your effort, skill, and market conditions.
-              </p>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          {/* Logo */}
+          <div className="flex items-center gap-2">
+            <div className="w-7 h-7 rounded-lg bg-[#583E8D] flex items-center justify-center">
+              <span className="text-white font-bold text-xs">E</span>
             </div>
-
-            {/* Navigation */}
-            <div>
-              <h4 className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">
-                Navigate
-              </h4>
-              <div className="space-y-2.5">
-                <a href="#curriculum" className="block text-sm text-foreground/70 hover:text-foreground transition-colors">
-                  Curriculum
-                </a>
-                <a href="#testimonials" className="block text-sm text-foreground/70 hover:text-foreground transition-colors">
-                  Testimonials
-                </a>
-                <a href="#faq" className="block text-sm text-foreground/70 hover:text-foreground transition-colors">
-                  FAQs
-                </a>
-                <a href="#apply" className="block text-sm text-foreground/70 hover:text-foreground transition-colors">
-                  Apply Now
-                </a>
-              </div>
-            </div>
-
-            {/* Legal */}
-            <div>
-              <h4 className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">
-                Legal
-              </h4>
-              <div className="space-y-2.5">
-                <a href="#" className="block text-sm text-foreground/70 hover:text-foreground transition-colors">
-                  Terms of Service
-                </a>
-                <a href="#" className="block text-sm text-foreground/70 hover:text-foreground transition-colors">
-                  Earnings Disclaimer
-                </a>
-                <a href="#" className="block text-sm text-foreground/70 hover:text-foreground transition-colors">
-                  Privacy Policy
-                </a>
-              </div>
-              <p className="mt-4 text-xs text-muted-foreground">
-                support@ecomkingvault.com
-              </p>
-            </div>
+            <span className="text-[15px] font-medium text-[#17191c]">
+              Ecom<span className="text-[#583E8D]">Mentor</span>
+            </span>
           </div>
 
-          {/* Bottom Bar */}
-          <div className="mt-12 pt-8 border-t border-border/30 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-muted-foreground">
-              © 2025 E-commerce Mentoring LTD. All Rights Reserved.
-            </p>
-            <p className="text-xs text-muted-foreground font-mono">
-              Execution beats theory. Proof beats hype. Systems beat luck.
-            </p>
+          {/* Links */}
+          <div className="flex items-center gap-6">
+            <a href="#curriculum" className="text-[14px] text-[#4c4c4c] hover:text-[#17191c] transition-colors">
+              Curriculum
+            </a>
+            <a href="#reviews" className="text-[14px] text-[#4c4c4c] hover:text-[#17191c] transition-colors">
+              Reviews
+            </a>
+            <a href="#faqs" className="text-[14px] text-[#4c4c4c] hover:text-[#17191c] transition-colors">
+              FAQs
+            </a>
           </div>
-        </motion.div>
+
+          {/* Copyright */}
+          <p className="text-[13px] text-[#a3a6af]">
+            © {new Date().getFullYear()} The Ecom King. All rights reserved.
+          </p>
+        </div>
+
+        {/* Disclaimer */}
+        <div className="mt-8 pt-6 border-t border-[#e8e8e8]">
+          <p className="text-[12px] text-[#a3a6af] text-center max-w-[600px] mx-auto leading-[1.6]">
+            Earnings Disclaimer: Results vary. The figures mentioned on this page are not guaranteed. Your success depends on your effort, skill, and market conditions.
+          </p>
+        </div>
       </div>
     </footer>
   );

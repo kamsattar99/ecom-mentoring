@@ -1,59 +1,31 @@
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
 
 export default function LogoBar() {
+  const logos = [
+    "Forbes", "Business Insider", "Yahoo Finance", "Entrepreneur", "The Sun"
+  ];
+
   return (
-    <section className="relative py-10 border-y border-border/30">
+    <section className="py-12 border-y border-[#e8e8e8] bg-[#f7f7f8]">
       <div className="container">
+        <p className="text-center text-[14px] text-[#777b86] mb-8">
+          As featured in
+        </p>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="flex flex-col md:flex-row items-center justify-between gap-8"
+          transition={{ duration: 0.6 }}
+          className="flex flex-wrap items-center justify-center gap-8 md:gap-14"
         >
-          {/* Trustpilot Rating */}
-          <div className="flex items-center gap-3">
-            <div className="flex items-center gap-0.5">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={16} className="fill-[#00B67A] text-[#00B67A]" />
-              ))}
-            </div>
-            <div className="text-sm">
-              <span className="font-semibold text-foreground">4.7/5</span>
-              <span className="text-muted-foreground ml-1">on Trustpilot</span>
-            </div>
-          </div>
-
-          {/* Partner Logos */}
-          <div className="flex items-center gap-6 md:gap-10 flex-wrap justify-center">
-            {["Shopify", "Meta", "TikTok", "Google Ads"].map((name) => (
-              <div
-                key={name}
-                className="text-muted-foreground/40 hover:text-muted-foreground/70 transition-colors"
-              >
-                <span className="font-display font-bold text-sm md:text-base tracking-tight">
-                  {name}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          {/* Student Count */}
-          <div className="flex items-center gap-2">
-            <div className="flex -space-x-1.5">
-              {[...Array(4)].map((_, i) => (
-                <div
-                  key={i}
-                  className="w-6 h-6 rounded-full border-2 border-background bg-gradient-to-br from-[#2563EB] to-[#06B6D4]"
-                  style={{ opacity: 1 - i * 0.15 }}
-                />
-              ))}
-            </div>
-            <span className="text-xs font-mono text-muted-foreground">
-              1,000+ active students
+          {logos.map((logo) => (
+            <span
+              key={logo}
+              className="text-[16px] md:text-[18px] font-medium text-[#a3a6af] tracking-[-0.01em]"
+            >
+              {logo}
             </span>
-          </div>
+          ))}
         </motion.div>
       </div>
     </section>

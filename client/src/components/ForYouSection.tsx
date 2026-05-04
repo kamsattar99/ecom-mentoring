@@ -19,90 +19,64 @@ const notForYou = [
 
 export default function ForYouSection() {
   return (
-    <section className="relative py-24 md:py-32">
-      <div className="absolute top-0 left-0 right-0 energy-line" />
-
+    <section className="py-[80px] md:py-[120px] bg-white">
       <div className="container">
+        {/* Section header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.5 }}
+          className="text-center max-w-[640px] mx-auto mb-16"
         >
-          <p className="text-xs font-mono uppercase tracking-[0.2em] text-[#06B6D4] mb-4">
-            Qualification
-          </p>
-          <h2 className="font-display font-bold text-3xl md:text-5xl">
-            Is This Mentorship{" "}
-            <span className="gradient-text">Right For You?</span>
+          <p className="text-[14px] text-[#583E8D] font-medium mb-4">Is this for you?</p>
+          <h2 className="font-serif text-[clamp(36px,4vw,52px)] leading-[1.1] tracking-[-0.015em] text-[#17191c]">
+            We're selective for a reason
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            We don't work with everyone. This program is designed for people who are serious about results.
-          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+        {/* Two columns */}
+        <div className="grid md:grid-cols-2 gap-6 max-w-[800px] mx-auto">
           {/* For You */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="glass-card rounded-xl p-7 md:p-8 relative overflow-hidden"
+            transition={{ duration: 0.5 }}
+            className="p-8 rounded-[24px] bg-[#f7f7f8]"
           >
-            {/* Top accent */}
-            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#06B6D4] to-[#22D3EE]" />
-            
-            <div className="flex items-center gap-3 mb-7">
-              <div className="w-10 h-10 rounded-lg bg-[#06B6D4]/10 border border-[#06B6D4]/30 flex items-center justify-center">
-                <Check size={18} className="text-[#06B6D4]" />
-              </div>
-              <h3 className="font-display font-bold text-lg text-foreground">
-                This IS For You If:
-              </h3>
-            </div>
-            <div className="space-y-4">
-              {forYou.map((item, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-[#06B6D4]/10 border border-[#06B6D4]/25 flex items-center justify-center shrink-0 mt-0.5">
-                    <Check size={10} className="text-[#06B6D4]" />
+            <h3 className="text-[18px] font-medium text-[#17191c] mb-6">This is for you if...</h3>
+            <ul className="space-y-4">
+              {forYou.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <div className="w-5 h-5 rounded-full bg-[#EDE8F5] flex items-center justify-center shrink-0 mt-0.5">
+                    <Check size={12} className="text-[#583E8D]" />
                   </div>
-                  <p className="text-sm text-foreground/80 leading-relaxed">{item}</p>
-                </div>
+                  <span className="text-[15px] text-[#4c4c4c] leading-[1.4]">{item}</span>
+                </li>
               ))}
-            </div>
+            </ul>
           </motion.div>
 
           {/* Not For You */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="glass-card rounded-xl p-7 md:p-8 relative overflow-hidden"
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="p-8 rounded-[24px] bg-[#f7f7f8]"
           >
-            {/* Top accent */}
-            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#F97316] to-[#FB923C]" />
-            
-            <div className="flex items-center gap-3 mb-7">
-              <div className="w-10 h-10 rounded-lg bg-[#F97316]/10 border border-[#F97316]/30 flex items-center justify-center">
-                <X size={18} className="text-[#F97316]" />
-              </div>
-              <h3 className="font-display font-bold text-lg text-foreground">
-                This Is NOT For You If:
-              </h3>
-            </div>
-            <div className="space-y-4">
-              {notForYou.map((item, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-[#F97316]/10 border border-[#F97316]/25 flex items-center justify-center shrink-0 mt-0.5">
-                    <X size={10} className="text-[#F97316]" />
+            <h3 className="text-[18px] font-medium text-[#17191c] mb-6">This is NOT for you if...</h3>
+            <ul className="space-y-4">
+              {notForYou.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <div className="w-5 h-5 rounded-full bg-red-50 flex items-center justify-center shrink-0 mt-0.5">
+                    <X size={12} className="text-red-400" />
                   </div>
-                  <p className="text-sm text-foreground/80 leading-relaxed">{item}</p>
-                </div>
+                  <span className="text-[15px] text-[#4c4c4c] leading-[1.4]">{item}</span>
+                </li>
               ))}
-            </div>
+            </ul>
           </motion.div>
         </div>
       </div>

@@ -29,53 +29,53 @@ const deliverables = [
   },
   {
     icon: Headphones,
-    title: "Lifetime Access to Resources",
+    title: "Lifetime Access",
     description: "All recordings, templates, and frameworks — yours forever. Revisit anything as your business evolves.",
   },
 ];
 
 export default function WhatYouGet() {
   return (
-    <section className="relative py-24 md:py-32">
-      <div className="absolute top-0 left-0 right-0 energy-line" />
-
+    <section className="py-[80px] md:py-[120px] bg-[#f7f7f8]">
       <div className="container">
+        {/* Section header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.5 }}
+          className="text-center max-w-[640px] mx-auto mb-16"
         >
-          <p className="text-xs font-mono uppercase tracking-[0.2em] text-[#06B6D4] mb-4">
-            What's Included
-          </p>
-          <h2 className="font-display font-bold text-3xl md:text-5xl">
-            Everything You Need to{" "}
-            <span className="gradient-text">Win</span>
+          <p className="text-[14px] text-[#583E8D] font-medium mb-4">What's included</p>
+          <h2 className="font-serif text-[clamp(36px,4vw,52px)] leading-[1.1] tracking-[-0.015em] text-[#17191c] mb-5">
+            Everything you need to succeed
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-[16px] leading-[1.5] text-[#4c4c4c]">
             No filler modules. No fluff. Just the tools, access, and guidance that actually move the needle.
           </p>
         </motion.div>
 
+        {/* Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {deliverables.map((item, i) => (
             <motion.div
               key={item.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group relative p-6 rounded-lg border border-border/40 bg-secondary/10 hover:border-[#2563EB]/30 hover:bg-[#2563EB]/5 transition-all duration-300"
+              transition={{ duration: 0.4, delay: i * 0.08 }}
+              className="p-7 rounded-[20px] bg-white hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-shadow duration-300"
+              style={{
+                boxShadow: "rgba(4, 23, 43, 0.03) 0px 0px 0px 1px",
+              }}
             >
-              <div className="w-10 h-10 rounded-md bg-gradient-to-br from-[#2563EB]/10 to-[#06B6D4]/10 border border-[#2563EB]/20 flex items-center justify-center mb-4 group-hover:border-[#2563EB]/50 transition-colors">
-                <item.icon size={18} className="text-[#06B6D4]" />
+              <div className="w-10 h-10 rounded-xl bg-[#EDE8F5] flex items-center justify-center mb-5">
+                <item.icon size={20} className="text-[#583E8D]" />
               </div>
-              <h3 className="font-semibold text-base text-foreground mb-2">
+              <h3 className="text-[16px] font-medium text-[#17191c] mb-2">
                 {item.title}
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-[14px] leading-[1.5] text-[#777b86]">
                 {item.description}
               </p>
             </motion.div>
