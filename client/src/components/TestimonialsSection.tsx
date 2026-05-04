@@ -209,7 +209,7 @@ export default function TestimonialsSection() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://e-commercementoring.com/"
+              href="/apply"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl text-white text-[14px] font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(88,62,141,0.25)]"

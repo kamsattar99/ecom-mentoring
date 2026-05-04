@@ -77,7 +77,7 @@ export default function CTASection() {
 
             {/* CTA Button */}
             <motion.a
-              href="https://e-commercementoring.com/"
+              href="/apply"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.03, y: -2 }}
