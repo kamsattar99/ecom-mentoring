@@ -38,8 +38,8 @@ export default function HeroSection() {
         className="absolute top-[14%] left-[4%] xl:left-[8%] hidden lg:block"
       >
         <motion.div
-          animate={{ y: [0, -8, 0] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          animate={{ y: [0, -12, -4, -10, 0], x: [0, 4, -2, 3, 0], rotate: [0, 0.8, -0.3, 0.5, 0] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         >
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-total-sales-Rdmh5wtQRyFfGinKfiFvwP.webp"
@@ -58,8 +58,8 @@ export default function HeroSection() {
         className="absolute top-[10%] right-[4%] xl:right-[8%] hidden lg:block"
       >
         <motion.div
-          animate={{ y: [0, -10, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          animate={{ y: [0, -14, -6, -11, 0], x: [0, -5, 2, -3, 0], rotate: [0, -0.6, 0.4, -0.8, 0] }}
+          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
         >
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-sessions-device-38MypvLYE5mt2H82mSxXPK.webp"
@@ -78,8 +78,8 @@ export default function HeroSection() {
         className="absolute bottom-[12%] left-[3%] xl:left-[6%] hidden lg:block"
       >
         <motion.div
-          animate={{ y: [0, -6, 0] }}
-          transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+          animate={{ y: [0, -9, -3, -7, 0], x: [0, 5, -3, 4, 0], rotate: [0, 0.5, -0.6, 0.3, 0] }}
+          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
         >
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-customers-time-X3ms7jG8yZk3tc2x3jGNVj.webp"
@@ -98,8 +98,8 @@ export default function HeroSection() {
         className="absolute bottom-[14%] right-[3%] xl:right-[6%] hidden lg:block"
       >
         <motion.div
-          animate={{ y: [0, -7, 0] }}
-          transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+          animate={{ y: [0, -11, -5, -9, 0], x: [0, -4, 3, -2, 0], rotate: [0, -0.4, 0.7, -0.5, 0] }}
+          transition={{ duration: 8.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
         >
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-sales-country-3wvFYXTrqPCU22m66QfsHX.webp"
