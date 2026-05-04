@@ -151,7 +151,7 @@ export default function AtoZSystem() {
             {/* CTA */}
             <div className="mb-6">
               <a
-                href="/learn-more"
+                href="https://e-commercementoring.com/learn-more"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2.5 bg-[#583E8D] text-white text-[14px] font-medium px-7 py-3.5 rounded-full hover:bg-[#4a3377] transition-all duration-300 shadow-[0_4px_16px_rgba(88,62,141,0.25)] hover:shadow-[0_6px_24px_rgba(88,62,141,0.35)] hover:-translate-y-0.5"

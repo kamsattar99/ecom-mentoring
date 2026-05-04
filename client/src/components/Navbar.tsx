@@ -53,7 +53,7 @@ export default function Navbar() {
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="/learn-more"
+            href="https://e-commercementoring.com/learn-more"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center text-white text-[13px] font-medium px-5 py-2.5 rounded-full transition-all duration-300 hover:-translate-y-[1px] hover:shadow-[0_6px_16px_rgba(88,62,141,0.25)]"
@@ -95,7 +95,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="/learn-more"
+                href="https://e-commercementoring.com/learn-more"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-3 inline-flex items-center justify-center text-white text-[14px] font-medium px-6 py-3.5 rounded-full"
