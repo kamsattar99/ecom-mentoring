@@ -119,7 +119,7 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-center max-w-[800px] mx-auto"
         >
-          <h1 className="font-serif text-[clamp(40px,6vw,72px)] leading-[1.08] tracking-[-0.02em] text-[#17191c] mb-6">
+          <h1 className="font-serif font-bold text-[clamp(40px,6vw,72px)] leading-[1.08] tracking-[-0.02em] text-[#17191c] mb-6">
             Scale your store to{" "}
             <span className="italic text-[#583E8D]">7‑figures</span> with
             hands‑on mentorship
