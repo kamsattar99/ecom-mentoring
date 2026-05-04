@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import AtoZSystem from "@/components/AtoZSystem";
 import LogoBar from "@/components/LogoBar";
 import IntroSection from "@/components/IntroSection";
 import PainPoints from "@/components/PainPoints";
@@ -18,6 +19,7 @@ export default function Home() {
     <div className="min-h-screen bg-white overflow-x-hidden">
       <Navbar />
       <HeroSection />
+      <AtoZSystem />
       <LogoBar />
       <IntroSection />
       <PainPoints />
