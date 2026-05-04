@@ -9,6 +9,7 @@ import Apply from "./pages/Apply";
 import LearnMore from "./pages/LearnMore";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import EarningsDisclaimer from "./pages/EarningsDisclaimer";
+import TermsOfService from "./pages/TermsOfService";
 import Navbar from "./components/Navbar";
 import { useLocation } from "wouter";
 
@@ -33,6 +34,7 @@ function Router() {
         <Route path={"/apply"} component={Apply} />
         <Route path={"/privacy-policy"} component={PrivacyPolicy} />
         <Route path={"/earnings-disclaimer"} component={EarningsDisclaimer} />
+        <Route path={"/terms-of-service"} component={TermsOfService} />
         <Route path={"/404"} component={NotFound} />
         <Route component={NotFound} />
       </Switch>
