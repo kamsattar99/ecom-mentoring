@@ -83,7 +83,6 @@ export default function Footer() {
               <li><a href="/privacy-policy" className="text-[13px] text-white/70 hover:text-white transition-colors duration-200">Privacy Policy</a></li>
               <li><a href="/terms-of-service" className="text-[13px] text-white/70 hover:text-white transition-colors duration-200">Terms of Service</a></li>
               <li><a href="/earnings-disclaimer" className="text-[13px] text-white/70 hover:text-white transition-colors duration-200">Earnings Disclaimer</a></li>
-              <li><a href="#" className="text-[13px] text-white/70 hover:text-white transition-colors duration-200">Refund Policy</a></li>
             </ul>
           </div>
         </div>
