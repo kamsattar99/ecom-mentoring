@@ -1,18 +1,19 @@
-import { motion } from "framer-motion";
-
-const logos = [
-  { name: "Forbes", style: "font-serif italic font-bold text-[22px] md:text-[26px]" },
-  { name: "Business Insider", style: "font-sans font-bold text-[17px] md:text-[19px] tracking-tight" },
-  { name: "Yahoo Finance", style: "font-sans font-extrabold text-[17px] md:text-[19px]" },
-  { name: "Entrepreneur", style: "font-serif italic font-semibold text-[19px] md:text-[22px]" },
-  { name: "The Sun", style: "font-sans font-black text-[18px] md:text-[20px] uppercase tracking-wide" },
-  { name: "LADbible", style: "font-sans font-extrabold text-[17px] md:text-[19px] tracking-tight" },
-];
-
 export default function LogoBar() {
+  const logos = [
+    { name: "Forbes", style: "font-serif italic font-bold text-[28px] md:text-[34px]" },
+    { name: "Business Insider", style: "font-sans font-extrabold text-[22px] md:text-[26px] tracking-tight" },
+    { name: "Yahoo Finance", style: "font-sans font-black text-[22px] md:text-[26px]" },
+    { name: "Entrepreneur", style: "font-serif italic font-bold text-[26px] md:text-[32px]" },
+    { name: "THE SUN", style: "font-sans font-black text-[22px] md:text-[26px] uppercase tracking-wider" },
+    { name: "LADbible", style: "font-sans font-black text-[22px] md:text-[26px] tracking-tight" },
+  ];
+
+  // Duplicate logos for seamless infinite scroll
+  const allLogos = [...logos, ...logos, ...logos];
+
   return (
-    <section className="py-14 md:py-16 bg-white relative overflow-hidden">
-      {/* Subtle gradient borders */}
+    <section className="py-12 md:py-14 bg-white relative overflow-hidden">
+      {/* Subtle top border */}
       <div className="absolute top-0 left-[5%] right-[5%] h-px"
         style={{ background: "linear-gradient(90deg, transparent 0%, rgba(88,62,141,0.08) 50%, transparent 100%)" }}
       />
@@ -20,36 +21,32 @@ export default function LogoBar() {
         style={{ background: "linear-gradient(90deg, transparent 0%, rgba(88,62,141,0.08) 50%, transparent 100%)" }}
       />
 
-      <div className="container">
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center text-[12px] text-[#999] font-medium tracking-[0.08em] uppercase mb-8"
-        >
-          As featured in
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16"
-        >
-          {logos.map((logo, i) => (
-            <motion.span
-              key={logo.name}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.15 + i * 0.06 }}
-              className={`text-[#17191c]/20 hover:text-[#583E8D]/60 transition-all duration-500 cursor-default select-none ${logo.style}`}
+      <p className="text-center text-[11px] text-[#999] font-medium tracking-[0.1em] uppercase mb-8">
+        As featured in
+      </p>
+
+      {/* Marquee container */}
+      <div className="relative w-full overflow-hidden">
+        {/* Left fade */}
+        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 z-10 pointer-events-none"
+          style={{ background: "linear-gradient(to right, white 0%, transparent 100%)" }}
+        />
+        {/* Right fade */}
+        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 z-10 pointer-events-none"
+          style={{ background: "linear-gradient(to left, white 0%, transparent 100%)" }}
+        />
+
+        {/* Scrolling track */}
+        <div className="flex items-center animate-marquee">
+          {allLogos.map((logo, i) => (
+            <span
+              key={`${logo.name}-${i}`}
+              className={`text-[#17191c]/80 whitespace-nowrap mx-8 md:mx-14 select-none flex-shrink-0 ${logo.style}`}
             >
               {logo.name}
-            </motion.span>
+            </span>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
