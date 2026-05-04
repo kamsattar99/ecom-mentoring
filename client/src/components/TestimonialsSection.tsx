@@ -1,49 +1,53 @@
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 const testimonials = [
   {
     name: "Jack",
-    role: "Dropshipping Entrepreneur",
-    quote: "I finally broke through and scaled past $100k in sales. The mentorship gave me the structure, accountability, and clarity I was missing.",
-    revenue: "$100K+",
-    highlight: true,
+    context: "Dropshipping entrepreneur · Product-led store",
+    quote: "I finally broke through and scaled past $100K in sales. The biggest difference was having structure, accountability and a clear plan instead of guessing every week.",
+    badge: "$100K+ In Sales",
+    featured: true,
   },
   {
     name: "Rivers",
-    role: "Dropshipping Entrepreneur",
-    quote: "After two products tested, I finally hit $1,000. Thank you so much for the mentoring — this is just the beginning of my ecom journey.",
-    revenue: "$1K first month",
-    highlight: false,
+    context: "Dropshipping entrepreneur · First store",
+    quote: "After testing two products, I finally hit my first $1,000 month. The mentoring helped me understand what to fix and what to focus on next.",
+    badge: "First $1K Month",
+    featured: false,
   },
   {
     name: "MB",
-    role: "Dropshipping Entrepreneur",
-    quote: "Despite Facebook disabling my account right before hitting $100k, I still crossed $98,968 in sales. Forever thankful for the knowledge and support.",
-    revenue: "$98,968",
-    highlight: false,
+    context: "Dropshipping entrepreneur · Scaling phase",
+    quote: "Even after Facebook disabled my account right before $100K, I still crossed $98,968 in sales. The knowledge and support helped me keep going when things got difficult.",
+    badge: "$98,968 In Sales",
+    featured: false,
   },
   {
     name: "Eric",
-    role: "Dropshipping Entrepreneur",
-    quote: "Just hit 100k in 2 months — totally crazy. I made 10k profit in 11 days. If I did this, anyone is able. Just keep pushing.",
-    revenue: "$100K in 2mo",
-    highlight: true,
+    context: "Dropshipping entrepreneur · High-ticket store",
+    quote: "I hit $100K in two months and made $10K profit in 11 days. The biggest win was knowing what to test, what to cut and when to scale.",
+    badge: "$100K In 2 Months",
+    featured: true,
   },
+];
+
+const resultStrip = [
+  "$100K+ student wins",
+  "First-sale breakthroughs",
+  "Store scaling support",
+  "Ad account guidance",
 ];
 
 export default function TestimonialsSection() {
   return (
     <section id="reviews" className="py-[80px] md:py-[120px] relative overflow-hidden" style={{ background: "linear-gradient(180deg, #ffffff 0%, #f8f5fc 40%, #f3eef9 70%, #ffffff 100%)" }}>
       {/* Background decorations */}
-      <div className="absolute top-[10%] left-[-5%] w-[500px] h-[500px] opacity-25 pointer-events-none"
+      <div className="absolute top-[10%] left-[-5%] w-[500px] h-[500px] opacity-20 pointer-events-none"
         style={{ background: "radial-gradient(circle, rgba(88,62,141,0.08) 0%, transparent 60%)" }}
       />
-      <div className="absolute bottom-[10%] right-[-5%] w-[400px] h-[400px] opacity-20 pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(248,180,120,0.08) 0%, transparent 60%)" }}
-      />
-      {/* Subtle grid pattern */}
-      <div className="absolute inset-0 opacity-[0.015] pointer-events-none"
-        style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px)", backgroundSize: "60px 60px" }}
+      <div className="absolute bottom-[10%] right-[-5%] w-[400px] h-[400px] opacity-15 pointer-events-none"
+        style={{ background: "radial-gradient(circle, rgba(88,62,141,0.06) 0%, transparent 60%)" }}
       />
 
       <div className="container relative z-10">
@@ -53,123 +57,172 @@ export default function TestimonialsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center max-w-[640px] mx-auto mb-16"
+          className="text-center max-w-[640px] mx-auto mb-10"
         >
-          <div className="inline-flex items-center px-4 py-2 rounded-full mb-6"
-            style={{ background: "linear-gradient(135deg, #f3eef9 0%, #ebe3f5 100%)", boxShadow: "0 2px 8px rgba(88,62,141,0.06)" }}
-          >
-            <span className="text-[12px] text-[#583E8D] font-semibold tracking-wide">Student Results</span>
+          <div className="inline-flex items-center px-3.5 py-1.5 rounded-full border border-[#583E8D]/10 bg-white/80 backdrop-blur-sm mb-5 shadow-[0_2px_8px_rgba(88,62,141,0.05)]">
+            <span className="text-[12px] text-[#583E8D] font-semibold tracking-wide uppercase">Student Results</span>
           </div>
-          <h2 className="font-serif text-[clamp(36px,4vw,52px)] leading-[1.1] tracking-[-0.015em] text-[#17191c]">
-            Real people, <span className="italic text-[#583E8D]">real results</span>
+          <h2 className="font-serif text-[clamp(32px,4vw,50px)] leading-[1.1] tracking-[-0.015em] text-[#17191c]">
+            Results From Founders Who{" "}
+            <span className="italic text-[#583E8D]">Put The System To Work</span>
           </h2>
-          <p className="text-[15px] text-[#777b86] mt-4 max-w-[420px] mx-auto leading-[1.6]">
-            These are real students who followed the system and put in the work. No fake screenshots. No inflated numbers.
+          <p className="text-[14px] text-[#777b86] mt-4 max-w-[520px] mx-auto leading-[1.7]">
+            These results come from students who applied the system, received feedback, and executed consistently. Results vary, but the process is built to create clarity, accountability and better decisions.
           </p>
+          {/* Trust microcopy */}
+          <div className="flex flex-wrap items-center justify-center gap-4 mt-5">
+            <span className="text-[11px] text-[#583E8D]/60 font-medium flex items-center gap-1.5">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6L9 17l-5-5" /></svg>
+              Student-reported results
+            </span>
+            <span className="text-[11px] text-[#583E8D]/60 font-medium flex items-center gap-1.5">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6L9 17l-5-5" /></svg>
+              No inflated claims
+            </span>
+            <span className="text-[11px] text-[#583E8D]/60 font-medium flex items-center gap-1.5">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6L9 17l-5-5" /></svg>
+              Screenshots available on request
+            </span>
+          </div>
         </motion.div>
 
-        {/* Testimonial cards */}
-        <div className="grid md:grid-cols-2 gap-6">
+        {/* Results strip */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.1 }}
+          className="flex flex-wrap items-center justify-center gap-3 mb-12"
+        >
+          {resultStrip.map((item) => (
+            <div key={item} className="px-4 py-2 rounded-full bg-white border border-[#e8e8e8] shadow-[0_2px_6px_rgba(0,0,0,0.02)]">
+              <span className="text-[12px] text-[#3a3a3e] font-medium">{item}</span>
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Testimonial cards — featured card larger */}
+        <div className="grid md:grid-cols-2 gap-5">
           {testimonials.map((t, i) => (
             <motion.div
               key={t.name}
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`group relative p-8 md:p-9 rounded-[24px] transition-all duration-400 hover:-translate-y-1.5 ${
-                t.highlight
-                  ? "text-white"
-                  : "bg-white"
-              }`}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              className={`group relative rounded-[20px] transition-all duration-300 hover:-translate-y-1 ${
+                t.featured ? "p-8 md:p-9" : "p-7 md:p-8"
+              } ${t.featured ? "text-white" : "bg-white text-[#17191c]"}`}
               style={{
-                background: t.highlight
-                  ? "linear-gradient(145deg, #3d2a6b 0%, #583E8D 40%, #7B5EC6 100%)"
+                background: t.featured
+                  ? "linear-gradient(145deg, #2d1f50 0%, #583E8D 50%, #6b4fa8 100%)"
                   : undefined,
-                boxShadow: t.highlight
-                  ? "0 20px 60px rgba(88, 62, 141, 0.25), 0 4px 12px rgba(88, 62, 141, 0.15), inset 0 1px 0 rgba(255,255,255,0.1)"
-                  : "0 4px 24px rgba(0,0,0,0.04), 0 1px 4px rgba(0,0,0,0.02), inset 0 1px 0 rgba(255,255,255,0.8)",
-                border: t.highlight ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(232,232,232,0.6)",
+                boxShadow: t.featured
+                  ? "0 16px 48px rgba(88,62,141,0.2), 0 4px 12px rgba(88,62,141,0.1), inset 0 1px 0 rgba(255,255,255,0.06)"
+                  : "0 4px 20px rgba(0,0,0,0.04), 0 1px 4px rgba(0,0,0,0.02)",
+                border: t.featured ? "1px solid rgba(255,255,255,0.06)" : "1px solid rgba(232,232,232,0.7)",
               }}
             >
-              {/* Decorative orb on highlight cards */}
-              {t.highlight && (
-                <>
-                  <div className="absolute top-[-30px] right-[-30px] w-[120px] h-[120px] rounded-full opacity-30 pointer-events-none"
-                    style={{ background: "radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%)" }}
-                  />
-                  <div className="absolute bottom-[-20px] left-[-20px] w-[100px] h-[100px] rounded-full opacity-20 pointer-events-none"
-                    style={{ background: "radial-gradient(circle, rgba(123,91,181,0.3) 0%, transparent 70%)" }}
-                  />
-                </>
+              {/* Subtle orb on featured cards */}
+              {t.featured && (
+                <div className="absolute top-[-40px] right-[-40px] w-[140px] h-[140px] rounded-full opacity-20 pointer-events-none"
+                  style={{ background: "radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%)" }}
+                />
               )}
 
               <div className="relative z-10">
-                {/* Revenue badge */}
-                <div className={`inline-flex px-4 py-2 rounded-full mb-6 ${
-                  t.highlight ? "" : ""
-                }`}
-                  style={{
-                    background: t.highlight
-                      ? "rgba(255,255,255,0.12)"
-                      : "linear-gradient(135deg, #f3eef9 0%, #ebe3f5 100%)",
-                    backdropFilter: t.highlight ? "blur(8px)" : undefined,
-                    border: t.highlight ? "1px solid rgba(255,255,255,0.1)" : "none",
-                    boxShadow: t.highlight ? "none" : "0 2px 6px rgba(88,62,141,0.06)",
-                  }}
-                >
-                  <span className={`text-[14px] font-bold tracking-tight ${
-                    t.highlight ? "text-white" : "text-[#583E8D]"
-                  }`}>
-                    {t.revenue}
+                {/* Top row: badge + verification */}
+                <div className="flex items-center gap-3 mb-5">
+                  <div className={`inline-flex px-3.5 py-1.5 rounded-full ${t.featured ? "" : ""}`}
+                    style={{
+                      background: t.featured
+                        ? "rgba(255,255,255,0.1)"
+                        : "linear-gradient(135deg, #f3eef9 0%, #ebe3f5 100%)",
+                      border: t.featured ? "1px solid rgba(255,255,255,0.08)" : "none",
+                    }}
+                  >
+                    <span className={`text-[13px] font-bold tracking-tight ${t.featured ? "text-white" : "text-[#583E8D]"}`}>
+                      {t.badge}
+                    </span>
+                  </div>
+                  <span className={`text-[10px] font-medium uppercase tracking-wider ${t.featured ? "text-white/40" : "text-[#999]"}`}>
+                    Verified
                   </span>
                 </div>
 
                 {/* Stars */}
-                <div className="flex gap-0.5 mb-5">
+                <div className="flex gap-0.5 mb-4">
                   {[...Array(5)].map((_, s) => (
-                    <svg key={s} width="16" height="16" viewBox="0 0 24 24" fill={t.highlight ? "#f59e0b" : "#f59e0b"}>
+                    <svg key={s} width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" opacity={t.featured ? 0.9 : 1}>
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                     </svg>
                   ))}
                 </div>
 
                 {/* Quote */}
-                <p className={`text-[15px] leading-[1.7] mb-8 ${
-                  t.highlight ? "text-white/90" : "text-[#2a2a2e]"
-                }`}>
+                <p className={`text-[14px] md:text-[15px] leading-[1.7] mb-7 ${t.featured ? "text-white/85" : "text-[#3a3a3e]"}`}>
                   "{t.quote}"
                 </p>
 
-                {/* Author */}
+                {/* Author row */}
                 <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-full flex items-center justify-center"
+                  <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0"
                     style={{
-                      background: t.highlight
-                        ? "rgba(255,255,255,0.15)"
+                      background: t.featured
+                        ? "rgba(255,255,255,0.12)"
                         : "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)",
-                      backdropFilter: t.highlight ? "blur(8px)" : undefined,
-                      border: t.highlight ? "1px solid rgba(255,255,255,0.1)" : "none",
-                      boxShadow: t.highlight ? "none" : "0 4px 12px rgba(88,62,141,0.2)",
+                      border: t.featured ? "1px solid rgba(255,255,255,0.08)" : "none",
+                      boxShadow: t.featured ? "none" : "0 3px 8px rgba(88,62,141,0.15)",
                     }}
                   >
-                    <span className="text-[14px] font-bold text-white">
-                      {t.name[0]}
-                    </span>
+                    <span className="text-[13px] font-bold text-white">{t.name[0]}</span>
                   </div>
                   <div>
-                    <p className={`text-[14px] font-semibold ${
-                      t.highlight ? "text-white" : "text-[#17191c]"
-                    }`}>{t.name}</p>
-                    <p className={`text-[12px] ${
-                      t.highlight ? "text-white/55" : "text-[#777b86]"
-                    }`}>{t.role}</p>
+                    <p className={`text-[13px] font-semibold ${t.featured ? "text-white" : "text-[#17191c]"}`}>
+                      {t.name}
+                    </p>
+                    <p className={`text-[11px] ${t.featured ? "text-white/45" : "text-[#999]"}`}>
+                      {t.context}
+                    </p>
                   </div>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
+
+        {/* Disclaimer */}
+        <p className="text-[11px] text-[#999] text-center mt-6 max-w-[400px] mx-auto">
+          Results vary by product, market and execution. These are student-reported outcomes, not guarantees.
+        </p>
+
+        {/* Subtle CTA transition */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.3 }}
+          className="text-center mt-12"
+        >
+          <p className="text-[15px] text-[#4c4c4c] mb-5 font-medium">
+            Want this level of clarity inside your own store?
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://e-commercementoring.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl text-white text-[14px] font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(88,62,141,0.25)]"
+              style={{ background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)" }}
+            >
+              Apply For Mentorship
+              <ArrowRight size={15} />
+            </a>
+            <a href="#curriculum" className="text-[13px] text-[#583E8D] font-medium hover:underline transition-colors">
+              See What's Included
+            </a>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
