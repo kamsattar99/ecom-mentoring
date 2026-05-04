@@ -21,32 +21,35 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[#ffffff]/95 backdrop-blur-md border-b border-[#e8e8e8]"
+          ? "bg-white/80 backdrop-blur-xl border-b border-[#e8e8e8]/50"
           : "bg-transparent"
       }`}
+      style={scrolled ? { boxShadow: "0 1px 12px rgba(0,0,0,0.03)" } : {}}
     >
-      <div className="container flex items-center justify-between h-[64px]">
-        {/* Logo — like Steep's clean wordmark */}
-        <a href="#" className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-full bg-[#583E8D] flex items-center justify-center">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
+      <div className="container flex items-center justify-between h-[68px]">
+        {/* Logo */}
+        <a href="#" className="flex items-center gap-2.5 group">
+          <div className="w-8 h-8 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:shadow-[0_4px_12px_rgba(88,62,141,0.25)]"
+            style={{ background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)" }}
+          >
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
               <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
             </svg>
           </div>
-          <span className="font-medium text-[#17191c] text-[16px] tracking-[-0.02em]">
+          <span className="font-semibold text-[#17191c] text-[16px] tracking-[-0.02em]">
             Ecom Mentor
           </span>
         </a>
 
-        {/* Desktop Links — centered */}
-        <div className="hidden md:flex items-center gap-7">
+        {/* Desktop Links */}
+        <div className="hidden md:flex items-center gap-1">
           {links.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="text-[14px] text-[#4c4c4c] hover:text-[#17191c] transition-colors duration-200"
+              className="relative text-[14px] text-[#4c4c4c] hover:text-[#17191c] transition-colors duration-200 px-4 py-2 rounded-full hover:bg-[#f5f3f0]"
             >
               {link.label}
             </a>
@@ -54,12 +57,13 @@ export default function Navbar() {
         </div>
 
         {/* CTA */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-3">
           <a
             href="https://e-commercementoring.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center bg-[#17191c] text-white text-[13px] font-medium px-5 py-2.5 rounded-full hover:bg-[#2d2f33] transition-all duration-200"
+            className="inline-flex items-center text-white text-[13px] font-medium px-5 py-2.5 rounded-full transition-all duration-300 hover:-translate-y-[1px] hover:shadow-[0_6px_16px_rgba(88,62,141,0.25)]"
+            style={{ background: "linear-gradient(135deg, #583E8D 0%, #6B4FA8 100%)" }}
           >
             Apply Now
           </a>
@@ -68,7 +72,7 @@ export default function Navbar() {
         {/* Mobile Toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden p-2 text-[#17191c]"
+          className="md:hidden w-10 h-10 rounded-xl flex items-center justify-center text-[#17191c] hover:bg-[#f5f3f0] transition-colors"
         >
           {mobileOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -81,8 +85,9 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="md:hidden bg-white border-b border-[#e8e8e8] px-4 pb-6 pt-2"
+            transition={{ duration: 0.25 }}
+            className="md:hidden bg-white/95 backdrop-blur-xl border-b border-[#e8e8e8]/50 px-4 pb-6 pt-2"
+            style={{ boxShadow: "0 8px 32px rgba(0,0,0,0.06)" }}
           >
             <div className="flex flex-col gap-1">
               {links.map((link) => (
@@ -90,7 +95,7 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="text-[15px] text-[#4c4c4c] hover:text-[#17191c] transition-colors py-3 px-2"
+                  className="text-[15px] text-[#4c4c4c] hover:text-[#17191c] hover:bg-[#f5f3f0] transition-all py-3 px-4 rounded-xl"
                 >
                   {link.label}
                 </a>
@@ -99,7 +104,8 @@ export default function Navbar() {
                 href="https://e-commercementoring.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-3 inline-flex items-center justify-center bg-[#17191c] text-white text-[14px] font-medium px-6 py-3 rounded-full"
+                className="mt-3 inline-flex items-center justify-center text-white text-[14px] font-medium px-6 py-3.5 rounded-full"
+                style={{ background: "linear-gradient(135deg, #583E8D 0%, #6B4FA8 100%)", boxShadow: "0 4px 12px rgba(88,62,141,0.2)" }}
               >
                 Apply Now
               </a>

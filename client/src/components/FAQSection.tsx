@@ -33,8 +33,20 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faqs" className="py-[80px] md:py-[120px] bg-white">
-      <div className="container">
+    <section id="faqs" className="py-[80px] md:py-[120px] bg-white relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute top-[5%] right-[-5%] w-[500px] h-[500px] opacity-20 pointer-events-none"
+        style={{ background: "radial-gradient(circle, rgba(88,62,141,0.08) 0%, transparent 60%)" }}
+      />
+      <div className="absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] opacity-15 pointer-events-none"
+        style={{ background: "radial-gradient(circle, rgba(248,180,120,0.06) 0%, transparent 60%)" }}
+      />
+      {/* Subtle grid */}
+      <div className="absolute inset-0 opacity-[0.012] pointer-events-none"
+        style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px)", backgroundSize: "60px 60px" }}
+      />
+
+      <div className="container relative z-10">
         <div className="grid lg:grid-cols-[1fr_1.5fr] gap-16 items-start">
           {/* Left - Header */}
           <motion.div
@@ -44,25 +56,39 @@ export default function FAQSection() {
             transition={{ duration: 0.5 }}
             className="lg:sticky lg:top-24"
           >
-            <p className="text-[13px] text-[#583E8D] font-medium mb-3">FAQs</p>
+            <div className="inline-flex items-center px-4 py-2 rounded-full mb-6"
+              style={{ background: "linear-gradient(135deg, #f3eef9 0%, #ebe3f5 100%)", boxShadow: "0 2px 8px rgba(88,62,141,0.06)" }}
+            >
+              <span className="text-[12px] text-[#583E8D] font-semibold tracking-wide">FAQs</span>
+            </div>
             <h2 className="font-serif text-[clamp(32px,4vw,48px)] leading-[1.1] tracking-[-0.015em] text-[#17191c] mb-5">
-              Common questions, answered
+              Common questions, <span className="italic text-[#583E8D]">answered</span>
             </h2>
-            <p className="text-[15px] leading-[1.5] text-[#4c4c4c] mb-6">
+            <p className="text-[15px] leading-[1.6] text-[#4c4c4c] mb-8">
               Everything you need to know before applying. Still have questions? Reach out directly.
             </p>
             <a
               href="https://e-commercementoring.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-[14px] font-medium text-[#17191c] hover:opacity-70 transition-opacity"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-white text-[14px] font-medium transition-all duration-300 hover:-translate-y-0.5"
+              style={{
+                background: "linear-gradient(135deg, #17191c 0%, #2a2a2e 100%)",
+                boxShadow: "0 4px 16px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.06)",
+              }}
             >
-              Contact us <span className="text-[#a3a6af]">→</span>
+              Contact us <span>→</span>
             </a>
           </motion.div>
 
           {/* Right - Accordion */}
-          <div>
+          <div className="rounded-[28px] p-6 md:p-8"
+            style={{
+              background: "linear-gradient(145deg, #faf9f7 0%, #f5f3f0 100%)",
+              boxShadow: "0 8px 32px rgba(0,0,0,0.04), 0 2px 8px rgba(0,0,0,0.02), inset 0 1px 0 rgba(255,255,255,0.8)",
+              border: "1px solid rgba(232,232,232,0.4)",
+            }}
+          >
             {faqs.map((faq, i) => (
               <motion.div
                 key={i}
@@ -70,20 +96,42 @@ export default function FAQSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: i * 0.05 }}
-                className="border-b border-[#e8e8e8] last:border-b-0"
+                className={`border-b border-[#e8e8e8]/60 last:border-b-0 transition-all duration-300 ${
+                  openIndex === i ? "bg-white rounded-[18px] -mx-3 px-3 border-transparent my-1" : ""
+                }`}
+                style={{
+                  boxShadow: openIndex === i ? "0 4px 20px rgba(88,62,141,0.06), 0 1px 4px rgba(0,0,0,0.02)" : "none",
+                }}
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                  className="w-full flex items-center justify-between py-6 text-left group"
+                  className="w-full flex items-center justify-between py-5 md:py-6 text-left group px-3"
                 >
-                  <span className="text-[16px] font-medium text-[#17191c] pr-4 group-hover:text-[#583E8D] transition-colors">
+                  <span className={`text-[15px] md:text-[16px] font-medium pr-4 transition-colors duration-200 ${
+                    openIndex === i ? "text-[#583E8D]" : "text-[#17191c] group-hover:text-[#583E8D]"
+                  }`}>
                     {faq.q}
                   </span>
-                  {openIndex === i ? (
-                    <Minus size={16} className="text-[#583E8D] shrink-0" />
-                  ) : (
-                    <Plus size={16} className="text-[#777b86] shrink-0" />
-                  )}
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${
+                    openIndex === i
+                      ? ""
+                      : "group-hover:scale-110"
+                  }`}
+                    style={{
+                      background: openIndex === i
+                        ? "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)"
+                        : "linear-gradient(135deg, #f3eef9 0%, #ebe3f5 100%)",
+                      boxShadow: openIndex === i
+                        ? "0 4px 12px rgba(88,62,141,0.25)"
+                        : "0 2px 6px rgba(88,62,141,0.06)",
+                    }}
+                  >
+                    {openIndex === i ? (
+                      <Minus size={13} className="text-white" strokeWidth={2.5} />
+                    ) : (
+                      <Plus size={13} className="text-[#583E8D]" strokeWidth={2.5} />
+                    )}
+                  </div>
                 </button>
                 <AnimatePresence>
                   {openIndex === i && (
@@ -91,10 +139,10 @@ export default function FAQSection() {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
                       className="overflow-hidden"
                     >
-                      <p className="pb-6 text-[15px] leading-[1.6] text-[#4c4c4c]">
+                      <p className="pb-6 px-3 text-[14px] md:text-[15px] leading-[1.7] text-[#4c4c4c]">
                         {faq.a}
                       </p>
                     </motion.div>
