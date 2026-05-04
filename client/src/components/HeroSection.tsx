@@ -7,14 +7,18 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         {/* Base gradient: warm cream to pale lavender */}
         <div className="absolute inset-0" style={{ background: "radial-gradient(circle at 50% 42%, rgba(245, 229, 210, 0.22), transparent 28%), radial-gradient(circle at 72% 30%, rgba(124, 87, 255, 0.10), transparent 24%), radial-gradient(circle at 22% 72%, rgba(255, 244, 232, 0.18), transparent 22%), linear-gradient(180deg, #fbfaf8 0%, #f6f4f8 100%)" }} />
+        {/* Left side intense purple glow */}
+        <div className="absolute top-[20%] left-[-5%] w-[600px] h-[700px] rounded-full blur-[150px] opacity-40" style={{ background: "radial-gradient(ellipse, rgba(124, 87, 255, 0.35) 0%, rgba(160, 120, 255, 0.15) 40%, transparent 70%)" }} />
+        {/* Right side intense purple glow */}
+        <div className="absolute top-[15%] right-[-5%] w-[600px] h-[700px] rounded-full blur-[150px] opacity-40" style={{ background: "radial-gradient(ellipse, rgba(124, 87, 255, 0.35) 0%, rgba(160, 120, 255, 0.15) 40%, transparent 70%)" }} />
         {/* Central cream glow behind headline + CTA */}
         <div className="absolute top-[30%] left-1/2 -translate-x-1/2 w-[900px] h-[700px] rounded-full blur-[160px] opacity-40" style={{ background: "radial-gradient(ellipse, rgba(248, 240, 228, 0.6) 0%, transparent 70%)" }} />
         {/* Lavender haze behind Hands-On area */}
         <div className="absolute top-[25%] left-[48%] -translate-x-1/2 w-[500px] h-[300px] rounded-full blur-[120px] opacity-30" style={{ background: "radial-gradient(ellipse, rgba(138, 100, 220, 0.18) 0%, transparent 70%)" }} />
         {/* Top-right lavender glow near dashboard card */}
-        <div className="absolute top-[10%] right-[8%] w-[400px] h-[400px] rounded-full blur-[130px] opacity-25" style={{ background: "radial-gradient(circle, rgba(160, 130, 230, 0.2) 0%, transparent 65%)" }} />
-        {/* Bottom-left warm cream glow */}
-        <div className="absolute bottom-[15%] left-[5%] w-[450px] h-[450px] rounded-full blur-[140px] opacity-22" style={{ background: "radial-gradient(circle, rgba(255, 238, 210, 0.3) 0%, transparent 65%)" }} />
+        <div className="absolute top-[10%] right-[8%] w-[400px] h-[400px] rounded-full blur-[130px] opacity-35" style={{ background: "radial-gradient(circle, rgba(140, 100, 240, 0.35) 0%, transparent 65%)" }} />
+        {/* Bottom-left purple-tinted glow */}
+        <div className="absolute bottom-[15%] left-[5%] w-[450px] h-[450px] rounded-full blur-[140px] opacity-35" style={{ background: "radial-gradient(circle, rgba(140, 100, 240, 0.3) 0%, transparent 65%)" }} />
         {/* Subtle warm glow bottom-right */}
         <div className="absolute bottom-[20%] right-[12%] w-[350px] h-[350px] rounded-full blur-[120px] opacity-20" style={{ background: "radial-gradient(circle, rgba(240, 225, 250, 0.25) 0%, transparent 60%)" }} />
         {/* Ultra-light grain/noise overlay for texture */}
