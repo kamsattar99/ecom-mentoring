@@ -72,8 +72,7 @@ export default function Footer() {
             <ul className="space-y-3.5">
               <li><a href="https://www.youtube.com/@TheEcomKing" target="_blank" rel="noopener noreferrer" className="text-[13px] text-white/70 hover:text-white transition-colors duration-200">YouTube Channel</a></li>
               <li><a href="#" className="text-[13px] text-white/70 hover:text-white transition-colors duration-200">Free Training</a></li>
-              <li><a href="#" className="text-[13px] text-white/70 hover:text-white transition-colors duration-200">Blog</a></li>
-              <li><a href="mailto:support@ecommentoring.com" className="text-[13px] text-white/70 hover:text-white transition-colors duration-200">Contact</a></li>
+
             </ul>
           </div>
 
