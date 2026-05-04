@@ -5,32 +5,38 @@ const mentors = [
     name: "Nail",
     role: "Brand Builder & E-Commerce Mentor",
     image: "https://i.ibb.co/Hf4Z2FjB/Gemini-Generated-Image-c5x4sfc5x4sfc5x4.png",
-    paragraphs: [
-      "Nail began his entrepreneurial journey after graduating from university in Poland and working in international trade. Driven by independence, he entered dropshipping in 2018, achieving early success across multiple platforms and investor partnerships.",
-      "In September 2023, he launched his first flagship brand, turning a Shopify venture into one of the most recognised brands in his country. He followed with launches in February and December 2025.",
-      "Now managing three active brands and approaching 7-figure seller status, Nail focuses on global expansion while mentoring the next generation of founders.",
+    credentials: [
+      "Built and scaled e-commerce brands",
+      "Experience across Shopify & international trade",
+      "Focuses on brand building & operational growth",
     ],
+    specialties: ["Brand strategy", "Store structure", "Operations"],
+    bio: "Nail brings hands-on experience from building multiple Shopify brands across international markets, helping students understand the operational foundations behind sustainable e-commerce growth.",
   },
   {
     name: "Kamil Sattar",
-    role: "The Ecom King — Founder & Lead Mentor",
+    role: "Founder & Lead Mentor",
     image: "https://i.ibb.co/jPTyKVyk/Screenshot-2026-01-12-at-14-04-02.png",
     featured: true,
-    paragraphs: [
-      'Kamil Sattar is an <strong>8-figure e-commerce entrepreneur</strong> with over <strong>10 years of hands-on experience</strong> building and scaling profitable online brands.',
-      "Starting out reselling shoes, he mastered supply, demand, and consumer psychology before transitioning fully into e-commerce in 2017. Through relentless testing, he became an expert in performance marketing, branding, and conversion optimisation.",
-      'His mentorship has helped <strong>1,000+ entrepreneurs</strong> scale stores, with hundreds hitting <strong>$100K+ months</strong> and <strong>50+ reaching 7-figure revenue</strong>.',
+    credentials: [
+      "Founder of The Ecom King",
+      "10+ years of e-commerce experience",
+      "1,000+ entrepreneurs trained",
     ],
+    specialties: ["Product research", "Paid ads", "Scaling"],
+    bio: "Kamil brings over a decade of hands-on e-commerce experience, helping students understand the systems behind product validation, store optimisation and profitable scaling.",
   },
   {
     name: "Inders",
     role: "E-Commerce Growth Mentor",
     image: "https://i.ibb.co/gZzwW6Hd/Gemini-Generated-Image-yzo8xlyzo8xlyzo8.png",
-    paragraphs: [
-      "Starting his entrepreneurial journey by reselling shoes, Inders learned early the fundamentals of supply, demand, and consumer psychology.",
-      "What began as flipping sneakers evolved into building and scaling e-commerce brands across multiple niches.",
-      "Today, Inders helps founders optimise conversion rates, systemise growth, and turn underperforming stores into predictable revenue machines.",
+    credentials: [
+      "Built e-commerce brands across multiple niches",
+      "Strong understanding of consumer psychology",
+      "Helps founders improve conversions & growth",
     ],
+    specialties: ["Growth strategy", "CRO", "Store optimisation"],
+    bio: "Inders helps founders optimise conversion rates, systemise growth, and turn underperforming stores into predictable revenue machines through data-driven decisions.",
   },
 ];
 
@@ -167,27 +173,27 @@ export default function LearnMore() {
       <section className="py-16 md:py-24 px-4">
         <div className="max-w-[1200px] mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-12 md:mb-16">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-[#583E8D]/10 text-[#583E8D] text-[13px] font-medium tracking-wide mb-5">
+          <div className="text-center mb-14 md:mb-18">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-[#583E8D]/10 text-[#583E8D] text-[12px] font-medium tracking-wide uppercase mb-5">
               Your Mentors
             </span>
             <h2 className="font-serif font-bold text-[clamp(28px,4vw,44px)] leading-[1.15] tracking-[-0.02em] text-[#17191c]">
-              Meet The Team Behind Your Growth
+              Meet The Operators Behind The Mentorship
             </h2>
-            <p className="mt-4 text-[15px] text-[#666] max-w-[550px] mx-auto leading-relaxed">
-              Real operators who've built, scaled, and exited e-commerce brands — now dedicated to helping you do the same.
+            <p className="mt-4 text-[15px] md:text-[16px] text-[#555] max-w-[620px] mx-auto leading-relaxed">
+              Work with mentors who have built, scaled and managed real e-commerce businesses — bringing practical feedback, frameworks and accountability to your store.
             </p>
           </div>
 
           {/* Mentor Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-7">
             {mentors.map((mentor) => (
               <div
                 key={mentor.name}
-                className={`relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 ${
+                className={`relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 flex flex-col ${
                   mentor.featured
-                    ? "bg-gradient-to-b from-[#1a1225] to-[#0f0a18] ring-2 ring-[#7B5BB5]/60 shadow-[0_0_40px_rgba(123,91,181,0.15)]"
-                    : "bg-gradient-to-b from-[#1c1c22] to-[#111114] ring-1 ring-white/10"
+                    ? "bg-gradient-to-b from-[#1a1225] to-[#0f0a18] ring-2 ring-[#7B5BB5]/50 shadow-[0_12px_48px_rgba(123,91,181,0.2)]"
+                    : "bg-gradient-to-b from-[#1c1c22] to-[#111114] ring-1 ring-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.15)]"
                 }`}
               >
                 {/* Featured badge */}
@@ -199,59 +205,89 @@ export default function LearnMore() {
                   </div>
                 )}
 
-                {/* Photo */}
-                <div className="relative h-[280px] md:h-[300px] overflow-hidden">
+                {/* Photo - brighter with less overlay */}
+                <div className="relative h-[260px] md:h-[280px] overflow-hidden">
                   <img
                     src={mentor.image}
                     alt={mentor.name}
-                    className="w-full h-full object-cover object-top"
+                    className={`w-full h-full object-cover object-top ${mentor.featured ? "brightness-110" : "brightness-105"}`}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1c1c22] via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1c1c22] via-[#1c1c22]/20 to-transparent" />
+                  {/* Purple edge glow for lead mentor */}
+                  {mentor.featured && (
+                    <div className="absolute inset-0 shadow-[inset_0_0_30px_rgba(123,91,181,0.15)]" />
+                  )}
                 </div>
 
                 {/* Content */}
-                <div className="p-6 pt-4">
+                <div className="p-6 pt-4 flex flex-col flex-1">
                   <h3 className="text-white font-bold text-[20px] mb-1">
                     {mentor.name}
                   </h3>
-                  <p className="text-[#7B5BB5] text-[13px] font-semibold mb-3">
+                  <p className="text-[#7B5BB5] text-[13px] font-semibold mb-4">
                     {mentor.role}
                   </p>
-                  {/* Purple accent line */}
-                  <div className="w-8 h-[3px] rounded-full bg-[#7B5BB5] mb-4" />
-                  {/* Bio */}
-                  <div className="space-y-3">
-                    {mentor.paragraphs.map((p, i) => (
-                      <p
-                        key={i}
-                        className="text-[#b0b0b8] text-[13px] leading-[1.7]"
-                        dangerouslySetInnerHTML={{ __html: p }}
-                      />
+
+                  {/* Credibility bullets */}
+                  <ul className="space-y-2 mb-4">
+                    {mentor.credentials.map((cred, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-[#7B5BB5] shrink-0 mt-0.5">
+                          <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                        <span className="text-[#d0d0d8] text-[13px] leading-snug">{cred}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Short bio */}
+                  <p className="text-[#9a9aa8] text-[13px] leading-[1.7] mb-5 flex-1">
+                    {mentor.bio}
+                  </p>
+
+                  {/* Specialist area tags */}
+                  <div className="flex flex-wrap gap-2 mt-auto">
+                    {mentor.specialties.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 rounded-full bg-[#7B5BB5]/10 text-[#c4a8ff] text-[11px] font-medium border border-[#7B5BB5]/20"
+                      >
+                        {tag}
+                      </span>
                     ))}
                   </div>
                 </div>
               </div>
             ))}
           </div>
+
+          {/* Bridge CTA under cards */}
+          <p className="text-center text-[13px] text-[#777] mt-10 font-medium">
+            Apply to see which mentor is best suited to your stage.
+          </p>
         </div>
       </section>
 
-      {/* Stats Brag Banner */}
-      <section className="w-full bg-[#583E8D] py-14 md:py-20">
-        <div className="max-w-[1000px] mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 text-center">
+      {/* Stats Strip */}
+      <section className="w-full bg-gradient-to-r from-[#4e3580] via-[#583E8D] to-[#6b4fa8] py-12 md:py-16 border-t border-[#7B5BB5]/20">
+        <div className="max-w-[900px] mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 text-center">
           <div>
-            <p className="text-white font-bold text-[clamp(36px,5vw,56px)] leading-none tracking-tight">1000+</p>
-            <p className="text-white/80 text-[15px] mt-2 font-medium">Students.</p>
+            <p className="text-white font-bold text-[clamp(32px,4.5vw,48px)] leading-none tracking-tight">1,000+</p>
+            <p className="text-white/75 text-[14px] mt-2 font-medium">Students Trained</p>
           </div>
           <div>
-            <p className="text-white font-bold text-[clamp(36px,5vw,56px)] leading-none tracking-tight">$20M+</p>
-            <p className="text-white/80 text-[15px] mt-2 font-medium">Student Revenue</p>
+            <p className="text-white font-bold text-[clamp(32px,4.5vw,48px)] leading-none tracking-tight">$20M+</p>
+            <p className="text-white/75 text-[14px] mt-2 font-medium">Student-Reported Revenue</p>
           </div>
           <div>
-            <p className="text-white font-bold text-[clamp(36px,5vw,56px)] leading-none tracking-tight">9+</p>
-            <p className="text-white/80 text-[15px] mt-2 font-medium">Years In the Industry</p>
+            <p className="text-white font-bold text-[clamp(32px,4.5vw,48px)] leading-none tracking-tight">9+</p>
+            <p className="text-white/75 text-[14px] mt-2 font-medium">Years Industry Experience</p>
           </div>
         </div>
+        {/* Disclaimer */}
+        <p className="text-center text-[11px] text-white/40 mt-6 px-4 max-w-[600px] mx-auto">
+          Results vary. Figures are based on student-reported outcomes and are not guaranteed. Your success depends on effort, skill and market conditions.
+        </p>
       </section>
 
       {/* Bottom CTA */}
