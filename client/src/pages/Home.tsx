@@ -20,9 +20,9 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <AtoZSystem />
+      <PainPoints />
       <LogoBar />
       <IntroSection />
-      <PainPoints />
       <StatsSection />
       <WhatYouGet />
       <CurriculumSection />

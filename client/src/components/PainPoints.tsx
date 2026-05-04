@@ -1,112 +1,114 @@
 import { motion } from "framer-motion";
 
-const features = [
-  { label: "Product Research", active: true },
-  { label: "Store Setup", active: false },
-  { label: "Paid Ads", active: false },
-  { label: "Scaling", active: false },
-  { label: "Automation", active: false },
+const painPoints = [
+  {
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#583E8D" strokeWidth="1.6">
+        <circle cx="12" cy="8" r="4" />
+        <path d="M6 20v-1a6 6 0 0 1 12 0v1" />
+        <path d="M16 4l1-1M8 4L7 3" />
+      </svg>
+    ),
+    text: "Spending hours guessing which products might sell only to see losses?",
+  },
+  {
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#583E8D" strokeWidth="1.6">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v0M9.5 10.5c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5c0 1.4-1.1 2.5-2.5 2.5v2" />
+        <circle cx="12" cy="17" r="0.5" fill="#583E8D" />
+      </svg>
+    ),
+    text: "Pouring money into ads without knowing if they'll ever pay off?",
+  },
+  {
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#583E8D" strokeWidth="1.6">
+        <path d="M4 12h4l3-9 4 18 3-9h4" />
+      </svg>
+    ),
+    text: "Worrying your store will never break past a few sales a week while others scale to six figures?",
+  },
+  {
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#583E8D" strokeWidth="1.6">
+        <rect x="4" y="4" width="16" height="16" rx="2" />
+        <path d="M8 8h8M8 12h6M8 16h4" />
+      </svg>
+    ),
+    text: "Feeling left behind by competitors who always seem two steps ahead?",
+  },
+  {
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#583E8D" strokeWidth="1.6">
+        <circle cx="12" cy="12" r="3" />
+        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+      </svg>
+    ),
+    text: 'Overwhelmed by endless "gurus," tools, and conflicting advice on what actually works?',
+  },
+  {
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#583E8D" strokeWidth="1.6">
+        <path d="M3 3v18h18" />
+        <path d="M7 16l4-4 4 4 6-6" />
+      </svg>
+    ),
+    text: "Tired of rewriting your strategy every month without seeing real traction?",
+  },
 ];
 
 export default function PainPoints() {
   return (
-    <section className="py-[80px] md:py-[120px] bg-[#f9f9fa] overflow-hidden">
+    <section className="py-[80px] md:py-[120px] bg-[#f5f4f2]">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left - Text content (like Steep's "Engage everyone" section) */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <p className="text-[13px] text-[#583E8D] font-medium mb-3">Product &gt;</p>
-            <h2 className="font-serif text-[clamp(36px,4.5vw,56px)] leading-[1.08] tracking-[-0.02em] text-[#17191c] mb-5">
-              Stop guessing, start building
-            </h2>
-            <p className="text-[16px] leading-[1.6] text-[#4c4c4c] mb-8 max-w-[440px]">
-              Our mentorship replaces the chaos of YouTube tutorials and conflicting advice with a clear, step-by-step system that actually works.
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16 relative"
+        >
+          <p className="text-[14px] text-[#777b86] font-medium mb-4">Is this you?</p>
+          <h2 className="font-serif text-[clamp(36px,4.5vw,56px)] leading-[1.1] tracking-[-0.02em] text-[#17191c] max-w-[700px] mx-auto">
+            Does Growing Your Ecom Store Feel More{" "}
+            <span className="text-[#583E8D] italic">Draining Than Rewarding?</span>
+          </h2>
+
+          {/* Handwritten annotation */}
+          <div className="absolute top-4 right-[10%] hidden lg:block">
+            <p className="text-[14px] font-medium tracking-[0.05em] text-[#17191c] uppercase" style={{ fontFamily: "'Caveat', cursive" }}>
+              <span className="text-[16px] normal-case tracking-normal" style={{ fontFamily: "'Caveat', cursive" }}>
+                Sounds familiar?
+              </span>
             </p>
-            <a
-              href="#curriculum"
-              className="inline-flex items-center gap-2 text-[15px] font-medium text-[#17191c] hover:opacity-70 transition-opacity"
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" className="ml-4 mt-1">
+              <path d="M5 5 C 10 15, 15 20, 20 25" stroke="#17191c" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+              <path d="M15 23 L20 25 L18 20" stroke="#17191c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            </svg>
+          </div>
+        </motion.div>
+
+        {/* 3x2 Grid of pain points */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 max-w-[960px] mx-auto">
+          {painPoints.map((point, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
+              className="text-center"
             >
-              Learn more <span className="text-[#a3a6af]">→</span>
-            </a>
-
-            {/* Feature list (like Steep's sidebar nav) */}
-            <div className="mt-10 space-y-1 border-l border-[#e8e8e8] pl-4">
-              {features.map((f) => (
-                <div
-                  key={f.label}
-                  className={`py-2 px-3 rounded-lg text-[15px] transition-colors ${
-                    f.active
-                      ? "text-[#17191c] font-medium bg-white border border-[#e8e8e8]"
-                      : "text-[#777b86]"
-                  }`}
-                >
-                  {f.label}
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Right - Shopify analytics dashboard images */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative"
-          >
-            {/* Warm gradient glow behind */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#f8e8d4]/60 via-[#ede4f7]/40 to-transparent rounded-[32px] blur-[40px] scale-110" />
-            
-            {/* Stacked analytics cards */}
-            <div className="relative space-y-4">
-              {/* Top row - Total Sales (large) */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-              >
-                <img
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-total-sales-Rdmh5wtQRyFfGinKfiFvwP.webp"
-                  alt="Total Sales - $250,000"
-                  className="w-full max-w-[420px] rounded-2xl shadow-[0_12px_40px_rgba(0,0,0,0.06)]"
-                />
-              </motion.div>
-
-              {/* Bottom row - Two smaller cards */}
-              <div className="grid grid-cols-2 gap-4">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.5 }}
-                >
-                  <img
-                    src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-sessions-device-38MypvLYE5mt2H82mSxXPK.webp"
-                    alt="Sessions by Device"
-                    className="w-full rounded-2xl shadow-[0_12px_40px_rgba(0,0,0,0.06)]"
-                  />
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.6 }}
-                >
-                  <img
-                    src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-sales-country-3wvFYXTrqPCU22m66QfsHX.webp"
-                    alt="Sessions by Country"
-                    className="w-full rounded-2xl shadow-[0_12px_40px_rgba(0,0,0,0.06)]"
-                  />
-                </motion.div>
+              <div className="w-14 h-14 rounded-xl bg-[#EDE8F5] flex items-center justify-center mx-auto mb-4">
+                {point.icon}
               </div>
-            </div>
-          </motion.div>
+              <p className="text-[15px] leading-[1.5] text-[#17191c] font-medium max-w-[260px] mx-auto">
+                {point.text}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
