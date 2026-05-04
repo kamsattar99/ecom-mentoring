@@ -13,10 +13,9 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { label: "Product", href: "#curriculum" },
-    { label: "Resources", href: "#reviews" },
-    { label: "Customers", href: "#testimonials" },
-    { label: "Pricing", href: "#faqs" },
+    { label: "Curriculum", href: "#curriculum" },
+    { label: "Reviews", href: "#reviews" },
+    { label: "FAQs", href: "#faqs" },
   ];
 
   return (
