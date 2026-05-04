@@ -64,6 +64,10 @@ export default function IntroSection() {
                   src={pillar.image}
                   alt={pillar.imageAlt}
                   className="w-full max-w-[280px] rounded-xl"
+                  width={280}
+                  height={180}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <p className="text-[14px] leading-[1.5] text-[#4c4c4c]">

@@ -22,6 +22,10 @@ export default function Footer() {
                   src="/manus-storage/ecom-mentoring-footer-logo_6a87be9b.webp"
                   alt="eMentoring"
                   className="h-[48px] w-auto"
+                  width={160}
+                  height={48}
+                  loading="lazy"
+                  decoding="async"
                 />
               </a>
             </div>

@@ -101,6 +101,10 @@ export default function WhatYouGet() {
                     src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-customers-time-X3ms7jG8yZk3tc2x3jGNVj.webp"
                     alt="Customer Growth Trend"
                     className="w-full rounded-xl"
+                    width={400}
+                    height={250}
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </motion.div>

@@ -201,6 +201,8 @@ export default function LearnMore() {
                     src={mentor.image}
                     alt={mentor.name}
                     className={`w-full h-full object-cover object-top ${mentor.featured ? "brightness-110" : "brightness-105"}`}
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1c1c22] via-[#1c1c22]/20 to-transparent" />
                   {/* Purple edge glow for lead mentor */}

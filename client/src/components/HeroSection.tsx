@@ -50,6 +50,10 @@ export default function HeroSection() {
             alt="Total Sales: $250,000"
             className="w-[320px] rounded-2xl border border-white/70"
             style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.1), 0 4px 12px rgba(88,62,141,0.06)" }}
+            width={320}
+            height={200}
+            loading="eager"
+            decoding="async"
           />
         </motion.div>
       </motion.div>
@@ -70,6 +74,10 @@ export default function HeroSection() {
             alt="Sessions by Device"
             className="w-[300px] rounded-2xl border border-white/70"
             style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.1), 0 4px 12px rgba(88,62,141,0.06)" }}
+            width={300}
+            height={200}
+            loading="eager"
+            decoding="async"
           />
         </motion.div>
       </motion.div>
@@ -90,6 +98,10 @@ export default function HeroSection() {
             alt="Customers over Time"
             className="w-[300px] rounded-2xl border border-white/70"
             style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.1), 0 4px 12px rgba(88,62,141,0.06)" }}
+            width={300}
+            height={200}
+            loading="lazy"
+            decoding="async"
           />
         </motion.div>
       </motion.div>
@@ -110,6 +122,10 @@ export default function HeroSection() {
             alt="Sessions by Country"
             className="w-[290px] rounded-2xl border border-white/70"
             style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.1), 0 4px 12px rgba(88,62,141,0.06)" }}
+            width={290}
+            height={200}
+            loading="lazy"
+            decoding="async"
           />
         </motion.div>
       </motion.div>

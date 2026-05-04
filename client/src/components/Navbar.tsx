@@ -34,6 +34,9 @@ export default function Navbar() {
             src="/manus-storage/ecom-mentoring-logo_b617fdab.webp"
             alt="eMentoring"
             className="h-[48px] w-auto"
+            width={160}
+            height={48}
+            fetchPriority="high"
           />
         </a>
 
