@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Apply from "./pages/Apply";
 import LearnMore from "./pages/LearnMore";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Navbar from "./components/Navbar";
 import { useLocation } from "wouter";
 
@@ -29,6 +30,7 @@ function Router() {
         <Route path={"/"} component={Home} />
         <Route path={"/learn-more"} component={LearnMore} />
         <Route path={"/apply"} component={Apply} />
+        <Route path={"/privacy-policy"} component={PrivacyPolicy} />
         <Route path={"/404"} component={NotFound} />
         <Route component={NotFound} />
       </Switch>
