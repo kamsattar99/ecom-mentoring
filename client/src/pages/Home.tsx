@@ -16,9 +16,9 @@ export default function Home() {
     <div className="min-h-screen bg-white overflow-x-hidden">
       <Navbar />
       <HeroSection />
+      <LogoBar />
       <AtoZSystem />
       <PainPoints />
-      <LogoBar />
       <WhatYouGet />
       <CurriculumSection />
       <TestimonialsSection />
