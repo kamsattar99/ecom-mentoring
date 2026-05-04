@@ -30,17 +30,12 @@ export default function Navbar() {
     >
       <div className="container flex items-center justify-between h-[68px]">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2.5 group">
-          <div className="w-8 h-8 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:shadow-[0_4px_12px_rgba(88,62,141,0.25)]"
-            style={{ background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)" }}
-          >
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-            </svg>
-          </div>
-          <span className="font-semibold text-[#17191c] text-[16px] tracking-[-0.02em]">
-            Ecom Mentor
-          </span>
+        <a href="#" className="flex items-center group">
+          <img
+            src="/manus-storage/ecom-mentoring-logo_b617fdab.webp"
+            alt="eMentoring"
+            className="h-[36px] w-auto"
+          />
         </a>
 
         {/* Desktop Links */}

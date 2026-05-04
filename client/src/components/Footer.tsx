@@ -18,15 +18,12 @@ export default function Footer() {
         <div className="grid md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-10 md:gap-8">
           {/* Brand column */}
           <div>
-            <div className="flex items-center gap-2.5 mb-5">
-              <div className="w-9 h-9 rounded-xl flex items-center justify-center"
-                style={{ background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)", boxShadow: "0 4px 16px rgba(88,62,141,0.35)" }}
-              >
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
-                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                </svg>
-              </div>
-              <span className="text-[17px] font-semibold text-white">Ecom Mentor</span>
+            <div className="flex items-center mb-5">
+              <img
+                src="/manus-storage/ecom-mentoring-logo_b617fdab.webp"
+                alt="eMentoring"
+                className="h-[36px] w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-[14px] text-[#6b6f78] leading-[1.7] max-w-[280px] mb-7">
               The proven mentorship system for serious e-commerce founders. Built by operators, not theorists.
