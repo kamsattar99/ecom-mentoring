@@ -229,14 +229,8 @@ export default defineConfig({
           if (id.includes('node_modules/react/') || id.includes('node_modules/react-dom/')) {
             return 'vendor-react';
           }
-          if (id.includes('node_modules/framer-motion/')) {
-            return 'vendor-motion';
-          }
           if (id.includes('node_modules/@radix-ui/')) {
             return 'vendor-radix';
-          }
-          if (id.includes('node_modules/recharts/') || id.includes('node_modules/d3-')) {
-            return 'vendor-recharts';
           }
           if (id.includes('node_modules/wouter/')) {
             return 'vendor-router';

@@ -1,13 +1,4 @@
-import { useEffect, useState } from "react";
-
 export default function HeroSection() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    // Trigger entrance animations after hydration
-    requestAnimationFrame(() => setMounted(true));
-  }, []);
-
   return (
     <section className="relative pt-[90px] pb-[60px] md:pt-[160px] md:pb-[80px] overflow-hidden">
       {/* Background: layered radial glows for premium depth */}
@@ -31,12 +22,9 @@ export default function HeroSection() {
       <div className="absolute bottom-[12%] left-[3%] xl:left-[6%] w-[320px] h-[240px] rounded-3xl blur-[45px] opacity-16 hidden lg:block" style={{ background: "radial-gradient(ellipse, rgba(248, 230, 200, 0.4) 0%, transparent 70%)" }} />
       <div className="absolute bottom-[14%] right-[3%] xl:right-[6%] w-[310px] h-[230px] rounded-3xl blur-[45px] opacity-16 hidden lg:block" style={{ background: "radial-gradient(ellipse, rgba(210, 190, 240, 0.35) 0%, transparent 70%)" }} />
 
-      {/* Floating Analytics Cards - CSS animations instead of framer-motion */}
+      {/* Floating Analytics Cards - hidden on mobile, lazy loaded */}
       {/* Top Left - Total Sales */}
-      <div
-        className={`absolute top-[14%] left-[4%] xl:left-[8%] hidden lg:block transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-        style={{ transitionDelay: "0.8s" }}
-      >
+      <div className="absolute top-[14%] left-[4%] xl:left-[8%] hidden lg:block">
         <div className="animate-float-slow">
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-total-sales-Rdmh5wtQRyFfGinKfiFvwP.webp"
@@ -45,17 +33,15 @@ export default function HeroSection() {
             style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.1), 0 4px 12px rgba(88,62,141,0.06)" }}
             width={320}
             height={200}
-            loading="lazy"
+            loading="eager"
             decoding="async"
+            fetchPriority="low"
           />
         </div>
       </div>
 
       {/* Top Right - Sessions by Device */}
-      <div
-        className={`absolute top-[10%] right-[4%] xl:right-[8%] hidden lg:block transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-        style={{ transitionDelay: "1.0s" }}
-      >
+      <div className="absolute top-[10%] right-[4%] xl:right-[8%] hidden lg:block">
         <div className="animate-float-medium">
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-sessions-device-38MypvLYE5mt2H82mSxXPK.webp"
@@ -64,17 +50,15 @@ export default function HeroSection() {
             style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.1), 0 4px 12px rgba(88,62,141,0.06)" }}
             width={300}
             height={200}
-            loading="lazy"
+            loading="eager"
             decoding="async"
+            fetchPriority="low"
           />
         </div>
       </div>
 
       {/* Bottom Left - Customers over Time */}
-      <div
-        className={`absolute bottom-[12%] left-[3%] xl:left-[6%] hidden lg:block transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-        style={{ transitionDelay: "1.2s" }}
-      >
+      <div className="absolute bottom-[12%] left-[3%] xl:left-[6%] hidden lg:block">
         <div className="animate-float-fast">
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-customers-time-X3ms7jG8yZk3tc2x3jGNVj.webp"
@@ -83,17 +67,15 @@ export default function HeroSection() {
             style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.1), 0 4px 12px rgba(88,62,141,0.06)" }}
             width={300}
             height={200}
-            loading="lazy"
+            loading="eager"
             decoding="async"
+            fetchPriority="low"
           />
         </div>
       </div>
 
       {/* Bottom Right - Sessions by Country */}
-      <div
-        className={`absolute bottom-[14%] right-[3%] xl:right-[6%] hidden lg:block transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-        style={{ transitionDelay: "1.4s" }}
-      >
+      <div className="absolute bottom-[14%] right-[3%] xl:right-[6%] hidden lg:block">
         <div className="animate-float-reverse">
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-sales-country-3wvFYXTrqPCU22m66QfsHX.webp"
@@ -102,17 +84,16 @@ export default function HeroSection() {
             style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.1), 0 4px 12px rgba(88,62,141,0.06)" }}
             width={290}
             height={200}
-            loading="lazy"
+            loading="eager"
             decoding="async"
+            fetchPriority="low"
           />
         </div>
       </div>
 
       <div className="container relative">
         {/* Urgency badge */}
-        <div
-          className={`flex justify-center mb-7 transition-all duration-500 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
-        >
+        <div className="flex justify-center mb-7">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-[#e8e8e8]/60"
             style={{ boxShadow: "0 2px 12px rgba(0,0,0,0.03)" }}
           >
@@ -122,10 +103,7 @@ export default function HeroSection() {
         </div>
 
         {/* Headline */}
-        <div
-          className={`text-center max-w-[820px] mx-auto transition-all duration-600 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-7"}`}
-          style={{ transitionDelay: "0.1s" }}
-        >
+        <div className="text-center max-w-[820px] mx-auto">
           <h1 className="font-serif font-bold text-[clamp(36px,5.5vw,68px)] leading-[1.08] tracking-[-0.02em] text-[#17191c] mb-6">
             Build & Scale Your E‑Commerce Brand With{" "}
             <span className="relative inline-block">
@@ -140,10 +118,7 @@ export default function HeroSection() {
         </div>
 
         {/* CTA */}
-        <div
-          className={`flex flex-col items-center justify-center mb-12 transition-all duration-500 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
-          style={{ transitionDelay: "0.3s" }}
-        >
+        <div className="flex flex-col items-center justify-center mb-12">
           <a
             href="https://e-commercementoring.com/learn-more"
             target="_blank"
@@ -165,10 +140,7 @@ export default function HeroSection() {
         </div>
 
         {/* Proof bar: 3 stats */}
-        <div
-          className={`flex flex-row items-center justify-center gap-0 mb-10 transition-all duration-600 ${mounted ? "opacity-100" : "opacity-0"}`}
-          style={{ transitionDelay: "0.5s" }}
-        >
+        <div className="flex flex-row items-center justify-center gap-0 mb-10">
           {/* Stat 1 */}
           <div className="flex items-center gap-2 px-3 sm:px-6">
             <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#EDE8F5] flex items-center justify-center flex-shrink-0">
@@ -218,10 +190,7 @@ export default function HeroSection() {
         </div>
 
         {/* Founder credibility line */}
-        <div
-          className={`text-center transition-all duration-500 ${mounted ? "opacity-100" : "opacity-0"}`}
-          style={{ transitionDelay: "0.7s" }}
-        >
+        <div className="text-center">
           <p className="text-[13px] text-[#999] font-medium">
             Led by Kamil Sattar, founder of The Ecom King — trusted by 600k+ e-commerce entrepreneurs.
           </p>
