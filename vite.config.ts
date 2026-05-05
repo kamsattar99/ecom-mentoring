@@ -213,6 +213,10 @@ export default defineConfig({
       "@shared": path.resolve(import.meta.dirname, "shared"),
       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
     },
+    conditions: ['production', 'import', 'module', 'browser', 'default'],
+  },
+  define: {
+    'process.env.NODE_ENV': JSON.stringify('production'),
   },
   envDir: path.resolve(import.meta.dirname),
   root: path.resolve(import.meta.dirname, "client"),

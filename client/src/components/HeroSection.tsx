@@ -45,7 +45,7 @@ export default function HeroSection() {
             style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.1), 0 4px 12px rgba(88,62,141,0.06)" }}
             width={320}
             height={200}
-            loading="eager"
+            loading="lazy"
             decoding="async"
           />
         </div>
@@ -64,7 +64,7 @@ export default function HeroSection() {
             style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.1), 0 4px 12px rgba(88,62,141,0.06)" }}
             width={300}
             height={200}
-            loading="eager"
+            loading="lazy"
             decoding="async"
           />
         </div>

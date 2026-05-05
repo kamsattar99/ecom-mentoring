@@ -1,7 +1,6 @@
 import { lazy, Suspense } from "react";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
-import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -53,12 +52,10 @@ function Router() {
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider defaultTheme="light">
-        <Suspense fallback={null}>
-          <Toaster />
-        </Suspense>
-        <Router />
-      </ThemeProvider>
+      <Suspense fallback={null}>
+        <Toaster />
+      </Suspense>
+      <Router />
     </ErrorBoundary>
   );
 }
