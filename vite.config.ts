@@ -203,7 +203,20 @@ function vitePluginStorageProxy(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()];
+// Skip the manus-runtime plugin in production: it injects a 366KB synchronous
+// inline script (Manus visual editor + bundled React) at the top of <body> that
+// blocks first paint on mobile. The live site doesn't need it. Set
+// MANUS_KEEP_RUNTIME=1 to force-include (e.g. if Manus previews prod builds).
+const __isProdBuild = process.env.NODE_ENV === "production";
+const __keepManusRuntime = process.env.MANUS_KEEP_RUNTIME === "1";
+const plugins = [
+  react(),
+  tailwindcss(),
+  jsxLocPlugin(),
+  ...(!__isProdBuild || __keepManusRuntime ? [vitePluginManusRuntime()] : []),
+  vitePluginManusDebugCollector(),
+  vitePluginStorageProxy(),
+];
 
 export default defineConfig({
   plugins,
