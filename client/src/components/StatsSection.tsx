@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 
 const stats = [
   { value: "2M+", label: "YouTube Subscribers" },
@@ -10,11 +9,7 @@ export default function StatsSection() {
   return (
     <section className="py-[48px] md:py-[64px] bg-white border-b border-[#f0f0f0]">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+        <div
           className="grid grid-cols-3 gap-4 md:gap-8 max-w-[680px] mx-auto"
         >
           {stats.map((stat, i) => (
@@ -28,7 +23,7 @@ export default function StatsSection() {
               )}
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

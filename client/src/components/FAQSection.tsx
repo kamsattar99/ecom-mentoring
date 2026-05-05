@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus, ArrowRight, MessageCircle } from "lucide-react";
 
 const faqs = [
@@ -50,11 +49,7 @@ export default function FAQSection() {
       <div className="container relative z-10">
         <div className="grid lg:grid-cols-[380px_1fr] gap-12 lg:gap-16 max-w-[1080px] mx-auto">
           {/* Left side — header + CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+          <div
             className="lg:sticky lg:top-[120px] lg:self-start"
           >
             <div className="inline-flex items-center px-3.5 py-1.5 rounded-full border border-[#583E8D]/10 bg-white/80 backdrop-blur-sm mb-5 shadow-[0_2px_8px_rgba(88,62,141,0.05)]">
@@ -105,14 +100,10 @@ export default function FAQSection() {
             <p className="text-[11px] text-[#999]">
               Applications are reviewed before calls are booked.
             </p>
-          </motion.div>
+          </div>
 
           {/* Right side — FAQ accordion */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+          <div
           >
             <div className="rounded-[20px] bg-white overflow-hidden"
               style={{ boxShadow: "0 4px 24px rgba(88,62,141,0.04), 0 1px 4px rgba(0,0,0,0.02)", border: "1px solid rgba(232,232,232,0.6)" }}
@@ -136,13 +127,9 @@ export default function FAQSection() {
                         )}
                       </div>
                     </button>
-                    <AnimatePresence initial={false}>
+                    
                       {isOpen && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.25, ease: "easeInOut" }}
+                        <div
                           className="overflow-hidden"
                         >
                           <div className="px-6 md:px-7 pb-5">
@@ -150,9 +137,9 @@ export default function FAQSection() {
                               {faq.answer}
                             </p>
                           </div>
-                        </motion.div>
+                        </div>
                       )}
-                    </AnimatePresence>
+                    
                   </div>
                 );
               })}
@@ -173,7 +160,7 @@ export default function FAQSection() {
                 Results vary based on execution
               </span>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

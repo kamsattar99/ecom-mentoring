@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 
 const painPoints = [
   {
@@ -71,11 +70,7 @@ export default function PainPoints() {
     <section className="py-[80px] md:py-[120px] relative overflow-hidden" style={{ background: "linear-gradient(180deg, #f8f5fc 0%, #f3eef9 50%, #faf9f7 100%)" }}>
       <div className="container">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+        <div
           className="text-center mb-14 relative"
         >
           {/* Eyebrow label */}
@@ -92,17 +87,13 @@ export default function PainPoints() {
           <p className="text-[16px] md:text-[17px] leading-[1.65] text-[#5a5a6a] max-w-[560px] mx-auto">
             If you are stuck guessing, second-guessing, and spinning your wheels — you are not alone. Most founders do not need more noise, they need a clear roadmap.
           </p>
-        </motion.div>
+        </div>
 
         {/* 3x2 Grid of pain points */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-[960px] mx-auto mb-12">
           {painPoints.map((point, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.07 }}
               className="group relative bg-white rounded-[18px] p-6 transition-all duration-300 hover:-translate-y-1 border border-[#f0ecf5]/80"
               style={{
                 boxShadow: "0 2px 12px rgba(88, 62, 141, 0.04), 0 1px 3px rgba(0,0,0,0.02)",
@@ -137,22 +128,18 @@ export default function PainPoints() {
                   {point.body}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Transition line */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+        <div
           className="text-center"
         >
           <p className="text-[16px] md:text-[17px] text-[#583E8D] font-medium italic">
             You do not need more noise — you need a proven system.
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

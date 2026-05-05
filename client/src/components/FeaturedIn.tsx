@@ -1,14 +1,9 @@
-import { motion } from "framer-motion";
 
 export default function FeaturedIn() {
   return (
     <section className="py-[60px] md:py-[80px] bg-white border-y border-[#e8e8e8]">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+        <div
           className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20"
         >
           <div className="text-center">
@@ -31,7 +26,7 @@ export default function FeaturedIn() {
             </p>
             <p className="text-[13px] text-[#777b86] mt-1">Years Experience</p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

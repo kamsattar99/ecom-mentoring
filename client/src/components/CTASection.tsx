@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { ArrowRight, Layers, MessageSquare, BarChart3 } from "lucide-react";
 
 export default function CTASection() {
@@ -10,11 +9,7 @@ export default function CTASection() {
       />
 
       <div className="container relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+        <div
           className="relative overflow-hidden rounded-[28px] md:rounded-[36px] px-6 py-14 md:px-16 md:py-20"
           style={{
             boxShadow: "0 24px 80px rgba(88,62,141,0.1), 0 8px 24px rgba(0,0,0,0.03), inset 0 1px 0 rgba(255,255,255,0.7)",
@@ -47,11 +42,7 @@ export default function CTASection() {
 
           <div className="relative text-center max-w-[600px] mx-auto">
             {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.2 }}
+            <div
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-7"
               style={{
                 background: "rgba(255,255,255,0.75)",
@@ -62,7 +53,7 @@ export default function CTASection() {
             >
               <div className="w-2 h-2 rounded-full bg-[#583E8D] shadow-[0_0_6px_rgba(88,62,141,0.4)]" />
               <span className="text-[12px] font-semibold text-[#17191c] tracking-wide">Limited Mentor Capacity</span>
-            </motion.div>
+            </div>
 
             {/* Headline */}
             <h2 className="font-serif text-[clamp(32px,4.5vw,52px)] leading-[1.1] tracking-[-0.02em] text-[#17191c] mb-5">
@@ -76,12 +67,10 @@ export default function CTASection() {
             </p>
 
             {/* CTA Button */}
-            <motion.a
+            <a
               href="https://e-commercementoring.com/learn-more"
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.03, y: -2 }}
-              whileTap={{ scale: 0.98 }}
               className="inline-flex items-center gap-3 text-white text-[15px] font-semibold px-11 py-[18px] rounded-full transition-all duration-300"
               style={{
                 background: "linear-gradient(135deg, #583E8D 0%, #6B4FA8 50%, #7B5BB5 100%)",
@@ -89,7 +78,7 @@ export default function CTASection() {
               }}
             >
               Apply For Mentorship <ArrowRight size={16} />
-            </motion.a>
+            </a>
 
             {/* Microcopy */}
             <p className="text-[13px] text-[#777b86] mt-5 leading-[1.5]">
@@ -105,11 +94,7 @@ export default function CTASection() {
             </a>
 
             {/* Trust indicators */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.4 }}
+            <div
               className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mt-10 pt-7 border-t border-[#17191c]/5"
             >
               {[
@@ -133,9 +118,9 @@ export default function CTASection() {
                   <span className="text-[12px] font-medium text-[#4c4c4c]">{label}</span>
                 </div>
               ))}
-            </motion.div>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus, Check } from "lucide-react";
 
 const stages = [
@@ -90,11 +89,7 @@ export default function CurriculumSection() {
 
       <div className="container relative z-10">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+        <div
           className="text-center mb-14"
         >
           <div className="inline-flex items-center px-3.5 py-1.5 rounded-full border border-[#583E8D]/12 bg-white/80 backdrop-blur-sm mb-5 shadow-[0_2px_8px_rgba(88,62,141,0.05)]">
@@ -107,25 +102,17 @@ export default function CurriculumSection() {
           <p className="text-[15px] md:text-[16px] text-[#5a5a6a] mt-5 max-w-[560px] mx-auto leading-[1.6]">
             A structured framework designed to help you validate products, build your store, launch ads, scale profitably, and create a business with long-term potential.
           </p>
-        </motion.div>
+        </div>
 
         {/* Two-column layout */}
         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-10 items-start">
           {/* Left — Accordion stages */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+          <div
             className="space-y-3"
           >
             {stages.map((stage, i) => (
-              <motion.div
+              <div
                 key={i}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: 0.05 * i }}
                 className={`group rounded-2xl border transition-all duration-300 ${
                   openIndex === i
                     ? "bg-white border-[#583E8D]/15"
@@ -175,13 +162,9 @@ export default function CurriculumSection() {
                     )}
                   </div>
                 </button>
-                <AnimatePresence>
+                
                   {openIndex === i && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                    <div
                       className="overflow-hidden"
                     >
                       <div className="px-5 md:px-6 pb-5 md:pb-6 pl-[76px] md:pl-[84px]">
@@ -199,24 +182,20 @@ export default function CurriculumSection() {
                           ))}
                         </div>
                       </div>
-                    </motion.div>
+                    </div>
                   )}
-                </AnimatePresence>
-              </motion.div>
+                
+              </div>
             ))}
 
             {/* Trust line below accordion */}
             <p className="text-[13px] text-[#583E8D]/70 italic text-center pt-4">
               Designed to remove guesswork at every stage.
             </p>
-          </motion.div>
+          </div>
 
           {/* Right — Dark apply card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+          <div
             className="lg:sticky lg:top-[100px]"
           >
             <div className="relative bg-[#17191c] rounded-[24px] p-7 md:p-8 text-white overflow-hidden"
@@ -301,7 +280,7 @@ export default function CurriculumSection() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

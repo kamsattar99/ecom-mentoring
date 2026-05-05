@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Check, X, ArrowRight } from "lucide-react";
 
 const forYou = [
@@ -27,11 +26,7 @@ export default function ForYouSection() {
 
       <div className="container relative z-10">
         {/* Section header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+        <div
           className="text-center max-w-[640px] mx-auto mb-14"
         >
           <div className="inline-flex items-center px-3.5 py-1.5 rounded-full border border-[#583E8D]/10 bg-white/80 backdrop-blur-sm mb-5 shadow-[0_2px_8px_rgba(88,62,141,0.05)]">
@@ -44,16 +39,12 @@ export default function ForYouSection() {
           <p className="text-[14px] md:text-[15px] text-[#777b86] mt-4 max-w-[500px] mx-auto leading-[1.7]">
             This is not another passive course. It is a hands-on mentorship for people who are ready to follow a system, take feedback, and build with consistency.
           </p>
-        </motion.div>
+        </div>
 
         {/* Two columns */}
         <div className="grid md:grid-cols-2 gap-5 max-w-[920px] mx-auto">
           {/* For You */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+          <div
             className="group relative rounded-[20px] bg-white overflow-hidden transition-all duration-300 hover:-translate-y-1"
             style={{
               boxShadow: "0 4px 24px rgba(88,62,141,0.05), 0 1px 4px rgba(0,0,0,0.02)",
@@ -82,12 +73,8 @@ export default function ForYouSection() {
               {/* Bullet list */}
               <ul className="space-y-4">
                 {forYou.map((item, i) => (
-                  <motion.li
+                  <li
                     key={i}
-                    initial={{ opacity: 0, x: -8 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: 0.1 + i * 0.04 }}
                     className="flex items-start gap-3"
                   >
                     <div className="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5"
@@ -96,18 +83,14 @@ export default function ForYouSection() {
                       <Check size={10} className="text-white" strokeWidth={3} />
                     </div>
                     <span className="text-[13px] md:text-[14px] text-[#3a3a3e] leading-[1.6]">{item}</span>
-                  </motion.li>
+                  </li>
                 ))}
               </ul>
             </div>
-          </motion.div>
+          </div>
 
           {/* Not For You */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+          <div
             className="group relative rounded-[20px] bg-white overflow-hidden transition-all duration-300 hover:-translate-y-1"
             style={{
               boxShadow: "0 4px 20px rgba(0,0,0,0.03), 0 1px 4px rgba(0,0,0,0.02)",
@@ -136,31 +119,23 @@ export default function ForYouSection() {
               {/* Bullet list */}
               <ul className="space-y-4">
                 {notForYou.map((item, i) => (
-                  <motion.li
+                  <li
                     key={i}
-                    initial={{ opacity: 0, x: -8 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: 0.15 + i * 0.04 }}
                     className="flex items-start gap-3"
                   >
                     <div className="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 bg-[#fce4ec]">
                       <X size={10} className="text-red-400" strokeWidth={3} />
                     </div>
                     <span className="text-[13px] md:text-[14px] text-[#5a5a5a] leading-[1.6]">{item}</span>
-                  </motion.li>
+                  </li>
                 ))}
               </ul>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Conversion bridge */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.3 }}
+        <div
           className="text-center mt-12"
         >
           <p className="text-[14px] text-[#4c4c4c] mb-5 font-medium">
@@ -179,7 +154,7 @@ export default function ForYouSection() {
           <p className="text-[11px] text-[#999] mt-4">
             Applications are reviewed before calls are booked. Limited mentor capacity.
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

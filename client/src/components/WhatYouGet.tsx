@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 
 const deliverables = [
   {
@@ -71,11 +70,7 @@ export default function WhatYouGet() {
       <div className="container relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left — Mockups */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="relative order-2 lg:order-1"
           >
             {/* Warm gradient glow behind */}
@@ -83,11 +78,7 @@ export default function WhatYouGet() {
 
             <div className="relative space-y-5">
               {/* Top - Customer Growth chart */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 }}
+              <div
                 className="relative"
               >
                 <div className="bg-white rounded-[20px] p-5 border border-[#e8e8e8]/40"
@@ -107,14 +98,10 @@ export default function WhatYouGet() {
                     decoding="async"
                   />
                 </div>
-              </motion.div>
+              </div>
 
               {/* Bottom - Chat mockup */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.4 }}
+              <div
               >
                 <div
                   className="bg-white rounded-[20px] overflow-hidden border border-[#e8e8e8]/30"
@@ -190,16 +177,12 @@ export default function WhatYouGet() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right — Text content */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+          <div
             className="order-1 lg:order-2"
           >
             {/* Badge */}
@@ -232,12 +215,8 @@ export default function WhatYouGet() {
               style={{ background: "linear-gradient(155deg, #ffffff 0%, #faf8fd 100%)", border: "1px solid rgba(88,62,141,0.06)", boxShadow: "0 4px 24px rgba(88,62,141,0.05)" }}
             >
               {deliverables.map((item, i) => (
-                <motion.div
+                <div
                   key={i}
-                  initial={{ opacity: 0, x: 15 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: 0.1 + i * 0.06 }}
                   className="group flex items-start gap-4 p-4 rounded-[16px] hover:bg-white/80 transition-all duration-300"
                 >
                   <div
@@ -253,7 +232,7 @@ export default function WhatYouGet() {
                     </div>
                     <p className="text-[13px] text-[#5a5a6a] leading-[1.55]">{item.description}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -274,7 +253,7 @@ export default function WhatYouGet() {
                 See Curriculum
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

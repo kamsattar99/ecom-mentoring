@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
 const steps = [
@@ -82,11 +81,7 @@ export default function AtoZSystem() {
     <section className="py-[80px] md:py-[120px] relative overflow-hidden" style={{ background: "linear-gradient(180deg, #faf9f7 0%, #f9f6fd 50%, #f8f5fc 100%)" }}>
       <div className="container">
         {/* Section header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+        <div
           className="text-center mb-14"
         >
           <p className="text-[13px] text-[#583E8D] font-medium tracking-wide mb-3">The Complete System</p>
@@ -97,16 +92,12 @@ export default function AtoZSystem() {
           <p className="text-[16px] md:text-[17px] leading-[1.6] text-[#4c4c4c] max-w-[600px] mx-auto">
             Get guided through the exact foundations, frameworks and scaling systems needed to build a profitable online store — without guessing what to do next.
           </p>
-        </motion.div>
+        </div>
 
         {/* Two-column layout */}
         <div className="grid lg:grid-cols-[1fr_1.1fr] gap-6 lg:gap-8 items-start">
           {/* Left — Overview card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+          <div
             className="relative rounded-[24px] p-7 md:p-9 flex flex-col overflow-hidden"
             style={{
               background: "linear-gradient(155deg, #ffffff 0%, #f8f6fb 40%, #f3eef9 100%)",
@@ -182,23 +173,15 @@ export default function AtoZSystem() {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right — Step cards */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+          <div
             className="flex flex-col gap-4"
           >
             {steps.map((step, i) => (
-              <motion.div
+              <div
                 key={step.title}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
                 className={`group relative overflow-hidden rounded-[20px] p-6 bg-gradient-to-br ${step.gradient} text-white transition-all duration-300 hover:-translate-y-0.5`}
                 style={{
                   boxShadow:
@@ -233,9 +216,9 @@ export default function AtoZSystem() {
                 <div className="absolute -bottom-4 -right-4 w-20 h-20 rounded-full opacity-[0.06] pointer-events-none"
                   style={{ background: "radial-gradient(circle, white 0%, transparent 70%)" }}
                 />
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

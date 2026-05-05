@@ -14,9 +14,6 @@ const EarningsDisclaimer = lazy(() => import("./pages/EarningsDisclaimer"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
-// Lazy load Toaster since toasts are rarely triggered on initial load
-const Toaster = lazy(() => import("./components/ui/sonner").then(m => ({ default: m.Toaster })));
-
 function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
   const hideNavbar = location === "/apply";
@@ -52,9 +49,6 @@ function Router() {
 function App() {
   return (
     <ErrorBoundary>
-      <Suspense fallback={null}>
-        <Toaster />
-      </Suspense>
       <Router />
     </ErrorBoundary>
   );

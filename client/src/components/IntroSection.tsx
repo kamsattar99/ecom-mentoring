@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 
 const pillars = [
   {
@@ -29,27 +28,19 @@ export default function IntroSection() {
     <section className="py-[80px] md:py-[120px] bg-white">
       <div className="container">
         {/* Section header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+        <div
           className="text-center max-w-[640px] mx-auto mb-16"
         >
           <h2 className="font-serif text-[clamp(36px,4vw,52px)] leading-[1.1] tracking-[-0.015em] text-[#17191c]">
             A new kind of ecom mentorship
           </h2>
-        </motion.div>
+        </div>
 
         {/* Three cards — first one larger with accent bg */}
         <div className="grid md:grid-cols-[1.3fr_1fr_1fr] gap-5">
           {pillars.map((pillar, i) => (
-            <motion.div
+            <div
               key={pillar.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
               className={`p-7 rounded-[24px] flex flex-col ${
                 pillar.accent
                   ? "bg-[#f8ebe0]"
@@ -73,7 +64,7 @@ export default function IntroSection() {
               <p className="text-[14px] leading-[1.5] text-[#4c4c4c]">
                 {pillar.description}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

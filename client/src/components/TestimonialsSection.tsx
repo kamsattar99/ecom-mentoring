@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 const testimonials = [
@@ -52,11 +51,7 @@ export default function TestimonialsSection() {
 
       <div className="container relative z-10">
         {/* Section header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+        <div
           className="text-center max-w-[640px] mx-auto mb-10"
         >
           <div className="inline-flex items-center px-3.5 py-1.5 rounded-full border border-[#583E8D]/10 bg-white/80 backdrop-blur-sm mb-5 shadow-[0_2px_8px_rgba(88,62,141,0.05)]">
@@ -84,14 +79,10 @@ export default function TestimonialsSection() {
               Screenshots available on request
             </span>
           </div>
-        </motion.div>
+        </div>
 
         {/* Results strip */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.1 }}
+        <div
           className="flex flex-wrap items-center justify-center gap-3 mb-12"
         >
           {resultStrip.map((item) => (
@@ -99,17 +90,13 @@ export default function TestimonialsSection() {
               <span className="text-[12px] text-[#3a3a3e] font-medium">{item}</span>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Testimonial cards — featured card larger */}
         <div className="grid md:grid-cols-2 gap-5">
           {testimonials.map((t, i) => (
-            <motion.div
+            <div
               key={t.name}
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
               className={`group relative rounded-[20px] transition-all duration-300 hover:-translate-y-1 ${
                 t.featured ? "p-8 md:p-9" : "p-7 md:p-8"
               } ${t.featured ? "text-white" : "bg-white text-[#17191c]"}`}
@@ -187,7 +174,7 @@ export default function TestimonialsSection() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
@@ -197,11 +184,7 @@ export default function TestimonialsSection() {
         </p>
 
         {/* Subtle CTA transition */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.3 }}
+        <div
           className="text-center mt-12"
         >
           <p className="text-[15px] text-[#4c4c4c] mb-5 font-medium">
@@ -222,7 +205,7 @@ export default function TestimonialsSection() {
               See What's Included
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
