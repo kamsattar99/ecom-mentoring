@@ -1,6 +1,4 @@
 import { lazy, Suspense } from "react";
-import { Toaster } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
@@ -16,6 +14,9 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const EarningsDisclaimer = lazy(() => import("./pages/EarningsDisclaimer"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+
+// Lazy load Toaster since toasts are rarely triggered on initial load
+const Toaster = lazy(() => import("./components/ui/sonner").then(m => ({ default: m.Toaster })));
 
 function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
@@ -53,10 +54,10 @@ function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">
-        <TooltipProvider>
+        <Suspense fallback={null}>
           <Toaster />
-          <Router />
-        </TooltipProvider>
+        </Suspense>
+        <Router />
       </ThemeProvider>
     </ErrorBoundary>
   );

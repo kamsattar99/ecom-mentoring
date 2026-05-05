@@ -1,27 +1,25 @@
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function HeroSection() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // Trigger entrance animations after hydration
+    requestAnimationFrame(() => setMounted(true));
+  }, []);
+
   return (
     <section className="relative pt-[90px] pb-[60px] md:pt-[160px] md:pb-[80px] overflow-hidden">
       {/* Background: layered radial glows for premium depth */}
       <div className="absolute inset-0">
-        {/* Base gradient: warm cream to pale lavender */}
         <div className="absolute inset-0" style={{ background: "radial-gradient(circle at 50% 42%, rgba(245, 229, 210, 0.22), transparent 28%), radial-gradient(circle at 72% 30%, rgba(124, 87, 255, 0.10), transparent 24%), radial-gradient(circle at 22% 72%, rgba(255, 244, 232, 0.18), transparent 22%), linear-gradient(180deg, #fbfaf8 0%, #f6f4f8 100%)" }} />
-        {/* Left side intense purple glow */}
         <div className="absolute top-[20%] left-[-5%] w-[600px] h-[700px] rounded-full blur-[150px] opacity-40" style={{ background: "radial-gradient(ellipse, rgba(124, 87, 255, 0.35) 0%, rgba(160, 120, 255, 0.15) 40%, transparent 70%)" }} />
-        {/* Right side intense purple glow */}
         <div className="absolute top-[15%] right-[-5%] w-[600px] h-[700px] rounded-full blur-[150px] opacity-40" style={{ background: "radial-gradient(ellipse, rgba(124, 87, 255, 0.35) 0%, rgba(160, 120, 255, 0.15) 40%, transparent 70%)" }} />
-        {/* Central cream glow behind headline + CTA */}
         <div className="absolute top-[30%] left-1/2 -translate-x-1/2 w-[900px] h-[700px] rounded-full blur-[160px] opacity-40" style={{ background: "radial-gradient(ellipse, rgba(248, 240, 228, 0.6) 0%, transparent 70%)" }} />
-        {/* Lavender haze behind Hands-On area */}
         <div className="absolute top-[25%] left-[48%] -translate-x-1/2 w-[500px] h-[300px] rounded-full blur-[120px] opacity-30" style={{ background: "radial-gradient(ellipse, rgba(138, 100, 220, 0.18) 0%, transparent 70%)" }} />
-        {/* Top-right lavender glow near dashboard card */}
         <div className="absolute top-[10%] right-[8%] w-[400px] h-[400px] rounded-full blur-[130px] opacity-35" style={{ background: "radial-gradient(circle, rgba(140, 100, 240, 0.35) 0%, transparent 65%)" }} />
-        {/* Bottom-left purple-tinted glow */}
         <div className="absolute bottom-[15%] left-[5%] w-[450px] h-[450px] rounded-full blur-[140px] opacity-35" style={{ background: "radial-gradient(circle, rgba(140, 100, 240, 0.3) 0%, transparent 65%)" }} />
-        {/* Subtle warm glow bottom-right */}
         <div className="absolute bottom-[20%] right-[12%] w-[350px] h-[350px] rounded-full blur-[120px] opacity-20" style={{ background: "radial-gradient(circle, rgba(240, 225, 250, 0.25) 0%, transparent 60%)" }} />
-        {/* Ultra-light grain/noise overlay for texture */}
         <div className="absolute inset-0 opacity-[0.03]"
           style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")" }}
         />
@@ -33,18 +31,13 @@ export default function HeroSection() {
       <div className="absolute bottom-[12%] left-[3%] xl:left-[6%] w-[320px] h-[240px] rounded-3xl blur-[45px] opacity-16 hidden lg:block" style={{ background: "radial-gradient(ellipse, rgba(248, 230, 200, 0.4) 0%, transparent 70%)" }} />
       <div className="absolute bottom-[14%] right-[3%] xl:right-[6%] w-[310px] h-[230px] rounded-3xl blur-[45px] opacity-16 hidden lg:block" style={{ background: "radial-gradient(ellipse, rgba(210, 190, 240, 0.35) 0%, transparent 70%)" }} />
 
-      {/* Floating Analytics Cards - positioned closer to content */}
+      {/* Floating Analytics Cards - CSS animations instead of framer-motion */}
       {/* Top Left - Total Sales */}
-      <motion.div
-        initial={{ opacity: 0, y: 30, x: -20 }}
-        animate={{ opacity: 1, y: 0, x: 0 }}
-        transition={{ duration: 0.9, delay: 0.8 }}
-        className="absolute top-[14%] left-[4%] xl:left-[8%] hidden lg:block"
+      <div
+        className={`absolute top-[14%] left-[4%] xl:left-[8%] hidden lg:block transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+        style={{ transitionDelay: "0.8s" }}
       >
-        <motion.div
-          animate={{ y: [0, -12, -4, -10, 0], x: [0, 4, -2, 3, 0], rotate: [0, 0.8, -0.3, 0.5, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        >
+        <div className="animate-float-slow">
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-total-sales-Rdmh5wtQRyFfGinKfiFvwP.webp"
             alt="Total Sales: $250,000"
@@ -55,20 +48,15 @@ export default function HeroSection() {
             loading="eager"
             decoding="async"
           />
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
       {/* Top Right - Sessions by Device */}
-      <motion.div
-        initial={{ opacity: 0, y: 30, x: 20 }}
-        animate={{ opacity: 1, y: 0, x: 0 }}
-        transition={{ duration: 0.9, delay: 1.0 }}
-        className="absolute top-[10%] right-[4%] xl:right-[8%] hidden lg:block"
+      <div
+        className={`absolute top-[10%] right-[4%] xl:right-[8%] hidden lg:block transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+        style={{ transitionDelay: "1.0s" }}
       >
-        <motion.div
-          animate={{ y: [0, -14, -6, -11, 0], x: [0, -5, 2, -3, 0], rotate: [0, -0.6, 0.4, -0.8, 0] }}
-          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-        >
+        <div className="animate-float-medium">
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-sessions-device-38MypvLYE5mt2H82mSxXPK.webp"
             alt="Sessions by Device"
@@ -79,20 +67,15 @@ export default function HeroSection() {
             loading="eager"
             decoding="async"
           />
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
       {/* Bottom Left - Customers over Time */}
-      <motion.div
-        initial={{ opacity: 0, y: 30, x: -10 }}
-        animate={{ opacity: 1, y: 0, x: 0 }}
-        transition={{ duration: 0.9, delay: 1.2 }}
-        className="absolute bottom-[12%] left-[3%] xl:left-[6%] hidden lg:block"
+      <div
+        className={`absolute bottom-[12%] left-[3%] xl:left-[6%] hidden lg:block transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+        style={{ transitionDelay: "1.2s" }}
       >
-        <motion.div
-          animate={{ y: [0, -9, -3, -7, 0], x: [0, 5, -3, 4, 0], rotate: [0, 0.5, -0.6, 0.3, 0] }}
-          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
-        >
+        <div className="animate-float-fast">
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-customers-time-X3ms7jG8yZk3tc2x3jGNVj.webp"
             alt="Customers over Time"
@@ -103,20 +86,15 @@ export default function HeroSection() {
             loading="lazy"
             decoding="async"
           />
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
       {/* Bottom Right - Sessions by Country */}
-      <motion.div
-        initial={{ opacity: 0, y: 30, x: 10 }}
-        animate={{ opacity: 1, y: 0, x: 0 }}
-        transition={{ duration: 0.9, delay: 1.4 }}
-        className="absolute bottom-[14%] right-[3%] xl:right-[6%] hidden lg:block"
+      <div
+        className={`absolute bottom-[14%] right-[3%] xl:right-[6%] hidden lg:block transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+        style={{ transitionDelay: "1.4s" }}
       >
-        <motion.div
-          animate={{ y: [0, -11, -5, -9, 0], x: [0, -4, 3, -2, 0], rotate: [0, -0.4, 0.7, -0.5, 0] }}
-          transition={{ duration: 8.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
-        >
+        <div className="animate-float-reverse">
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-sales-country-3wvFYXTrqPCU22m66QfsHX.webp"
             alt="Sessions by Country"
@@ -127,16 +105,13 @@ export default function HeroSection() {
             loading="lazy"
             decoding="async"
           />
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
       <div className="container relative">
         {/* Urgency badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="flex justify-center mb-7"
+        <div
+          className={`flex justify-center mb-7 transition-all duration-500 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-[#e8e8e8]/60"
             style={{ boxShadow: "0 2px 12px rgba(0,0,0,0.03)" }}
@@ -144,20 +119,17 @@ export default function HeroSection() {
             <span className="w-2 h-2 rounded-full bg-[#583E8D] animate-pulse" />
             <span className="text-[13px] text-[#4c4c4c] font-medium">Limited spaces — application required</span>
           </div>
-        </motion.div>
+        </div>
 
         {/* Headline */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-center max-w-[820px] mx-auto"
+        <div
+          className={`text-center max-w-[820px] mx-auto transition-all duration-600 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-7"}`}
+          style={{ transitionDelay: "0.1s" }}
         >
           <h1 className="font-serif font-bold text-[clamp(36px,5.5vw,68px)] leading-[1.08] tracking-[-0.02em] text-[#17191c] mb-6">
             Build & Scale Your E‑Commerce Brand With{" "}
             <span className="relative inline-block">
               <span className="italic text-[#583E8D]">Hands‑On</span>
-              {/* Purple glow behind highlighted word */}
               <span className="absolute inset-0 bg-[#583E8D]/8 blur-[20px] rounded-full -z-10" />
             </span>{" "}
             Mentorship
@@ -165,14 +137,12 @@ export default function HeroSection() {
           <p className="text-[16px] md:text-[17px] leading-[1.6] text-[#4c4c4c] max-w-[620px] mx-auto mb-10">
             Work directly with e-commerce operators who have built, launched and scaled real stores — with guidance across product research, store setup, paid ads, creatives and conversion.
           </p>
-        </motion.div>
+        </div>
 
         {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex flex-col items-center justify-center mb-12"
+        <div
+          className={`flex flex-col items-center justify-center mb-12 transition-all duration-500 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
+          style={{ transitionDelay: "0.3s" }}
         >
           <a
             href="https://e-commercementoring.com/learn-more"
@@ -192,14 +162,12 @@ export default function HeroSection() {
           <p className="mt-3 text-[13px] text-[#999] font-medium">
             Limited spaces available — application required.
           </p>
-        </motion.div>
+        </div>
 
         {/* Proof bar: 3 stats */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="flex flex-row items-center justify-center gap-0 mb-10"
+        <div
+          className={`flex flex-row items-center justify-center gap-0 mb-10 transition-all duration-600 ${mounted ? "opacity-100" : "opacity-0"}`}
+          style={{ transitionDelay: "0.5s" }}
         >
           {/* Stat 1 */}
           <div className="flex items-center gap-2 px-3 sm:px-6">
@@ -247,19 +215,17 @@ export default function HeroSection() {
               <p className="text-[11px] sm:text-[12px] text-[#777b86]">E-commerce experience</p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Founder credibility line */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.7 }}
-          className="text-center"
+        <div
+          className={`text-center transition-all duration-500 ${mounted ? "opacity-100" : "opacity-0"}`}
+          style={{ transitionDelay: "0.7s" }}
         >
           <p className="text-[13px] text-[#999] font-medium">
             Led by Kamil Sattar, founder of The Ecom King — trusted by 600k+ e-commerce entrepreneurs.
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

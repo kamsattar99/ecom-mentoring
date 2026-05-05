@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
@@ -8,7 +7,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -75,41 +74,39 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.25 }}
-            className="md:hidden bg-white/95 backdrop-blur-xl border-b border-[#e8e8e8]/50 px-4 pb-6 pt-2"
-            style={{ boxShadow: "0 8px 32px rgba(0,0,0,0.06)" }}
-          >
-            <div className="flex flex-col gap-1">
-              {links.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="text-[15px] text-[#4c4c4c] hover:text-[#17191c] hover:bg-[#f5f3f0] transition-all py-3 px-4 rounded-xl"
-                >
-                  {link.label}
-                </a>
-              ))}
+      {/* Mobile Menu - CSS transitions instead of framer-motion */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-250 ease-out ${
+          mobileOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div
+          className="bg-white/95 backdrop-blur-xl border-b border-[#e8e8e8]/50 px-4 pb-6 pt-2"
+          style={{ boxShadow: "0 8px 32px rgba(0,0,0,0.06)" }}
+        >
+          <div className="flex flex-col gap-1">
+            {links.map((link) => (
               <a
-                href="https://e-commercementoring.com/learn-more"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-3 inline-flex items-center justify-center text-white text-[14px] font-medium px-6 py-3.5 rounded-full"
-                style={{ background: "linear-gradient(135deg, #583E8D 0%, #6B4FA8 100%)", boxShadow: "0 4px 12px rgba(88,62,141,0.2)" }}
+                key={link.label}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className="text-[15px] text-[#4c4c4c] hover:text-[#17191c] hover:bg-[#f5f3f0] transition-all py-3 px-4 rounded-xl"
               >
-                Apply Now
+                {link.label}
               </a>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            ))}
+            <a
+              href="https://e-commercementoring.com/learn-more"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-flex items-center justify-center text-white text-[14px] font-medium px-6 py-3.5 rounded-full"
+              style={{ background: "linear-gradient(135deg, #583E8D 0%, #6B4FA8 100%)", boxShadow: "0 4px 12px rgba(88,62,141,0.2)" }}
+            >
+              Apply Now
+            </a>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 }

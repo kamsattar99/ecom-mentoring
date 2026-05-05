@@ -221,18 +221,22 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       output: {
-        manualChunks: {
-          'vendor-motion': ['framer-motion'],
-          'vendor-radix': [
-            '@radix-ui/react-accordion',
-            '@radix-ui/react-dialog',
-            '@radix-ui/react-dropdown-menu',
-            '@radix-ui/react-popover',
-            '@radix-ui/react-tooltip',
-            '@radix-ui/react-tabs',
-            '@radix-ui/react-select',
-          ],
-          'vendor-recharts': ['recharts'],
+        manualChunks(id) {
+          if (id.includes('node_modules/react/') || id.includes('node_modules/react-dom/')) {
+            return 'vendor-react';
+          }
+          if (id.includes('node_modules/framer-motion/')) {
+            return 'vendor-motion';
+          }
+          if (id.includes('node_modules/@radix-ui/')) {
+            return 'vendor-radix';
+          }
+          if (id.includes('node_modules/recharts/') || id.includes('node_modules/d3-')) {
+            return 'vendor-recharts';
+          }
+          if (id.includes('node_modules/wouter/')) {
+            return 'vendor-router';
+          }
         },
       },
     },

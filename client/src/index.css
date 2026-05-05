@@ -233,3 +233,66 @@ html {
   background: rgba(88, 62, 141, 0.15);
   color: #17191c;
 }
+
+/* Floating card animations - CSS-only replacement for framer-motion in hero */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-12px) rotate(0.5deg); }
+  50% { transform: translateY(-4px) rotate(-0.3deg); }
+  75% { transform: translateY(-10px) rotate(0.3deg); }
+}
+
+@keyframes float-medium {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-14px) rotate(-0.4deg); }
+  50% { transform: translateY(-6px) rotate(0.3deg); }
+  75% { transform: translateY(-11px) rotate(-0.5deg); }
+}
+
+@keyframes float-fast {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-9px) rotate(0.3deg); }
+  50% { transform: translateY(-3px) rotate(-0.4deg); }
+  75% { transform: translateY(-7px) rotate(0.2deg); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-11px) rotate(-0.3deg); }
+  50% { transform: translateY(-5px) rotate(0.5deg); }
+  75% { transform: translateY(-9px) rotate(-0.4deg); }
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-float-medium {
+  animation: float-medium 9s ease-in-out infinite;
+  animation-delay: 0.5s;
+  will-change: transform;
+}
+
+.animate-float-fast {
+  animation: float-fast 7s ease-in-out infinite;
+  animation-delay: 1.2s;
+  will-change: transform;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 8.5s ease-in-out infinite;
+  animation-delay: 0.8s;
+  will-change: transform;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-slow,
+  .animate-float-medium,
+  .animate-float-fast,
+  .animate-float-reverse,
+  .animate-marquee {
+    animation: none;
+  }
+}
