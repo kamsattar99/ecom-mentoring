@@ -3,16 +3,16 @@ import { Plus, Minus, ArrowRight, MessageCircle } from "lucide-react";
 
 const faqs = [
   {
-    question: "How is this different from a normal e-commerce course?",
-    answer: "Most courses give you content and leave you to figure out the rest. This is hands-on mentorship. You get direct support, personalised feedback and practical guidance based on your store, products, ads and current stage.",
+    question: "How is this different from a normal ecommerce course?",
+    answer: "Most courses give you content and leave you to figure out the rest. This is hands-on mentorship with AI-integrated workflows. You get direct support, personalised feedback, AI tools for every stage, and practical guidance based on your store, products, ads and current stage.",
   },
   {
-    question: "Is this suitable if I'm a complete beginner?",
-    answer: "Yes, if you are serious about learning properly and taking action. The programme is structured to guide you through the foundations, but it works best for people who are willing to implement, test and stay consistent.",
+    question: "Do I need AI experience to join?",
+    answer: "No. We teach you exactly which AI tools to use and how to use them at each stage. The programme is structured to guide you from zero, but it works best for people who are willing to implement, test and stay consistent.",
   },
   {
     question: "How much budget do I need to start properly?",
-    answer: "You do not need a huge budget, but you should be prepared to invest in your store, tools, product testing and advertising. The application process helps us understand whether your current budget is realistic for your goals.",
+    answer: "You do not need a huge budget, but you should be prepared to invest in your store, AI tools, product testing and advertising. Many AI tools we recommend are free or low-cost. The application process helps us understand whether your current budget is realistic for your goals.",
   },
   {
     question: "How much time should I commit each week?",
@@ -20,15 +20,15 @@ const faqs = [
   },
   {
     question: "How quickly can I expect to see progress?",
-    answer: "Results vary depending on your product, budget, execution and market. The goal is not to promise overnight results — it is to give you a clear system, direct feedback and better decision-making so you can make progress with less guesswork.",
+    answer: "Results vary depending on your product, budget, execution and market. The AI tools accelerate research, creative production and testing — but the goal is not to promise overnight results. It is to give you a clear system, direct feedback and better decision-making so you can make progress faster with less guesswork.",
   },
   {
     question: "What support do I get during the mentorship?",
-    answer: "You get structured guidance, 1:1 calls, direct chat access, templates, SOPs, store feedback and ad account reviews depending on your stage and needs.",
+    answer: "You get structured guidance, 1:1 calls, direct chat access, AI workflow templates, SOPs, store feedback and ad account reviews depending on your stage and needs.",
   },
   {
     question: "What happens after the mentorship ends?",
-    answer: "The aim is to leave you with the systems, frameworks and confidence to continue building independently. You will understand how to research products, optimise your store, test creatives, read data and make better scaling decisions.",
+    answer: "The aim is to leave you with the AI systems, frameworks and confidence to continue building independently. You will understand how to use AI for product research, store optimisation, creative testing, data analysis and scaling decisions.",
   },
   {
     question: "Is there an application process?",
@@ -60,7 +60,7 @@ export default function FAQSection() {
               <span className="italic text-[#583E8D]">Apply?</span>
             </h2>
             <p className="text-[14px] text-[#777b86] leading-[1.7] mb-8">
-              Before you apply, here are the questions most serious founders ask about the programme, the commitment, and whether it is the right fit.
+              Before you apply, here are the questions most serious founders ask about the AI-powered programme, the commitment, and whether it is the right fit.
             </p>
 
             {/* Need help deciding card */}

@@ -3,35 +3,35 @@ import { Plus, Minus, Check } from "lucide-react";
 
 const stages = [
   {
-    title: "Product Research & Validation",
+    title: "AI Product Research & Validation",
     week: "Week 01",
-    description: "Learn how to find products with real demand using proven research and validation frameworks before spending money on ads.",
+    description: "Use AI workflows, trend tools and competitor analysis to find products with real demand before spending money on ads.",
     bullets: [
-      "Product validation framework",
-      "Competitor analysis methods",
+      "AI-powered product validation",
+      "Competitor analysis with AI tools",
       "Trend spotting & market timing",
-      "Choosing products with real potential",
+      "Structured research frameworks",
     ],
   },
   {
-    title: "Store Setup & Brand Positioning",
+    title: "AI Store Build & Conversion",
     week: "Week 02",
-    description: "Build a high-converting Shopify store with brand positioning, trust elements and checkout optimisation that turns visitors into buyers.",
+    description: "Build high-converting Shopify stores faster using AI-assisted page building, copywriting and conversion frameworks.",
     bullets: [
-      "Theme selection & customisation",
+      "AI-assisted store buildout",
       "Product page conversion structure",
       "Trust signals & checkout flow",
-      "Brand identity & positioning",
+      "AI copywriting workflows",
     ],
   },
   {
-    title: "Creative Testing & Paid Ads",
+    title: "AI Creatives & Paid Ads",
     week: "Week 03",
-    description: "Master Meta and TikTok ads with proven creative frameworks, audience targeting strategies and budget allocation rules.",
+    description: "Launch, test and scale campaigns using AI creative production, ad angle research and optimisation frameworks.",
     bullets: [
-      "Ad creative frameworks & hooks",
-      "Audience targeting strategy",
-      "Budget allocation rules",
+      "AI creative production workflows",
+      "Ad angle research with AI",
+      "Budget allocation & testing rules",
       "When to kill, test or scale",
     ],
   },
@@ -43,37 +43,37 @@ const stages = [
       "Horizontal & vertical scaling",
       "CBO & lookalike strategies",
       "Margin protection at scale",
-      "Data-driven decision making",
+      "AI-assisted data analysis",
     ],
   },
   {
-    title: "Systems, Automation & Team Structure",
+    title: "AI Operations & Automation",
     week: "Week 05",
-    description: "Build SOPs, automate fulfilment, set up email flows and create systems that run without you — so you can scale without burnout.",
+    description: "Build AI-assisted SOPs, automate fulfilment, set up email flows and create systems that run without you.",
     bullets: [
-      "SOPs for every stage",
+      "AI-powered SOPs & workflows",
       "Email & SMS automation",
       "Fulfilment & operations",
-      "When and how to delegate",
+      "AI tools for delegation",
     ],
   },
   {
     title: "Long-Term Brand Growth",
     week: "Week 06",
-    description: "Transition from a product store to a real brand with retention marketing, customer lifetime value and long-term asset building.",
+    description: "Transition from a product store to a real brand with retention marketing, customer lifetime value and AI-powered content systems.",
     bullets: [
       "Retention & repeat customers",
       "Customer lifetime value",
-      "Influencer & content strategy",
+      "AI content & influencer strategy",
       "Building a sellable asset",
     ],
   },
 ];
 
 const courseOverview = [
-  "Direct access to 1:1 mentorship and strategic support",
-  "A complete roadmap covering products, stores, ads and scaling",
-  "Proven frameworks, templates and operating systems",
+  "Direct access to 1:1 mentorship with AI-integrated workflows",
+  "A complete roadmap covering AI product research, stores, ads and scaling",
+  "Proven frameworks, templates and AI operating systems",
   "Accountability and feedback tailored to your business",
 ];
 
@@ -96,11 +96,11 @@ export default function CurriculumSection() {
             <span className="text-[12px] text-[#583E8D] font-semibold tracking-wide uppercase">Curriculum Overview</span>
           </div>
           <h2 className="font-serif text-[clamp(32px,4.5vw,52px)] leading-[1.08] tracking-[-0.02em] text-[#17191c] max-w-[700px] mx-auto">
-            The 6-Stage System Behind{" "}
-            <span className="text-[#583E8D] italic">Profitable E-commerce Growth</span>
+            The 6-Stage AI System Behind{" "}
+            <span className="text-[#583E8D] italic">Profitable Ecommerce Growth</span>
           </h2>
           <p className="text-[15px] md:text-[16px] text-[#5a5a6a] mt-5 max-w-[560px] mx-auto leading-[1.6]">
-            A structured framework designed to help you validate products, build your store, launch ads, scale profitably, and create a business with long-term potential.
+            A structured AI-powered framework designed to help you validate products, build your store, launch ads, scale profitably, and create a business with long-term potential.
           </p>
         </div>
 
@@ -190,7 +190,7 @@ export default function CurriculumSection() {
 
             {/* Trust line below accordion */}
             <p className="text-[13px] text-[#583E8D]/70 italic text-center pt-4">
-              Designed to remove guesswork at every stage.
+              AI-powered systems at every stage. No guesswork.
             </p>
           </div>
 

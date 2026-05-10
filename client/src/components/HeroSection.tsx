@@ -105,15 +105,14 @@ export default function HeroSection() {
         {/* Headline */}
         <div className="text-center max-w-[820px] mx-auto">
           <h1 className="font-serif font-bold text-[clamp(36px,5.5vw,68px)] leading-[1.08] tracking-[-0.02em] text-[#17191c] mb-6">
-            Build & Scale Your E‑Commerce Brand With{" "}
+            The 1‑on‑1 Ecommerce Mentorship{" "}
             <span className="relative inline-block">
-              <span className="italic text-[#583E8D]">Hands‑On</span>
+              <span className="italic text-[#583E8D]">Rebuilt For The AI Era</span>
               <span className="absolute inset-0 bg-[#583E8D]/8 blur-[20px] rounded-full -z-10" />
-            </span>{" "}
-            Mentorship
+            </span>
           </h1>
           <p className="text-[16px] md:text-[17px] leading-[1.6] text-[#4c4c4c] max-w-[620px] mx-auto mb-10">
-            Work directly with e-commerce operators who have built, launched and scaled real stores — with guidance across product research, store setup, paid ads, creatives and conversion.
+            Work directly with experienced ecommerce operators who show you how to use AI across product research, store building, ad creatives, paid ads and operations — with the structure, feedback and accountability to actually build.
           </p>
         </div>
 
@@ -152,8 +151,8 @@ export default function HeroSection() {
               </svg>
             </div>
             <div>
-              <p className="text-[14px] sm:text-[16px] font-bold text-[#17191c] leading-tight">1,000+</p>
-              <p className="text-[11px] sm:text-[12px] text-[#777b86]">Entrepreneurs trained</p>
+              <p className="text-[14px] sm:text-[16px] font-bold text-[#17191c] leading-tight">600k+</p>
+              <p className="text-[11px] sm:text-[12px] text-[#777b86]">Trusted Entrepreneurs</p>
             </div>
           </div>
 
@@ -184,7 +183,7 @@ export default function HeroSection() {
             </div>
             <div>
               <p className="text-[14px] sm:text-[16px] font-bold text-[#17191c] leading-tight">7+ Years</p>
-              <p className="text-[11px] sm:text-[12px] text-[#777b86]">E-commerce experience</p>
+              <p className="text-[11px] sm:text-[12px] text-[#777b86]">Ecommerce Experience</p>
             </div>
           </div>
         </div>

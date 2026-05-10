@@ -57,13 +57,13 @@ export default function CTASection() {
 
             {/* Headline */}
             <h2 className="font-serif text-[clamp(32px,4.5vw,52px)] leading-[1.1] tracking-[-0.02em] text-[#17191c] mb-5">
-              Ready To Stop Guessing And{" "}
-              <span className="italic text-[#583E8D]">Start Building?</span>
+              Ready To Build With AI And{" "}
+              <span className="italic text-[#583E8D]">Scale Faster?</span>
             </h2>
 
             {/* Subheading */}
             <p className="text-[15px] md:text-[16px] leading-[1.65] text-[#4c4c4c] mb-9 max-w-[520px] mx-auto">
-              Apply to work 1:1 with experienced e-commerce mentors who can help you clarify your next move across product research, store setup, ads, creatives and scaling.
+              Apply to work 1:1 with experienced ecommerce mentors who integrate AI into every stage — product research, store setup, ads, creatives and scaling.
             </p>
 
             {/* CTA Button */}
@@ -98,7 +98,7 @@ export default function CTASection() {
               className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mt-10 pt-7 border-t border-[#17191c]/5"
             >
               {[
-                { icon: Layers, label: "Proven frameworks" },
+                { icon: Layers, label: "AI-powered frameworks" },
                 { icon: MessageSquare, label: "Direct mentor access" },
                 { icon: BarChart3, label: "Store & ad reviews" },
               ].map(({ icon: Icon, label }) => (

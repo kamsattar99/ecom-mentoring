@@ -3,9 +3,9 @@ import { Check } from "lucide-react";
 const steps = [
   {
     step: "01",
-    title: "Product Research & Validation",
+    title: "AI Product Research & Validation",
     description:
-      "Find products with real demand using validation frameworks, research sheets and competitor analysis before wasting money on ads.",
+      "Use AI workflows, trend tools and competitor analysis to find products with real demand before spending money on ads.",
     gradient: "from-[#4a3377] to-[#6B4FA8]",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
@@ -16,9 +16,9 @@ const steps = [
   },
   {
     step: "02",
-    title: "Store Buildout & Conversion",
+    title: "AI Store Build & Conversion",
     description:
-      "Build high-converting Shopify stores with product pages, offers, checkout structure and trust elements designed to turn visitors into buyers.",
+      "Build high-converting Shopify stores faster using AI-assisted page building, copywriting and conversion frameworks.",
     gradient: "from-[#583E8D] to-[#7B5EC6]",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
@@ -30,9 +30,9 @@ const steps = [
   },
   {
     step: "03",
-    title: "Ads, Creatives & Scaling",
+    title: "AI Creatives & Paid Ads",
     description:
-      "Launch, test and scale campaigns using Meta/TikTok ad frameworks, creative angles, optimisation rules and scaling playbooks.",
+      "Launch, test and scale campaigns using AI creative production, ad angle research and optimisation frameworks.",
     gradient: "from-[#17191c] to-[#2d2f33]",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
@@ -44,9 +44,9 @@ const steps = [
   },
   {
     step: "04",
-    title: "Weekly Guidance & Accountability",
+    title: "Mentorship, Feedback & Accountability",
     description:
-      "Get direct feedback, store audits and practical next steps so you are never left guessing what to fix next.",
+      "Get direct operator feedback, store audits and practical next steps so you never build in the wrong direction.",
     gradient: "from-[#4a3377] to-[#6B4FA8]",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
@@ -60,18 +60,18 @@ const steps = [
 ];
 
 const trustPoints = [
-  "1:1 mentor feedback",
-  "Store audits included",
-  "Ad strategy reviews",
+  "AI-integrated workflows at every stage",
+  "1:1 mentor feedback and accountability",
+  "Store, ad and creative reviews",
   "Product validation frameworks",
-  "Beginner to scaling roadmap",
+  "Beginner-to-scaling roadmap",
 ];
 
 const tools = [
   "Meta Ads",
   "TikTok Ads",
   "Shopify",
-  "Omnisend",
+  "AI Tools",
   "CRO",
   "Creatives",
 ];
@@ -84,13 +84,13 @@ export default function AtoZSystem() {
         <div
           className="text-center mb-14"
         >
-          <p className="text-[13px] text-[#583E8D] font-medium tracking-wide mb-3">The Complete System</p>
+          <p className="text-[13px] text-[#583E8D] font-medium tracking-wide mb-3">The New AI Ecommerce System</p>
           <h2 className="font-serif text-[clamp(32px,4.5vw,52px)] leading-[1.1] tracking-[-0.02em] text-[#17191c] max-w-[700px] mx-auto mb-5">
-            Everything You Need To Build, Launch &{" "}
-            <span className="italic text-[#583E8D]">Scale</span>
+            The Mentorship Has Been{" "}
+            <span className="italic text-[#583E8D]">Rebuilt</span>{" "}Around The AI Ecommerce Stack
           </h2>
           <p className="text-[16px] md:text-[17px] leading-[1.6] text-[#4c4c4c] max-w-[600px] mx-auto">
-            Get guided through the exact foundations, frameworks and scaling systems needed to build a profitable online store — without guessing what to do next.
+            This is not an AI module bolted onto an old course. The entire curriculum has been rebuilt around AI-assisted ecommerce execution — from product research to scaling.
           </p>
         </div>
 
@@ -119,12 +119,12 @@ export default function AtoZSystem() {
 
             {/* Heading */}
             <h3 className="font-serif text-[clamp(22px,2.8vw,30px)] leading-[1.15] tracking-[-0.01em] text-[#17191c] mb-5">
-              A guided system for founders who want more than another course.
+              A complete system for founders who want to build with AI and operator-level guidance.
             </h3>
 
             {/* Body */}
             <p className="text-[15px] leading-[1.7] text-[#4c4c4c] mb-7">
-              Work 1:1 with experienced e-commerce mentors across product selection, store buildout, paid ads, creative strategy, optimisation and scaling — so every stage of your business has a clear next step.
+              Work 1:1 with experienced ecommerce operators across AI product research, store buildout, creative production, paid ads and operations — so every stage of your business moves faster with better systems.
             </p>
 
             {/* Trust points */}

@@ -1,11 +1,11 @@
 import { Check, X, ArrowRight } from "lucide-react";
 
 const forYou = [
-  "You are serious about building an e-commerce business with structure, not guesswork",
+  "You want to build an ecommerce business using AI tools and proven systems",
   "You want personalised feedback on your actual store, products, ads and strategy",
   "You are ready to test, learn, optimise and keep moving forward",
   "You understand that growth requires investment, consistency and execution",
-  "You want a practical roadmap instead of another collection of random tactics",
+  "You want an AI-integrated roadmap instead of another collection of random tactics",
 ];
 
 const notForYou = [
@@ -37,7 +37,7 @@ export default function ForYouSection() {
             <span className="italic text-[#583E8D]">Execute</span>
           </h2>
           <p className="text-[14px] md:text-[15px] text-[#777b86] mt-4 max-w-[500px] mx-auto leading-[1.7]">
-            This is not another passive course. It is a hands-on mentorship for people who are ready to follow a system, take feedback, and build with consistency.
+            This is not another passive course. It is a hands-on AI-powered mentorship for people who are ready to follow a system, take feedback, and build with consistency.
           </p>
         </div>
 

@@ -34,7 +34,7 @@ const testimonials = [
 const resultStrip = [
   "$100K+ student wins",
   "First-sale breakthroughs",
-  "Store scaling support",
+  "AI-powered scaling",
   "Ad account guidance",
 ];
 
@@ -58,11 +58,11 @@ export default function TestimonialsSection() {
             <span className="text-[12px] text-[#583E8D] font-semibold tracking-wide uppercase">Student Results</span>
           </div>
           <h2 className="font-serif text-[clamp(32px,4vw,50px)] leading-[1.1] tracking-[-0.015em] text-[#17191c]">
-            Results From Founders Who{" "}
-            <span className="italic text-[#583E8D]">Put The System To Work</span>
+            Results From Founders Using{" "}
+            <span className="italic text-[#583E8D]">The AI System</span>
           </h2>
           <p className="text-[14px] text-[#777b86] mt-4 max-w-[520px] mx-auto leading-[1.7]">
-            These results come from students who applied the system, received feedback, and executed consistently. Results vary, but the process is built to create clarity, accountability and better decisions.
+            These results come from students who applied the AI-powered system, received feedback, and executed consistently. Results vary, but the process is built to create clarity, accountability and faster decisions.
           </p>
           {/* Trust microcopy */}
           <div className="flex flex-wrap items-center justify-center gap-4 mt-5">
@@ -188,7 +188,7 @@ export default function TestimonialsSection() {
           className="text-center mt-12"
         >
           <p className="text-[15px] text-[#4c4c4c] mb-5 font-medium">
-            Want this level of clarity inside your own store?
+            Want this level of clarity and AI-powered growth inside your own store?
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a

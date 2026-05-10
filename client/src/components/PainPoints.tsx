@@ -1,8 +1,8 @@
 
 const painPoints = [
   {
-    title: "Product Guesswork",
-    body: "You spend hours researching products, but still feel unsure what will actually sell.",
+    title: "Copying Saturated Products",
+    body: "Scrolling TikTok and AliExpress hoping to find a winner instead of using structured AI validation systems.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
         <circle cx="12" cy="12" r="9" stroke="#583E8D" strokeWidth="1.8" />
@@ -12,8 +12,8 @@ const painPoints = [
     ),
   },
   {
-    title: "Ad Spend Anxiety",
-    body: "You put money into ads without confidence that the numbers will ever make sense.",
+    title: "Overspending On Weak Creatives",
+    body: "Paying for UGC and static ads without testing enough angles or using AI creative tools to reduce costs.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
         <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="#583E8D" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
@@ -21,8 +21,8 @@ const painPoints = [
     ),
   },
   {
-    title: "Stuck At Low Sales",
-    body: "Your store makes some sales, but never seems to break through into real momentum.",
+    title: "Building Stores Manually",
+    body: "Spending weeks on Shopify setup that AI-assisted workflows can compress into days.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
         <path d="M3 3v18h18" stroke="#583E8D" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
@@ -31,8 +31,8 @@ const painPoints = [
     ),
   },
   {
-    title: "Falling Behind",
-    body: "Competitors always seem ahead while you are still trying to figure out the next move.",
+    title: "Testing Without A System",
+    body: "Launching campaigns with no framework for when to kill, scale or iterate — burning budget on guesswork.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#583E8D" strokeWidth="1.8" strokeLinecap="round" />
@@ -43,8 +43,8 @@ const painPoints = [
     ),
   },
   {
-    title: "Advice Overload",
-    body: 'You are bombarded by gurus, tools, and conflicting opinions — and none of it feels clear.',
+    title: "Using AI For Random Prompts",
+    body: "Asking ChatGPT to write product descriptions instead of building real AI workflows across the full business.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
         <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="#583E8D" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
@@ -54,8 +54,8 @@ const painPoints = [
     ),
   },
   {
-    title: "No Clear Traction",
-    body: "You keep changing strategy, but the business still does not feel stable or scalable.",
+    title: "Following Outdated Strategies",
+    body: "Watching 2022 tutorials in a market that moves every quarter — while AI-powered founders pull ahead.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
         <circle cx="12" cy="12" r="10" stroke="#583E8D" strokeWidth="1.8" />
@@ -76,16 +76,16 @@ export default function PainPoints() {
           {/* Eyebrow label */}
           <div className="inline-flex items-center px-3.5 py-1.5 rounded-full border border-[#583E8D]/12 bg-white/80 backdrop-blur-sm mb-5 shadow-[0_2px_8px_rgba(88,62,141,0.05)]">
             <div className="w-1.5 h-1.5 rounded-full bg-[#e74c3c] mr-2 animate-pulse" />
-            <span className="text-[12px] font-semibold text-[#583E8D] tracking-wide uppercase">Why most stores stay stuck</span>
+            <span className="text-[12px] font-semibold text-[#583E8D] tracking-wide uppercase">The Market Has Shifted</span>
           </div>
 
           <h2 className="font-serif text-[clamp(32px,4.5vw,52px)] leading-[1.1] tracking-[-0.02em] text-[#17191c] max-w-[720px] mx-auto mb-5">
-            Does Building Your Store Feel More{" "}
-            <span className="text-[#583E8D] italic">Draining Than Rewarding?</span>
+            Most Dropshippers Are Still Building{" "}
+            <span className="text-[#583E8D] italic">The Old Way</span>
           </h2>
 
           <p className="text-[16px] md:text-[17px] leading-[1.65] text-[#5a5a6a] max-w-[560px] mx-auto">
-            If you are stuck guessing, second-guessing, and spinning your wheels — you are not alone. Most founders do not need more noise, they need a clear roadmap.
+            Ecommerce in 2025 is not the same game it was in 2022 or even 2024. AI has changed the speed, the tools and the execution — but most people are still stuck doing everything manually.
           </p>
         </div>
 
@@ -137,7 +137,7 @@ export default function PainPoints() {
           className="text-center"
         >
           <p className="text-[16px] md:text-[17px] text-[#583E8D] font-medium italic">
-            You do not need more noise — you need a proven system.
+            The advantage now belongs to founders who can use AI properly inside the full business — not just for one-off tasks.
           </p>
         </div>
       </div>

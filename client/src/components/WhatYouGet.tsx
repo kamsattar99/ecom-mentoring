@@ -2,7 +2,7 @@
 const deliverables = [
   {
     title: "Weekly 1:1 Strategy Calls",
-    description: "Review progress, remove bottlenecks and leave each call with clear next actions.",
+    description: "Review progress, remove bottlenecks and leave each call with clear next actions — including which AI tools to use next.",
     tag: "Personal guidance",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -13,7 +13,7 @@ const deliverables = [
   },
   {
     title: "Direct Mentor Chat",
-    description: "Ask questions as you build, launch and test — so you are not stuck waiting weeks for answers.",
+    description: "Ask questions as you build, launch and test — get answers in hours, not weeks.",
     tag: "Fast feedback",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -23,9 +23,9 @@ const deliverables = [
     ),
   },
   {
-    title: "SOPs, Templates & Frameworks",
-    description: "Use proven systems for product research, store setup, creative testing, ads and scaling.",
-    tag: "Plug-and-play systems",
+    title: "AI SOPs, Templates & Frameworks",
+    description: "Use AI-integrated systems for product research, store setup, creative testing, ads and scaling.",
+    tag: "AI-powered systems",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
@@ -36,7 +36,7 @@ const deliverables = [
   },
   {
     title: "Store & Ad Account Reviews",
-    description: "Get practical feedback on your actual store, funnels, creatives and campaign data.",
+    description: "Get practical feedback on your actual store, funnels, creatives and campaign data — with AI optimisation suggestions.",
     tag: "Real business review",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -46,8 +46,8 @@ const deliverables = [
     ),
   },
   {
-    title: "Creative & Offer Feedback",
-    description: "Refine your hooks, offers and product positioning before spending more on traffic.",
+    title: "AI Creative & Offer Feedback",
+    description: "Refine your hooks, offers and product positioning using AI creative workflows before spending more on traffic.",
     tag: "Conversion support",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -192,17 +192,17 @@ export default function WhatYouGet() {
 
             {/* Headline */}
             <h2 className="font-serif text-[clamp(32px,4vw,48px)] leading-[1.1] tracking-[-0.02em] text-[#17191c] mb-4">
-              The Guidance, Tools & Feedback You Need To Scale
+              The AI Tools, Guidance & Feedback You Need To Scale
             </h2>
 
             {/* Subheading */}
             <p className="text-[15px] md:text-[16px] leading-[1.65] text-[#4c4c4c] mb-5 max-w-[460px]">
-              No endless theory or generic modules — just direct mentor access, proven operating systems, store feedback, ad reviews and the practical guidance needed to make better decisions.
+              No endless theory or generic modules — just direct mentor access, AI-integrated operating systems, store feedback, ad reviews and the practical guidance needed to move faster.
             </p>
 
             {/* Trust pills */}
             <div className="flex flex-wrap gap-2 mb-8">
-              {["Real feedback, not generic lessons", "Built around your store", "Frameworks you can implement"].map((pill) => (
+              {["AI workflows at every stage", "Built around your store", "Frameworks you can implement today"].map((pill) => (
                 <span key={pill} className="text-[11px] font-medium text-[#583E8D] bg-[#f3eef9] border border-[#583E8D]/8 px-3 py-1.5 rounded-full">
                   {pill}
                 </span>
