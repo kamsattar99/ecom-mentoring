@@ -6,12 +6,12 @@ const mentors = [
     role: "Brand Builder & E-Commerce Mentor",
     image: "https://i.ibb.co/Hf4Z2FjB/Gemini-Generated-Image-c5x4sfc5x4sfc5x4.png",
     credentials: [
-      "Built and scaled e-commerce brands",
-      "Experience across Shopify & international trade",
-      "Focuses on brand building & operational growth",
+      "Built and scaled e-commerce brands using AI tools",
+      "Experience across Shopify & international markets",
+      "Focuses on brand building & AI-powered operations",
     ],
-    specialties: ["Brand strategy", "Store structure", "Operations"],
-    bio: "Nail brings hands-on experience from building multiple Shopify brands across international markets, helping students understand the operational foundations behind sustainable e-commerce growth.",
+    specialties: ["Brand strategy", "AI store systems", "Operations"],
+    bio: "Nail brings hands-on experience from building multiple Shopify brands across international markets, helping students integrate AI tools into their operational foundations for sustainable e-commerce growth.",
   },
   {
     name: "Kamil Sattar",
@@ -21,10 +21,10 @@ const mentors = [
     credentials: [
       "Founder of The Ecom King",
       "10+ years of e-commerce experience",
-      "1,000+ entrepreneurs trained",
+      "1,000+ entrepreneurs trained with AI-integrated methods",
     ],
-    specialties: ["Product research", "Paid ads", "Scaling"],
-    bio: "Kamil brings over a decade of hands-on e-commerce experience, helping students understand the systems behind product validation, store optimisation and profitable scaling.",
+    specialties: ["AI product research", "Paid ads", "Scaling"],
+    bio: "Kamil brings over a decade of hands-on e-commerce experience, helping students leverage AI across product validation, store optimisation and profitable scaling.",
   },
   {
     name: "Inders",
@@ -32,11 +32,11 @@ const mentors = [
     image: "https://i.ibb.co/gZzwW6Hd/Gemini-Generated-Image-yzo8xlyzo8xlyzo8.png",
     credentials: [
       "Built e-commerce brands across multiple niches",
-      "Strong understanding of consumer psychology",
-      "Helps founders improve conversions & growth",
+      "Strong understanding of consumer psychology & AI analytics",
+      "Helps founders improve conversions with AI-driven insights",
     ],
-    specialties: ["Growth strategy", "CRO", "Store optimisation"],
-    bio: "Inders helps founders optimise conversion rates, systemise growth, and turn underperforming stores into predictable revenue machines through data-driven decisions.",
+    specialties: ["Growth strategy", "AI analytics", "Store optimisation"],
+    bio: "Inders helps founders optimise conversion rates, systemise growth with AI tools, and turn underperforming stores into predictable revenue machines through data-driven decisions.",
   },
 ];
 
@@ -74,12 +74,12 @@ export default function LearnMore() {
 
           {/* Headline */}
           <h1 className="font-serif font-bold text-[clamp(26px,4.5vw,44px)] leading-[1.15] tracking-[-0.02em] text-[#17191c] text-center max-w-[700px] mx-auto mb-4">
-            See How The Ecom Mentorship Works
+            See How The AI-Powered Ecom Mentorship Works
           </h1>
 
           {/* Subheading */}
           <p className="text-center text-[15px] md:text-[16px] text-[#555] leading-relaxed max-w-[600px] mx-auto mb-10">
-            Watch this short breakdown to understand the roadmap, support and expectations before you apply.
+            Watch this short breakdown to understand the AI-integrated roadmap, support and expectations before you apply.
           </p>
 
           {/* Video Container */}
@@ -168,10 +168,10 @@ export default function LearnMore() {
               Your Mentors
             </span>
             <h2 className="font-serif font-bold text-[clamp(28px,4vw,44px)] leading-[1.15] tracking-[-0.02em] text-[#17191c]">
-              Meet The Operators Behind The Mentorship
+              Meet The Operators Behind The AI Mentorship
             </h2>
             <p className="mt-4 text-[15px] md:text-[16px] text-[#555] max-w-[620px] mx-auto leading-relaxed">
-              Work with mentors who have built, scaled and managed real e-commerce businesses — bringing practical feedback, frameworks and accountability to your store.
+              Work with mentors who have built, scaled and managed real e-commerce businesses using AI — bringing practical feedback, AI-integrated frameworks and accountability to your store.
             </p>
           </div>
 
@@ -299,12 +299,12 @@ export default function LearnMore() {
 
           {/* Headline */}
           <h2 className="font-serif font-bold text-[clamp(28px,4.5vw,44px)] leading-[1.15] tracking-[-0.02em] text-[#17191c] text-center mb-5">
-            Ready To Stop Guessing And <em className="italic text-[#583E8D]">Start Building?</em>
+            Ready To Build With AI And <em className="italic text-[#583E8D]">Scale Faster?</em>
           </h2>
 
           {/* Subtext */}
           <p className="text-center text-[15px] md:text-[16px] text-[#666] leading-relaxed max-w-[560px] mx-auto mb-8">
-            Apply to work 1:1 with experienced e-commerce mentors who can help you clarify your next move across product research, store setup, ads, creatives and scaling.
+            Apply to work 1:1 with experienced e-commerce mentors who integrate AI into every stage — product research, store setup, ads, creatives and scaling.
           </p>
 
           {/* CTA Button */}
