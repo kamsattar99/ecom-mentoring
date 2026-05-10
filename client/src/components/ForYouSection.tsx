@@ -33,11 +33,11 @@ export default function ForYouSection() {
             <span className="text-[12px] text-[#583E8D] font-semibold tracking-wide uppercase">Who this is for</span>
           </div>
           <h2 className="font-serif text-[clamp(32px,4vw,50px)] leading-[1.1] tracking-[-0.015em] text-[#17191c]">
-            Built For Founders Ready To{" "}
-            <span className="italic text-[#583E8D]">Execute</span>
+            Built For Serious Founders,{" "}
+            <span className="italic text-[#583E8D]">Not Passive Course Collectors</span>
           </h2>
           <p className="text-[14px] md:text-[15px] text-[#777b86] mt-4 max-w-[500px] mx-auto leading-[1.7]">
-            This is not another passive course. It is a hands-on AI-powered mentorship for people who are ready to follow a system, take feedback, and build with consistency.
+            This is not another passive course you buy and forget about. It is a hands-on mentorship for people ready to build, test, get feedback and execute consistently.
           </p>
         </div>
 
@@ -148,7 +148,7 @@ export default function ForYouSection() {
             className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl text-white text-[14px] font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(88,62,141,0.25)]"
             style={{ background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)" }}
           >
-            Apply For Mentorship
+            Apply For 1-on-1 Mentorship
             <ArrowRight size={15} />
           </a>
           <p className="text-[11px] text-[#999] mt-4">

@@ -85,7 +85,7 @@ export default function PainPoints() {
           </h2>
 
           <p className="text-[16px] md:text-[17px] leading-[1.65] text-[#5a5a6a] max-w-[560px] mx-auto">
-            Ecommerce in 2025 is not the same game it was in 2022 or even 2024. AI has changed the speed, the tools and the execution — but most people are still stuck doing everything manually.
+            Dropshipping in 2026 is no longer won by copying products, building basic stores and hoping your ads work. AI has changed the speed, the tools and the execution — but most people are still stuck doing everything manually.
           </p>
         </div>
 

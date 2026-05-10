@@ -77,7 +77,7 @@ export default function CTASection() {
                 boxShadow: "0 14px 36px rgba(88,62,141,0.28), 0 4px 10px rgba(88,62,141,0.12), inset 0 1px 0 rgba(255,255,255,0.15)",
               }}
             >
-              Apply For Mentorship <ArrowRight size={16} />
+              Apply For 1-on-1 Mentorship <ArrowRight size={16} />
             </a>
 
             {/* Microcopy */}

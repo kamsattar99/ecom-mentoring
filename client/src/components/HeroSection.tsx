@@ -105,9 +105,9 @@ export default function HeroSection() {
         {/* Headline */}
         <div className="text-center max-w-[820px] mx-auto">
           <h1 className="font-serif font-bold text-[clamp(36px,5.5vw,68px)] leading-[1.08] tracking-[-0.02em] text-[#17191c] mb-6">
-            The 1‑on‑1 Ecommerce Mentorship{" "}
+            Build Faster, Test Smarter & Scale With{" "}
             <span className="relative inline-block">
-              <span className="italic text-[#583E8D]">Rebuilt For The AI Era</span>
+              <span className="italic text-[#583E8D]">AI-Powered Ecommerce Mentorship</span>
               <span className="absolute inset-0 bg-[#583E8D]/8 blur-[20px] rounded-full -z-10" />
             </span>
           </h1>
@@ -128,7 +128,7 @@ export default function HeroSection() {
               boxShadow: "0 8px 24px rgba(88,62,141,0.2), 0 2px 6px rgba(88,62,141,0.1)",
             }}
           >
-            Apply For Mentorship
+            Apply For 1-on-1 Mentorship
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
@@ -191,7 +191,7 @@ export default function HeroSection() {
         {/* Founder credibility line */}
         <div className="text-center">
           <p className="text-[13px] text-[#999] font-medium">
-            Led by Kamil Sattar, founder of The Ecom King — trusted by 600k+ e-commerce entrepreneurs.
+            Led by Kamil Sattar, founder of The Ecom King — trusted by 600,000+ ecommerce entrepreneurs and built from 7+ years of real ecommerce experience.
           </p>
         </div>
       </div>

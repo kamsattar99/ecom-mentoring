@@ -27,10 +27,10 @@ const stages = [
   {
     title: "AI Creatives & Paid Ads",
     week: "Week 03",
-    description: "Launch, test and scale campaigns using AI creative production, ad angle research and optimisation frameworks.",
+    description: "Launch, test and scale campaigns using AI-assisted UGC scripts, static ad concepts, hook testing, Meta/TikTok ad angles and creative iteration.",
     bullets: [
-      "AI creative production workflows",
-      "Ad angle research with AI",
+      "AI-assisted UGC scripts & static ad concepts",
+      "Hook testing & ad angle research with AI",
       "Budget allocation & testing rules",
       "When to kill, test or scale",
     ],
@@ -49,12 +49,12 @@ const stages = [
   {
     title: "AI Operations & Automation",
     week: "Week 05",
-    description: "Build AI-assisted SOPs, automate fulfilment, set up email flows and create systems that run without you.",
+    description: "Build AI support agents trained on your store policies, FAQs, product details, shipping rules and customer objections. Automate fulfilment, set up email flows and create systems that run without you.",
     bullets: [
-      "AI-powered SOPs & workflows",
+      "AI support agents for your store",
       "Email & SMS automation",
-      "Fulfilment & operations",
-      "AI tools for delegation",
+      "Fulfilment & operations SOPs",
+      "AI tools for delegation & ops",
     ],
   },
   {
@@ -266,7 +266,7 @@ export default function CurriculumSection() {
                   className="flex items-center justify-between w-full text-white text-[15px] font-medium px-6 py-4 rounded-xl transition-all duration-300 hover:shadow-[0_8px_24px_rgba(88,62,141,0.3)] hover:-translate-y-0.5"
                   style={{ background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)" }}
                 >
-                  <span>Apply Now</span>
+                  <span>See If You Qualify</span>
                   <span className="w-8 h-8 rounded-lg bg-white/15 flex items-center justify-center">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                       <path d="M5 12h14M12 5l7 7-7 7" />

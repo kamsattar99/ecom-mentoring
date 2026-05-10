@@ -198,7 +198,7 @@ export default function TestimonialsSection() {
               className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl text-white text-[14px] font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(88,62,141,0.25)]"
               style={{ background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)" }}
             >
-              Apply For Mentorship
+              Apply For 1-on-1 Mentorship
               <ArrowRight size={15} />
             </a>
             <a href="#curriculum" className="text-[13px] text-[#583E8D] font-medium hover:underline transition-colors">
