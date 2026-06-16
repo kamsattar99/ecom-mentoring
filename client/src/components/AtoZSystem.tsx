@@ -94,6 +94,21 @@ export default function AtoZSystem() {
           </p>
         </div>
 
+        {/* AI Ecosystem Visual */}
+        <div className="max-w-[800px] mx-auto mb-12">
+          <div className="relative rounded-[20px] overflow-hidden" style={{ boxShadow: "0 12px 48px rgba(88,62,141,0.12), 0 4px 16px rgba(0,0,0,0.04)" }}>
+            <img
+              src="/manus-storage/ai-ecosystem-visual_c950dc3f.png"
+              alt="AI-powered ecommerce ecosystem with interconnected business functions"
+              className="w-full h-[180px] md:h-[260px] object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+            {/* Gradient fade at bottom */}
+            <div className="absolute bottom-0 left-0 right-0 h-[60px]" style={{ background: "linear-gradient(to top, rgba(250,249,247,1) 0%, transparent 100%)" }} />
+          </div>
+        </div>
+
         {/* Two-column layout */}
         <div className="grid lg:grid-cols-[1fr_1.1fr] gap-6 lg:gap-8 items-start">
           {/* Left — Overview card */}

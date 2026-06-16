@@ -1,16 +1,21 @@
 export default function HeroSection() {
   return (
     <section className="relative pt-[90px] pb-[60px] md:pt-[160px] md:pb-[80px] overflow-hidden">
-      {/* Background: layered radial glows for premium depth */}
+      {/* AI-generated hero background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0" style={{ background: "radial-gradient(circle at 50% 42%, rgba(245, 229, 210, 0.22), transparent 28%), radial-gradient(circle at 72% 30%, rgba(124, 87, 255, 0.10), transparent 24%), radial-gradient(circle at 22% 72%, rgba(255, 244, 232, 0.18), transparent 22%), linear-gradient(180deg, #fbfaf8 0%, #f6f4f8 100%)" }} />
-        <div className="absolute top-[20%] left-[-5%] w-[600px] h-[700px] rounded-full blur-[150px] opacity-40" style={{ background: "radial-gradient(ellipse, rgba(124, 87, 255, 0.35) 0%, rgba(160, 120, 255, 0.15) 40%, transparent 70%)" }} />
-        <div className="absolute top-[15%] right-[-5%] w-[600px] h-[700px] rounded-full blur-[150px] opacity-40" style={{ background: "radial-gradient(ellipse, rgba(124, 87, 255, 0.35) 0%, rgba(160, 120, 255, 0.15) 40%, transparent 70%)" }} />
-        <div className="absolute top-[30%] left-1/2 -translate-x-1/2 w-[900px] h-[700px] rounded-full blur-[160px] opacity-40" style={{ background: "radial-gradient(ellipse, rgba(248, 240, 228, 0.6) 0%, transparent 70%)" }} />
-        <div className="absolute top-[25%] left-[48%] -translate-x-1/2 w-[500px] h-[300px] rounded-full blur-[120px] opacity-30" style={{ background: "radial-gradient(ellipse, rgba(138, 100, 220, 0.18) 0%, transparent 70%)" }} />
-        <div className="absolute top-[10%] right-[8%] w-[400px] h-[400px] rounded-full blur-[130px] opacity-35" style={{ background: "radial-gradient(circle, rgba(140, 100, 240, 0.35) 0%, transparent 65%)" }} />
-        <div className="absolute bottom-[15%] left-[5%] w-[450px] h-[450px] rounded-full blur-[140px] opacity-35" style={{ background: "radial-gradient(circle, rgba(140, 100, 240, 0.3) 0%, transparent 65%)" }} />
-        <div className="absolute bottom-[20%] right-[12%] w-[350px] h-[350px] rounded-full blur-[120px] opacity-20" style={{ background: "radial-gradient(circle, rgba(240, 225, 250, 0.25) 0%, transparent 60%)" }} />
+        <img
+          src="/manus-storage/hero-abstract-bg_56d547c4.png"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+          decoding="async"
+        />
+        {/* Overlay for text legibility - light frosted layer */}
+        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(251,250,248,0.88) 0%, rgba(246,244,248,0.82) 40%, rgba(243,238,249,0.85) 70%, rgba(251,250,248,0.92) 100%)" }} />
+        {/* Subtle purple glow accents */}
+        <div className="absolute top-[20%] left-[-5%] w-[600px] h-[700px] rounded-full blur-[150px] opacity-30" style={{ background: "radial-gradient(ellipse, rgba(124, 87, 255, 0.25) 0%, transparent 70%)" }} />
+        <div className="absolute top-[15%] right-[-5%] w-[600px] h-[700px] rounded-full blur-[150px] opacity-30" style={{ background: "radial-gradient(ellipse, rgba(124, 87, 255, 0.25) 0%, transparent 70%)" }} />
+        {/* Noise texture */}
         <div className="absolute inset-0 opacity-[0.03]"
           style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")" }}
         />
@@ -30,7 +35,7 @@ export default function HeroSection() {
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-total-sales-Rdmh5wtQRyFfGinKfiFvwP.webp"
             alt="Total Sales: $250,000"
             className="w-[320px] rounded-2xl border border-white/70"
-            style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.1), 0 4px 12px rgba(88,62,141,0.06)" }}
+            style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.12), 0 4px 12px rgba(88,62,141,0.08)" }}
             width={320}
             height={200}
             loading="eager"
@@ -47,7 +52,7 @@ export default function HeroSection() {
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-sessions-device-38MypvLYE5mt2H82mSxXPK.webp"
             alt="Sessions by Device"
             className="w-[300px] rounded-2xl border border-white/70"
-            style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.1), 0 4px 12px rgba(88,62,141,0.06)" }}
+            style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.12), 0 4px 12px rgba(88,62,141,0.08)" }}
             width={300}
             height={200}
             loading="eager"
@@ -64,7 +69,7 @@ export default function HeroSection() {
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-customers-time-X3ms7jG8yZk3tc2x3jGNVj.webp"
             alt="Customers over Time"
             className="w-[300px] rounded-2xl border border-white/70"
-            style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.1), 0 4px 12px rgba(88,62,141,0.06)" }}
+            style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.12), 0 4px 12px rgba(88,62,141,0.08)" }}
             width={300}
             height={200}
             loading="eager"
@@ -81,7 +86,7 @@ export default function HeroSection() {
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-sales-country-3wvFYXTrqPCU22m66QfsHX.webp"
             alt="Sessions by Country"
             className="w-[290px] rounded-2xl border border-white/70"
-            style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.1), 0 4px 12px rgba(88,62,141,0.06)" }}
+            style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.12), 0 4px 12px rgba(88,62,141,0.08)" }}
             width={290}
             height={200}
             loading="eager"
