@@ -1,14 +1,48 @@
+import { useParallax } from "@/hooks/useParallax";
+import { useState, useRef, useEffect } from "react";
+
 export default function HeroSection() {
+  const { ref, offset } = useParallax(0.25);
+  const [bgLoaded, setBgLoaded] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    // Attempt to play video once loaded
+    if (videoRef.current && videoLoaded) {
+      videoRef.current.play().catch(() => {});
+    }
+  }, [videoLoaded]);
+
   return (
-    <section className="relative pt-[90px] pb-[60px] md:pt-[160px] md:pb-[80px] overflow-hidden">
-      {/* AI-generated hero background */}
+    <section ref={ref} className="relative pt-[90px] pb-[60px] md:pt-[160px] md:pb-[80px] overflow-hidden">
+      {/* AI-generated hero background with parallax + video */}
       <div className="absolute inset-0">
+        {/* Shimmer placeholder */}
+        {!bgLoaded && !videoLoaded && (
+          <div className="absolute inset-0 shimmer-loading" />
+        )}
+        {/* Static image fallback (shows while video loads or if video fails) */}
         <img
           src="/manus-storage/hero-abstract-bg_56d547c4.png"
           alt=""
-          className="absolute inset-0 w-full h-full object-cover"
+          className={`absolute inset-[-10%] w-[120%] h-[120%] object-cover parallax-bg transition-opacity duration-700 ${bgLoaded ? "opacity-100" : "opacity-0"} ${videoLoaded ? "opacity-0" : ""}`}
+          style={{ transform: `translateY(${offset}px)` }}
           loading="eager"
           decoding="async"
+          onLoad={() => setBgLoaded(true)}
+        />
+        {/* Video loop - fades in over the static image once loaded */}
+        <video
+          ref={videoRef}
+          className={`absolute inset-[-10%] w-[120%] h-[120%] object-cover parallax-bg transition-opacity duration-1000 ${videoLoaded ? "opacity-100" : "opacity-0"}`}
+          style={{ transform: `translateY(${offset}px)` }}
+          src="/manus-storage/hero-video-loop_be7a5807.mp4"
+          muted
+          loop
+          playsInline
+          preload="auto"
+          onCanPlayThrough={() => setVideoLoaded(true)}
         />
         {/* Overlay for text legibility - light frosted layer */}
         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(251,250,248,0.88) 0%, rgba(246,244,248,0.82) 40%, rgba(243,238,249,0.85) 70%, rgba(251,250,248,0.92) 100%)" }} />

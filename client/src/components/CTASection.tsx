@@ -1,16 +1,27 @@
 import { ArrowRight, Layers, MessageSquare, BarChart3 } from "lucide-react";
+import { useParallax } from "@/hooks/useParallax";
+import { useState } from "react";
 
 export default function CTASection() {
+  const { ref, offset } = useParallax(0.2);
+  const [bgLoaded, setBgLoaded] = useState(false);
+
   return (
-    <section className="py-[80px] md:py-[120px] relative overflow-hidden">
-      {/* AI-generated growth visual as background */}
+    <section ref={ref} className="py-[80px] md:py-[120px] relative overflow-hidden">
+      {/* AI-generated growth visual as background with parallax */}
       <div className="absolute inset-0">
+        {/* Shimmer placeholder (dark variant) */}
+        {!bgLoaded && (
+          <div className="absolute inset-0 shimmer-loading-dark" />
+        )}
         <img
           src="/manus-storage/growth-scaling-visual_1ae06fc4.png"
           alt=""
-          className="absolute inset-0 w-full h-full object-cover"
+          className={`absolute inset-[-10%] w-[120%] h-[120%] object-cover parallax-bg transition-opacity duration-700 ${bgLoaded ? "opacity-100" : "opacity-0"}`}
+          style={{ transform: `translateY(${offset}px)` }}
           loading="lazy"
           decoding="async"
+          onLoad={() => setBgLoaded(true)}
         />
         {/* Dark overlay for premium feel and text legibility */}
         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(15,10,24,0.85) 0%, rgba(26,18,37,0.90) 50%, rgba(15,10,24,0.88) 100%)" }} />
