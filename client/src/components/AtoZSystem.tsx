@@ -1,5 +1,4 @@
 import { Check } from "lucide-react";
-import { useState } from "react";
 
 const steps = [
   {
@@ -78,7 +77,6 @@ const tools = [
 ];
 
 export default function AtoZSystem() {
-  const [ecosystemImgLoaded, setEcosystemImgLoaded] = useState(false);
   return (
     <section className="py-[80px] md:py-[120px] relative overflow-hidden" style={{ background: "linear-gradient(180deg, #faf9f7 0%, #f9f6fd 50%, #f8f5fc 100%)" }}>
       <div className="container">
@@ -94,26 +92,6 @@ export default function AtoZSystem() {
           <p className="text-[16px] md:text-[17px] leading-[1.6] text-[#4c4c4c] max-w-[600px] mx-auto">
             This is not an AI module bolted onto an old course. The entire curriculum has been rebuilt around AI-assisted ecommerce execution — from product research to scaling.
           </p>
-        </div>
-
-        {/* AI Ecosystem Visual */}
-        <div className="max-w-[800px] mx-auto mb-12">
-          <div className="relative rounded-[20px] overflow-hidden" style={{ boxShadow: "0 12px 48px rgba(88,62,141,0.12), 0 4px 16px rgba(0,0,0,0.04)" }}>
-            {/* Shimmer placeholder */}
-            {!ecosystemImgLoaded && (
-              <div className="absolute inset-0 shimmer-loading" />
-            )}
-            <img
-              src="/manus-storage/ai-ecosystem-visual_c950dc3f.png"
-              alt="AI-powered ecommerce ecosystem with interconnected business functions"
-              className={`w-full h-[180px] md:h-[260px] object-cover transition-opacity duration-500 ${ecosystemImgLoaded ? "opacity-100" : "opacity-0"}`}
-              loading="lazy"
-              decoding="async"
-              onLoad={() => setEcosystemImgLoaded(true)}
-            />
-            {/* Gradient fade at bottom */}
-            <div className="absolute bottom-0 left-0 right-0 h-[60px]" style={{ background: "linear-gradient(to top, rgba(250,249,247,1) 0%, transparent 100%)" }} />
-          </div>
         </div>
 
         {/* Two-column layout */}

@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const oldWay = [
   "Manual product research",
   "Slow store builds",
@@ -20,7 +18,6 @@ const newWay = [
 ];
 
 export default function OldVsNew() {
-  const [imgLoaded, setImgLoaded] = useState(false);
   return (
     <section className="py-[80px] md:py-[100px] relative overflow-hidden" style={{ background: "linear-gradient(180deg, #faf9f7 0%, #f8f5fc 50%, #f3eef9 100%)" }}>
       <div className="container">
@@ -36,26 +33,6 @@ export default function OldVsNew() {
           <p className="text-[15px] md:text-[16px] leading-[1.65] text-[#4c4c4c] max-w-[560px] mx-auto">
             The mentorship has been completely rebuilt around AI-powered ecommerce execution. Here is what changed.
           </p>
-        </div>
-
-        {/* Featured transformation visual */}
-        <div className="max-w-[920px] mx-auto mb-10">
-          <div className="relative rounded-[20px] overflow-hidden" style={{ boxShadow: "0 12px 48px rgba(88,62,141,0.12), 0 4px 16px rgba(0,0,0,0.04)" }}>
-            {/* Shimmer placeholder */}
-            {!imgLoaded && (
-              <div className="absolute inset-0 shimmer-loading" />
-            )}
-            <img
-              src="/manus-storage/old-vs-new-visual_3a5af9e6.png"
-              alt="Transformation from old manual methods to new AI-powered systems"
-              className={`w-full h-[200px] md:h-[280px] object-cover transition-opacity duration-500 ${imgLoaded ? "opacity-100" : "opacity-0"}`}
-              loading="lazy"
-              decoding="async"
-              onLoad={() => setImgLoaded(true)}
-            />
-            {/* Gradient fade at bottom */}
-            <div className="absolute bottom-0 left-0 right-0 h-[60px]" style={{ background: "linear-gradient(to top, rgba(250,249,247,1) 0%, transparent 100%)" }} />
-          </div>
         </div>
 
         {/* Comparison grid */}

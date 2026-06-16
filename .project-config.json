@@ -1,0 +1,35 @@
+{
+  "build_command": "pnpm run build",
+  "capabilities": [],
+  "dev_command": "pnpm run dev",
+  "env_vars": {},
+  "experiments": null,
+  "git_remote": {
+    "repo_url": "s3://vida-prod-gitrepo/webdev-git/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo",
+    "access_key_id": "ASIAZV3A2ECZDD2TX6TH",
+    "secret_access_key": "gV04qbPN1j166QuuUkBEyPJ1J2NAqB17443SUmiy",
+    "session_token": "IQoJb3JpZ2luX2VjELP//////////wEaCXVzLWVhc3QtMSJHMEUCIQC1sQ5CaA9D1pBDFAt7Ss9BZHpbwnYlKIuDTZZdhYoqewIgRQKbDCmo947pqcjgo5HNGcFBVnzeTqtv+97tU4e7FF8q9gMIfBAEGgw2NjUzODYwOTg4NjYiDDG5lfrmg4PSu3ymtCrTA/Mq6omRIG8ic2KIGRdtlzr7yClI1JTXW+V2z6iVab0oqzxQmG7w5gN/+FyGTRUZL43eBCjQbTHDwhrql6fBqX4YVSZFGYL6f3VaEK7miroJm7I61liNiHWsFvMlVsUBA5kaPzGtmH3AcmNGF7bFWZqba1NZCBCEGyCMnKljbqVwe+nr2Y8Htoa5k96oxDcruPaBg7SpyCpcGUUwHwlh4Znc3+1kEbB+Kh9Xx1p/KkHDjRBDsgnrk7r/kzgglj+Bcv1rwuOlBNj/xUdwZHO5mYI5mdM/ezLmUKj9BG4erbXiL1czmx9vjMeDlSkAZ7DwvO+Q3nsfXQf1djC+URBILedF28Z8M71fwE0+A6vN7KWS/5VLmlkJEB8mvQJyMknG/mYoNOUf1t5jzJhH+D16WJIhlqdeU8XZweWFmONTIItqY4I2EW8POgp46gg4mqAASg0HPPzy01VlE5Fw15j9ERi/zQmvMhr26HAHWgow2wUTVAoIUfAhREYfC1c2p9stoV01Q3U+Xh94d75GyP4SOMcU0btM+ihzkHvUu8Av3Nj7qSFYeY1JrgjTmRCQRmBZjUg+2Wtp/n7yPFUWOwDWxtVpcki5d39PigBXvRMgFGUPqwjXMM66xtEGOp0B8ilWX4RqgbhORzHrQZNm8OoEJFKONujIg+IHGgmOlEV3ooyiknCsYPHz5YaiuX9KTdpZGXL8e46MJrzADian9jFUnm7ymCcq3cTfKwp1OM/qk3z8R5j803wIy4ctOQvWJe8TfBoQsn62K1iNBjm32ezV1yFM8KJ8ELrFVwHok3yTnzLMxMer/Dys7oQQqHHO52/P+KAxGrSspXR+HQ==",
+    "expiration": "2026-06-17T07:00:30.000Z"
+  },
+  "name": "ecom-mentoring",
+  "path": "/home/ubuntu/ecom-mentoring",
+  "port": 3000,
+  "secrets": {
+    "BUILT_IN_FORGE_API_KEY": "DEjoXSEYQ6U6g98BAbB5qi",
+    "BUILT_IN_FORGE_API_URL": "https://forge.manus.ai",
+    "JWT_SECRET": "mLM85AfBz5MQcCxUcPZvp4",
+    "OAUTH_SERVER_URL": "https://api.manus.im",
+    "OWNER_NAME": "Kamil Sattar",
+    "OWNER_OPEN_ID": "mjjMUbpgyr9iEQwq4fTyRV",
+    "VITE_ANALYTICS_ENDPOINT": "https://manus-analytics.com",
+    "VITE_ANALYTICS_WEBSITE_ID": "1f94df02-7fdc-44f6-beca-0542db82bbca",
+    "VITE_APP_ID": "TiCj6Aw4s8ouGZgKX7pWUo",
+    "VITE_APP_LOGO": "https://files.manuscdn.com/user_upload_by_module/web_dev_logo/310519663523906676/ccVVGuXGIJZrHVAR.webp",
+    "VITE_APP_TITLE": "Ecom | Dropshipping Mentor",
+    "VITE_FRONTEND_FORGE_API_KEY": "UfAxi5RF5NHGqXceP6qPVn",
+    "VITE_FRONTEND_FORGE_API_URL": "https://forge.manus.ai",
+    "VITE_OAUTH_PORTAL_URL": "https://manus.im"
+  },
+  "template_id": "web-static",
+  "test_command": "pnpm test"
+}
