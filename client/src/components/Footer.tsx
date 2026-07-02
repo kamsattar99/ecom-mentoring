@@ -9,9 +9,9 @@ export default function Footer() {
             <div className="flex items-center mb-5">
               <a href="/">
                 <img
-                  src="/manus-storage/ecom-mentoring-logo_b617fdab.webp"
+                  src="/manus-storage/ecom-mentoring-footer-logo_6a87be9b.webp"
                   alt="eMentoring"
-                  className="h-[48px] w-auto brightness-0 invert"
+                  className="h-[48px] w-auto"
                   width={160}
                   height={48}
                   loading="lazy"
