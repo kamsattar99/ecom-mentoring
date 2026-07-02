@@ -33,7 +33,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="/" className="flex items-center gap-2 group">
           <img
-            src="/manus-storage/ecom-mentoring-logo_b617fdab.webp"
+            src="/manus-storage/ecom-mentoring-footer-logo_6a87be9b.webp"
             alt="eMentoring"
             className="h-[48px] w-auto"
             width={160}
