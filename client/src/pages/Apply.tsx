@@ -14,7 +14,7 @@ export default function Apply() {
   }, []);
 
   return (
-    <div className="w-full h-screen">
+    <div className="w-full h-screen" style={{ background: "#0F0E13" }}>
       <div
         data-tf-widget="mimJCUN0"
         data-tf-opacity="100"

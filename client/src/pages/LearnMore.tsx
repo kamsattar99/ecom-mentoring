@@ -58,14 +58,29 @@ export default function LearnMore() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#f8f6fc] via-white to-[#f8f6fc]">
+    <div className="min-h-screen bg-[#0F0E13]">
       {/* Video Section */}
-      <section className="pt-24 md:pt-32 pb-16 md:pb-20 px-4">
-        <div className="max-w-[900px] mx-auto">
+      <section className="relative pt-24 md:pt-32 pb-20 md:pb-28 px-4 overflow-hidden">
+        {/* Radial purple glow */}
+        <div
+          className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[600px] pointer-events-none"
+          style={{
+            background: "radial-gradient(ellipse, rgba(123,91,181,0.28) 0%, transparent 65%)",
+          }}
+        />
+
+        <div className="relative max-w-[900px] mx-auto">
           {/* Eyebrow Badge */}
           <div className="text-center mb-5">
-            <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#583E8D]/8 border border-[#583E8D]/15 text-[#583E8D] text-[12px] font-medium tracking-wide uppercase">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-[#583E8D]">
+            <span
+              className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[12px] font-medium tracking-wide uppercase"
+              style={{
+                border: "1px solid rgba(155,126,219,0.35)",
+                background: "rgba(88,62,141,0.15)",
+                color: "rgba(255,255,255,0.8)",
+              }}
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-[#B394F2]">
                 <polygon points="5 3 19 12 5 21 5 3" />
               </svg>
               Watch Before Applying
@@ -73,18 +88,27 @@ export default function LearnMore() {
           </div>
 
           {/* Headline */}
-          <h1 className="font-serif font-bold text-[clamp(26px,4.5vw,44px)] leading-[1.15] tracking-[-0.02em] text-[#17191c] text-center max-w-[700px] mx-auto mb-4">
-            See How The AI-Powered Ecom Mentorship Works
+          <h1
+            className="text-center max-w-[700px] mx-auto mb-4 leading-[1.15] tracking-[-0.02em] text-white"
+            style={{ fontFamily: "'Instrument Serif', serif", fontWeight: 400, fontSize: "clamp(30px,4.5vw,54px)" }}
+          >
+            See How The <em className="italic text-[#B394F2]">AI-Powered</em> Ecom Mentorship Works
           </h1>
 
           {/* Subheading */}
-          <p className="text-center text-[15px] md:text-[16px] text-[#555] leading-relaxed max-w-[600px] mx-auto mb-10">
+          <p className="text-center text-[15px] md:text-[16px] leading-relaxed max-w-[600px] mx-auto mb-10" style={{ color: "rgba(255,255,255,0.6)" }}>
             Watch this short breakdown to understand the AI-integrated roadmap, support and expectations before you apply.
           </p>
 
           {/* Video Container */}
-          <div className="relative rounded-2xl overflow-hidden border border-[#e8e4f0] shadow-[0_8px_40px_rgba(88,62,141,0.08),0_2px_12px_rgba(0,0,0,0.04)]">
-
+          <div
+            className="relative rounded-2xl overflow-hidden"
+            style={{
+              border: "1px solid rgba(255,255,255,0.12)",
+              borderRadius: "16px",
+              boxShadow: "0 32px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(155,126,219,0.2)",
+            }}
+          >
             <div
               dangerouslySetInnerHTML={{
                 __html: `<vturb-smartplayer id="vid-69d95194d7a6aac50a9b93e2" style="display: block; margin: 0 auto; width: 100%;"></vturb-smartplayer>`,
@@ -93,7 +117,7 @@ export default function LearnMore() {
           </div>
 
           {/* Video tip */}
-          <p className="text-center text-[12px] text-[#999] mt-4 font-medium">
+          <p className="text-center text-[12px] mt-4 font-medium" style={{ color: "rgba(255,255,255,0.4)" }}>
             Tip: watch at 1.25x–1.5x speed if you're short on time.
           </p>
 
@@ -106,9 +130,14 @@ export default function LearnMore() {
             ].map((point) => (
               <span
                 key={point}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#e8e4f0] text-[13px] text-[#444] font-medium shadow-sm"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[13px] font-medium"
+                style={{
+                  background: "transparent",
+                  border: "1px solid rgba(255,255,255,0.14)",
+                  color: "rgba(255,255,255,0.7)",
+                }}
               >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-[#583E8D] shrink-0">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-[#9B7EDB] shrink-0">
                   <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
                 {point}
@@ -123,23 +152,15 @@ export default function LearnMore() {
               className="inline-flex items-center gap-2 text-white text-[15px] md:text-[16px] font-medium px-10 py-4 rounded-full transition-all duration-300 hover:-translate-y-[2px]"
               style={{
                 background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)",
-                boxShadow:
-                  "0 8px 24px rgba(88,62,141,0.25), 0 2px 6px rgba(88,62,141,0.1)",
+                boxShadow: "0 12px 40px rgba(123,91,181,0.45)",
               }}
             >
               Apply For Mentorship
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-              >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
-            <p className="mt-4 text-[13px] text-[#888] font-medium max-w-[400px] mx-auto">
+            <p className="mt-4 text-[13px] font-medium max-w-[400px] mx-auto" style={{ color: "rgba(255,255,255,0.4)" }}>
               Application takes around 2 minutes. We'll review your goals, budget and current stage.
             </p>
           </div>
@@ -149,9 +170,10 @@ export default function LearnMore() {
             {["1:1 mentorship", "Structured roadmap", "Store & ad reviews", "Application required"].map((item) => (
               <span
                 key={item}
-                className="inline-flex items-center gap-1.5 text-[12px] text-[#777] font-medium"
+                className="inline-flex items-center gap-1.5 text-[12px] font-medium"
+                style={{ color: "rgba(255,255,255,0.5)" }}
               >
-                <span className="w-1 h-1 rounded-full bg-[#583E8D]" />
+                <span className="w-1 h-1 rounded-full bg-[#9B7EDB]" />
                 {item}
               </span>
             ))}
@@ -160,17 +182,27 @@ export default function LearnMore() {
       </section>
 
       {/* Meet Our Mentors Section */}
-      <section className="py-16 md:py-24 px-4">
+      <section
+        className="py-24 md:py-28 px-4"
+        style={{
+          background: "#131118",
+          borderTop: "1px solid rgba(255,255,255,0.06)",
+          borderBottom: "1px solid rgba(255,255,255,0.06)",
+        }}
+      >
         <div className="max-w-[1200px] mx-auto">
           {/* Section Header */}
           <div className="text-center mb-14 md:mb-18">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-[#583E8D]/10 text-[#583E8D] text-[12px] font-medium tracking-wide uppercase mb-5">
+            <span className="text-[#B394F2] text-[12px] font-bold tracking-[0.12em] uppercase mb-5 block">
               Your Mentors
             </span>
-            <h2 className="font-serif font-bold text-[clamp(28px,4vw,44px)] leading-[1.15] tracking-[-0.02em] text-[#17191c]">
-              Meet The Operators Behind The AI Mentorship
+            <h2
+              className="text-white text-center leading-[1.15] tracking-[-0.02em]"
+              style={{ fontFamily: "'Instrument Serif', serif", fontWeight: 400, fontSize: "clamp(28px,4vw,50px)" }}
+            >
+              Meet The Operators Behind The <em className="italic text-[#B394F2]">AI Mentorship</em>
             </h2>
-            <p className="mt-4 text-[15px] md:text-[16px] text-[#555] max-w-[620px] mx-auto leading-relaxed">
+            <p className="mt-4 text-[15px] md:text-[16px] max-w-[620px] mx-auto leading-relaxed" style={{ color: "rgba(255,255,255,0.6)" }}>
               Work with mentors who have built, scaled and managed real e-commerce businesses using AI — bringing practical feedback, AI-integrated frameworks and accountability to your store.
             </p>
           </div>
@@ -180,11 +212,19 @@ export default function LearnMore() {
             {mentors.map((mentor) => (
               <div
                 key={mentor.name}
-                className={`relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 flex flex-col ${
-                  mentor.featured
-                    ? "bg-gradient-to-b from-[#1a1225] to-[#0f0a18] ring-2 ring-[#7B5BB5]/50 shadow-[0_12px_48px_rgba(123,91,181,0.2)]"
-                    : "bg-gradient-to-b from-[#1c1c22] to-[#111114] ring-1 ring-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.15)]"
-                }`}
+                className="relative overflow-hidden transition-all duration-300 hover:-translate-y-1 flex flex-col"
+                style={{
+                  background: mentor.featured
+                    ? "linear-gradient(160deg, rgba(88,62,141,0.35) 0%, #17151E 60%)"
+                    : "#17151E",
+                  border: mentor.featured
+                    ? "1px solid rgba(155,126,219,0.4)"
+                    : "1px solid rgba(255,255,255,0.08)",
+                  borderRadius: "22px",
+                  boxShadow: mentor.featured
+                    ? "0 24px 64px rgba(88,62,141,0.3)"
+                    : "0 8px 32px rgba(0,0,0,0.15)",
+                }}
               >
                 {/* Featured badge */}
                 {mentor.featured && (
@@ -195,7 +235,7 @@ export default function LearnMore() {
                   </div>
                 )}
 
-                {/* Photo - brighter with less overlay */}
+                {/* Photo */}
                 <div className="relative h-[260px] md:h-[280px] overflow-hidden">
                   <img
                     src={mentor.image}
@@ -204,8 +244,7 @@ export default function LearnMore() {
                     loading="lazy"
                     decoding="async"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1c1c22] via-[#1c1c22]/20 to-transparent" />
-                  {/* Purple edge glow for lead mentor */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#17151E] via-[#17151E]/20 to-transparent" />
                   {mentor.featured && (
                     <div className="absolute inset-0 shadow-[inset_0_0_30px_rgba(123,91,181,0.15)]" />
                   )}
@@ -224,16 +263,16 @@ export default function LearnMore() {
                   <ul className="space-y-2 mb-4">
                     {mentor.credentials.map((cred, i) => (
                       <li key={i} className="flex items-start gap-2">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-[#7B5BB5] shrink-0 mt-0.5">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-[#9B7EDB] shrink-0 mt-0.5">
                           <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
-                        <span className="text-[#d0d0d8] text-[13px] leading-snug">{cred}</span>
+                        <span className="text-[13px] leading-snug" style={{ color: "rgba(255,255,255,0.55)" }}>{cred}</span>
                       </li>
                     ))}
                   </ul>
 
                   {/* Short bio */}
-                  <p className="text-[#9a9aa8] text-[13px] leading-[1.7] mb-5 flex-1">
+                  <p className="text-[13px] leading-[1.7] mb-5 flex-1" style={{ color: "rgba(255,255,255,0.55)" }}>
                     {mentor.bio}
                   </p>
 
@@ -254,114 +293,173 @@ export default function LearnMore() {
           </div>
 
           {/* Bridge CTA under cards */}
-          <p className="text-center text-[13px] text-[#777] mt-10 font-medium">
+          <p className="text-center text-[13px] mt-10 font-medium" style={{ color: "rgba(255,255,255,0.4)" }}>
             Apply to see which mentor is best suited to your stage.
           </p>
         </div>
       </section>
 
       {/* Stats Strip */}
-      <section className="w-full bg-gradient-to-r from-[#4e3580] via-[#583E8D] to-[#6b4fa8] py-12 md:py-16 border-t border-[#7B5BB5]/20">
-        <div className="max-w-[900px] mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 text-center">
-          <div>
-            <p className="text-white font-bold text-[clamp(32px,4.5vw,48px)] leading-none tracking-tight">1,000+</p>
-            <p className="text-white/75 text-[14px] mt-2 font-medium">Students Trained</p>
-          </div>
-          <div>
-            <p className="text-white font-bold text-[clamp(32px,4.5vw,48px)] leading-none tracking-tight">$20M+</p>
-            <p className="text-white/75 text-[14px] mt-2 font-medium">Student-Reported Revenue</p>
-          </div>
-          <div>
-            <p className="text-white font-bold text-[clamp(32px,4.5vw,48px)] leading-none tracking-tight">9+</p>
-            <p className="text-white/75 text-[14px] mt-2 font-medium">Years Industry Experience</p>
-          </div>
+      <section
+        className="py-16 px-4"
+        style={{
+          borderTop: "1px solid rgba(255,255,255,0.08)",
+          borderBottom: "1px solid rgba(255,255,255,0.08)",
+        }}
+      >
+        <div className="max-w-[900px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 text-center">
+          {[
+            { number: "1,000+", label: "Students Trained" },
+            { number: "$20M+", label: "Student-Reported Revenue" },
+            { number: "9+", label: "Years Industry Experience" },
+          ].map((stat, i) => (
+            <div
+              key={stat.label}
+              className={`${i < 2 ? "md:border-r" : ""}`}
+              style={{ borderColor: "rgba(255,255,255,0.12)" }}
+            >
+              <p
+                className="text-white leading-none tracking-tight"
+                style={{ fontFamily: "'Instrument Serif', serif", fontWeight: 400, fontSize: "clamp(32px,4.5vw,44px)" }}
+              >
+                {stat.number}
+              </p>
+              <p className="text-[13px] mt-2 font-medium" style={{ color: "rgba(255,255,255,0.5)" }}>
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
         {/* Disclaimer */}
-        <p className="text-center text-[11px] text-white/40 mt-6 px-4 max-w-[600px] mx-auto">
+        <p className="text-center text-[11px] mt-6 px-4 max-w-[600px] mx-auto" style={{ color: "rgba(255,255,255,0.35)" }}>
           Results vary. Figures are based on student-reported outcomes and are not guaranteed. Your success depends on effort, skill and market conditions.
         </p>
       </section>
 
       {/* Bottom CTA Section */}
-      <section className="relative py-16 md:py-24 px-4">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#f3eef9] via-[#ede6f5] to-[#f9f5ee] opacity-80" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(200,170,240,0.3),transparent_60%),radial-gradient(ellipse_at_top_right,rgba(230,200,250,0.25),transparent_60%)]" />
+      <section className="relative py-24 md:py-28 px-4">
+        <div
+          className="relative max-w-[760px] mx-auto px-6 md:px-16 py-16 md:py-20 overflow-hidden"
+          style={{
+            border: "1px solid rgba(155,126,219,0.3)",
+            borderRadius: "32px",
+            background: "linear-gradient(160deg, rgba(88,62,141,0.35) 0%, rgba(15,14,19,0.6) 60%)",
+          }}
+        >
+          {/* Radial glow inside panel */}
+          <div
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] pointer-events-none"
+            style={{
+              background: "radial-gradient(ellipse, rgba(123,91,181,0.25) 0%, transparent 65%)",
+            }}
+          />
 
-        <div className="relative max-w-[700px] mx-auto rounded-3xl bg-white/60 backdrop-blur-sm border border-white/70 shadow-[0_8px_48px_rgba(88,62,141,0.08)] px-6 md:px-12 py-12 md:py-16">
-          {/* Badge */}
-          <div className="text-center mb-6">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#e8e4f0] text-[13px] font-medium text-[#333] shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-[#583E8D]"></span>
-              Limited Mentor Capacity
-            </span>
-          </div>
+          <div className="relative z-10">
+            {/* Badge */}
+            <div className="text-center mb-6">
+              <span
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[13px] font-medium"
+                style={{
+                  border: "1px solid rgba(155,126,219,0.35)",
+                  background: "rgba(88,62,141,0.15)",
+                  color: "rgba(255,255,255,0.85)",
+                }}
+              >
+                <span className="w-2 h-2 rounded-full bg-[#9B7EDB]"></span>
+                Limited Mentor Capacity
+              </span>
+            </div>
 
-          {/* Headline */}
-          <h2 className="font-serif font-bold text-[clamp(28px,4.5vw,44px)] leading-[1.15] tracking-[-0.02em] text-[#17191c] text-center mb-5">
-            Ready To Build With AI And <em className="italic text-[#583E8D]">Scale Faster?</em>
-          </h2>
-
-          {/* Subtext */}
-          <p className="text-center text-[15px] md:text-[16px] text-[#666] leading-relaxed max-w-[560px] mx-auto mb-8">
-            Apply to work 1:1 with experienced e-commerce mentors who integrate AI into every stage — product research, store setup, ads, creatives and scaling.
-          </p>
-
-          {/* CTA Button */}
-          <div className="text-center mb-5">
-            <a
-              href="/apply"
-              className="inline-flex items-center gap-2 text-white text-[15px] md:text-[16px] font-medium px-10 py-4 rounded-full transition-all duration-300 hover:-translate-y-[2px]"
-              style={{
-                background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)",
-                boxShadow: "0 8px 24px rgba(88,62,141,0.25), 0 2px 6px rgba(88,62,141,0.1)",
-              }}
+            {/* Headline */}
+            <h2
+              className="text-white text-center mb-5 leading-[1.15] tracking-[-0.02em]"
+              style={{ fontFamily: "'Instrument Serif', serif", fontWeight: 400, fontSize: "clamp(28px,4.5vw,50px)" }}
             >
-              Apply For Mentorship
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
+              Ready To Build With AI And <em className="italic text-[#B394F2]">Scale Faster?</em>
+            </h2>
 
-          {/* Reassurance text */}
-          <p className="text-center text-[13px] text-[#888] font-medium mb-4">
-            Applications are reviewed before calls are booked. No pressure if it is not the right fit.
-          </p>
+            {/* Subtext */}
+            <p className="text-center text-[15px] md:text-[16px] leading-relaxed max-w-[560px] mx-auto mb-8" style={{ color: "rgba(255,255,255,0.65)" }}>
+              Apply to work 1:1 with experienced e-commerce mentors who integrate AI into every stage — product research, store setup, ads, creatives and scaling.
+            </p>
 
-          {/* View curriculum link */}
-          <div className="text-center mb-8">
-            <a href="/#curriculum" className="inline-flex items-center gap-1 text-[14px] font-medium text-[#333] underline underline-offset-4 decoration-[#333]/30 hover:decoration-[#333] transition-colors">
-              View curriculum
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
+            {/* CTA Button */}
+            <div className="text-center mb-5">
+              <a
+                href="/apply"
+                className="inline-flex items-center gap-2 text-white text-[15px] md:text-[16px] font-medium px-10 py-4 rounded-full transition-all duration-300 hover:-translate-y-[2px]"
+                style={{
+                  background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)",
+                  boxShadow: "0 14px 44px rgba(123,91,181,0.5)",
+                }}
+              >
+                Apply For Mentorship
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
 
-          {/* Divider */}
-          <div className="border-t border-[#e8e4f0] mb-8" />
+            {/* Reassurance text */}
+            <p className="text-center text-[13px] font-medium mb-4" style={{ color: "rgba(255,255,255,0.45)" }}>
+              Applications are reviewed before calls are booked. No pressure if it is not the right fit.
+            </p>
 
-          {/* Trust pills */}
-          <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-[#e8e4f0] text-[13px] text-[#444] font-medium shadow-sm">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#583E8D" strokeWidth="2">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-              </svg>
-              Proven frameworks
-            </span>
-            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-[#e8e4f0] text-[13px] text-[#444] font-medium shadow-sm">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#583E8D" strokeWidth="2">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-              </svg>
-              Direct mentor access
-            </span>
-            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-[#e8e4f0] text-[13px] text-[#444] font-medium shadow-sm">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#583E8D" strokeWidth="2">
-                <path d="M18 20V10M12 20V4M6 20v-6" />
-              </svg>
-              Store & ad reviews
-            </span>
+            {/* View curriculum link */}
+            <div className="text-center mb-8">
+              <a href="/#curriculum" className="inline-flex items-center gap-1 text-[14px] font-medium text-[#B394F2] underline underline-offset-4 decoration-[#B394F2]/40 hover:decoration-[#B394F2] transition-colors">
+                View curriculum
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+
+            {/* Divider */}
+            <div className="mb-8" style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }} />
+
+            {/* Trust pills */}
+            <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+              <span
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-[13px] font-medium"
+                style={{
+                  background: "transparent",
+                  border: "1px solid rgba(255,255,255,0.14)",
+                  color: "rgba(255,255,255,0.7)",
+                }}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9B7EDB" strokeWidth="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                Proven frameworks
+              </span>
+              <span
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-[13px] font-medium"
+                style={{
+                  background: "transparent",
+                  border: "1px solid rgba(255,255,255,0.14)",
+                  color: "rgba(255,255,255,0.7)",
+                }}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9B7EDB" strokeWidth="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg>
+                Direct mentor access
+              </span>
+              <span
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-[13px] font-medium"
+                style={{
+                  background: "transparent",
+                  border: "1px solid rgba(255,255,255,0.14)",
+                  color: "rgba(255,255,255,0.7)",
+                }}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9B7EDB" strokeWidth="2">
+                  <path d="M18 20V10M12 20V4M6 20v-6" />
+                </svg>
+                Store & ad reviews
+              </span>
+            </div>
           </div>
         </div>
       </section>
