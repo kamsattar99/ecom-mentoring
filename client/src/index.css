@@ -9,15 +9,15 @@
   --radius-lg: 16px;
   --radius-xl: 24px;
 
-  --color-canvas: #ffffff;
-  --color-ink: #17191c;
-  --color-graphite: #000000;
-  --color-purple-mist: #EDE8F5;
-  --color-brand-purple: #583E8D;
-  --color-fog: #f7f7f8;
-  --color-muted-stone: #4c4c4c;
-  --color-light-steel: #777b86;
-  --color-hint-of-grey: #a3a6af;
+  --color-canvas: #0F0E13;
+  --color-ink: #F5F3F8;
+  --color-graphite: #ffffff;
+  --color-purple-mist: rgba(88,62,141,0.15);
+  --color-brand-purple: #7B5BB5;
+  --color-fog: #131118;
+  --color-muted-stone: rgba(255,255,255,0.6);
+  --color-light-steel: rgba(255,255,255,0.5);
+  --color-hint-of-grey: rgba(255,255,255,0.4);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -45,25 +45,25 @@
 
 :root {
   --radius: 24px;
-  --primary: #17191c;
+  --primary: #7B5BB5;
   --primary-foreground: #ffffff;
-  --background: #ffffff;
-  --foreground: #17191c;
-  --card: #ffffff;
-  --card-foreground: #17191c;
-  --popover: #ffffff;
-  --popover-foreground: #17191c;
-  --secondary: #f7f7f8;
-  --secondary-foreground: #17191c;
-  --muted: #f7f7f8;
-  --muted-foreground: #777b86;
-  --accent: #EDE8F5;
-  --accent-foreground: #583E8D;
+  --background: #0F0E13;
+  --foreground: #F5F3F8;
+  --card: #17151E;
+  --card-foreground: #F5F3F8;
+  --popover: #17151E;
+  --popover-foreground: #F5F3F8;
+  --secondary: #131118;
+  --secondary-foreground: #F5F3F8;
+  --muted: #131118;
+  --muted-foreground: rgba(255,255,255,0.5);
+  --accent: rgba(88,62,141,0.15);
+  --accent-foreground: #B394F2;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
-  --border: #e8e8e8;
-  --input: #e8e8e8;
-  --ring: #583E8D;
+  --border: rgba(255,255,255,0.08);
+  --input: rgba(255,255,255,0.08);
+  --ring: #B394F2;
 }
 
 @layer base {
@@ -118,7 +118,7 @@
     }
   }
 
-  /* Steep-inspired Design System */
+  /* Dark Premium Design System */
   .font-display {
     font-family: 'Instrument Serif', serif;
     letter-spacing: -0.015em;
@@ -126,27 +126,28 @@
   }
 
   .btn-primary {
-    background-color: #17191c;
+    background: linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%);
     color: #ffffff;
     border-radius: 9999px;
-    padding: 14px 28px;
+    padding: 17px 36px;
     font-weight: 500;
     font-size: 15px;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    box-shadow: 0 12px 40px rgba(123,91,181,0.45);
   }
 
   .btn-primary:hover {
-    background-color: #2d2f33;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 16px 48px rgba(123,91,181,0.55);
   }
 
   .btn-ghost {
     background-color: transparent;
-    color: #17191c;
-    border: 1px solid #17191c;
+    color: #F5F3F8;
+    border: 1px solid rgba(255,255,255,0.14);
     border-radius: 9999px;
     padding: 14px 28px;
     font-weight: 500;
@@ -158,29 +159,37 @@
   }
 
   .btn-ghost:hover {
-    background-color: #17191c;
-    color: #ffffff;
+    background-color: rgba(255,255,255,0.06);
+    border-color: rgba(255,255,255,0.2);
   }
 
   .card-elevated {
-    background: #ffffff;
-    border-radius: 24px;
-    box-shadow: rgba(4, 23, 43, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.1) 0px 8px 10px -6px;
+    background: #17151E;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 22px;
   }
 
   .card-subtle {
-    background: #f7f7f8;
-    border-radius: 24px;
+    background: #17151E;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 22px;
   }
 
   .card-accent {
-    background: #EDE8F5;
-    border-radius: 24px;
+    background: linear-gradient(140deg, rgba(88,62,141,0.35) 0%, rgba(23,21,30,0.9) 55%);
+    border: 1px solid rgba(155,126,219,0.25);
+    border-radius: 22px;
   }
 
   .section-gap {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
+
+  .section-alt {
+    background-color: #131118;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
   }
 
   .text-display {
@@ -188,7 +197,7 @@
     font-size: clamp(44px, 6vw, 64px);
     line-height: 1.1;
     letter-spacing: -0.015em;
-    color: #17191c;
+    color: #ffffff;
   }
 
   .text-display-sm {
@@ -196,19 +205,27 @@
     font-size: clamp(36px, 4vw, 44px);
     line-height: 1.1;
     letter-spacing: -0.015em;
-    color: #17191c;
+    color: #ffffff;
   }
 
   .text-body {
     font-size: 16px;
     line-height: 1.5;
-    color: #4c4c4c;
+    color: rgba(255,255,255,0.6);
   }
 
   .text-caption {
     font-size: 14px;
     line-height: 1.43;
-    color: #777b86;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    color: #B394F2;
   }
 }
 
@@ -230,11 +247,11 @@ html {
 
 /* Selection styling */
 ::selection {
-  background: rgba(88, 62, 141, 0.15);
-  color: #17191c;
+  background: rgba(123, 91, 181, 0.3);
+  color: #ffffff;
 }
 
-/* Floating card animations - CSS-only replacement for framer-motion in hero */
+/* Floating card animations */
 @keyframes float-slow {
   0%, 100% { transform: translateY(0) rotate(0deg); }
   25% { transform: translateY(-12px) rotate(0.5deg); }

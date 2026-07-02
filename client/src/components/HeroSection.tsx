@@ -1,38 +1,24 @@
 export default function HeroSection() {
   return (
-    <section className="relative pt-[90px] pb-[60px] md:pt-[160px] md:pb-[80px] overflow-hidden">
-      {/* Background: layered radial glows for premium depth */}
+    <section className="relative pt-[120px] pb-[80px] md:pt-[180px] md:pb-[110px] overflow-hidden bg-[#0F0E13]">
+      {/* Dark radial glows */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0" style={{ background: "radial-gradient(circle at 50% 42%, rgba(245, 229, 210, 0.22), transparent 28%), radial-gradient(circle at 72% 30%, rgba(124, 87, 255, 0.10), transparent 24%), radial-gradient(circle at 22% 72%, rgba(255, 244, 232, 0.18), transparent 22%), linear-gradient(180deg, #fbfaf8 0%, #f6f4f8 100%)" }} />
-        <div className="absolute top-[20%] left-[-5%] w-[600px] h-[700px] rounded-full blur-[150px] opacity-40" style={{ background: "radial-gradient(ellipse, rgba(124, 87, 255, 0.35) 0%, rgba(160, 120, 255, 0.15) 40%, transparent 70%)" }} />
-        <div className="absolute top-[15%] right-[-5%] w-[600px] h-[700px] rounded-full blur-[150px] opacity-40" style={{ background: "radial-gradient(ellipse, rgba(124, 87, 255, 0.35) 0%, rgba(160, 120, 255, 0.15) 40%, transparent 70%)" }} />
-        <div className="absolute top-[30%] left-1/2 -translate-x-1/2 w-[900px] h-[700px] rounded-full blur-[160px] opacity-40" style={{ background: "radial-gradient(ellipse, rgba(248, 240, 228, 0.6) 0%, transparent 70%)" }} />
-        <div className="absolute top-[25%] left-[48%] -translate-x-1/2 w-[500px] h-[300px] rounded-full blur-[120px] opacity-30" style={{ background: "radial-gradient(ellipse, rgba(138, 100, 220, 0.18) 0%, transparent 70%)" }} />
-        <div className="absolute top-[10%] right-[8%] w-[400px] h-[400px] rounded-full blur-[130px] opacity-35" style={{ background: "radial-gradient(circle, rgba(140, 100, 240, 0.35) 0%, transparent 65%)" }} />
-        <div className="absolute bottom-[15%] left-[5%] w-[450px] h-[450px] rounded-full blur-[140px] opacity-35" style={{ background: "radial-gradient(circle, rgba(140, 100, 240, 0.3) 0%, transparent 65%)" }} />
-        <div className="absolute bottom-[20%] right-[12%] w-[350px] h-[350px] rounded-full blur-[120px] opacity-20" style={{ background: "radial-gradient(circle, rgba(240, 225, 250, 0.25) 0%, transparent 60%)" }} />
-        <div className="absolute inset-0 opacity-[0.03]"
-          style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")" }}
-        />
+        <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[900px] h-[600px] rounded-full" style={{ background: "radial-gradient(ellipse, rgba(123,91,181,0.28) 0%, transparent 65%)" }} />
+        <div className="absolute bottom-[10%] left-[20%] w-[400px] h-[400px] rounded-full" style={{ background: "radial-gradient(ellipse, rgba(123,91,181,0.15) 0%, transparent 65%)" }} />
+        <div className="absolute bottom-[10%] right-[20%] w-[400px] h-[400px] rounded-full" style={{ background: "radial-gradient(ellipse, rgba(123,91,181,0.15) 0%, transparent 65%)" }} />
       </div>
 
-      {/* Blur halos behind floating cards for depth integration */}
-      <div className="absolute top-[14%] left-[4%] xl:left-[8%] w-[340px] h-[260px] rounded-3xl blur-[50px] opacity-20 hidden lg:block" style={{ background: "radial-gradient(ellipse, rgba(200, 180, 240, 0.4) 0%, transparent 70%)" }} />
-      <div className="absolute top-[10%] right-[4%] xl:right-[8%] w-[320px] h-[240px] rounded-3xl blur-[50px] opacity-18 hidden lg:block" style={{ background: "radial-gradient(ellipse, rgba(180, 160, 230, 0.35) 0%, transparent 70%)" }} />
-      <div className="absolute bottom-[12%] left-[3%] xl:left-[6%] w-[320px] h-[240px] rounded-3xl blur-[45px] opacity-16 hidden lg:block" style={{ background: "radial-gradient(ellipse, rgba(248, 230, 200, 0.4) 0%, transparent 70%)" }} />
-      <div className="absolute bottom-[14%] right-[3%] xl:right-[6%] w-[310px] h-[230px] rounded-3xl blur-[45px] opacity-16 hidden lg:block" style={{ background: "radial-gradient(ellipse, rgba(210, 190, 240, 0.35) 0%, transparent 70%)" }} />
-
-      {/* Floating Analytics Cards - hidden on mobile, lazy loaded */}
+      {/* Floating Analytics Cards - hidden on mobile */}
       {/* Top Left - Total Sales */}
       <div className="absolute top-[14%] left-[4%] xl:left-[8%] hidden lg:block">
         <div className="animate-float-slow">
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-total-sales-Rdmh5wtQRyFfGinKfiFvwP.webp"
             alt="Total Sales: $250,000"
-            className="w-[320px] rounded-2xl border border-white/70"
-            style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.1), 0 4px 12px rgba(88,62,141,0.06)" }}
-            width={320}
-            height={200}
+            className="w-[280px] rounded-[14px]"
+            style={{ border: "1px solid rgba(255,255,255,0.12)", boxShadow: "0 24px 64px rgba(0,0,0,0.5)" }}
+            width={280}
+            height={175}
             loading="eager"
             decoding="async"
             fetchPriority="low"
@@ -46,10 +32,10 @@ export default function HeroSection() {
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-sessions-device-38MypvLYE5mt2H82mSxXPK.webp"
             alt="Sessions by Device"
-            className="w-[300px] rounded-2xl border border-white/70"
-            style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.1), 0 4px 12px rgba(88,62,141,0.06)" }}
-            width={300}
-            height={200}
+            className="w-[270px] rounded-[14px]"
+            style={{ border: "1px solid rgba(255,255,255,0.12)", boxShadow: "0 24px 64px rgba(0,0,0,0.5)" }}
+            width={270}
+            height={175}
             loading="eager"
             decoding="async"
             fetchPriority="low"
@@ -63,10 +49,10 @@ export default function HeroSection() {
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-customers-time-X3ms7jG8yZk3tc2x3jGNVj.webp"
             alt="Customers over Time"
-            className="w-[300px] rounded-2xl border border-white/70"
-            style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.1), 0 4px 12px rgba(88,62,141,0.06)" }}
-            width={300}
-            height={200}
+            className="w-[280px] rounded-[14px]"
+            style={{ border: "1px solid rgba(255,255,255,0.12)", boxShadow: "0 24px 64px rgba(0,0,0,0.5)" }}
+            width={280}
+            height={175}
             loading="eager"
             decoding="async"
             fetchPriority="low"
@@ -80,10 +66,10 @@ export default function HeroSection() {
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663523906676/TiCj6Aw4s8ouGZgKX7pWUo/shopify-sales-country-3wvFYXTrqPCU22m66QfsHX.webp"
             alt="Sessions by Country"
-            className="w-[290px] rounded-2xl border border-white/70"
-            style={{ boxShadow: "0 16px 56px rgba(0,0,0,0.1), 0 4px 12px rgba(88,62,141,0.06)" }}
-            width={290}
-            height={200}
+            className="w-[270px] rounded-[14px]"
+            style={{ border: "1px solid rgba(255,255,255,0.12)", boxShadow: "0 24px 64px rgba(0,0,0,0.5)" }}
+            width={270}
+            height={175}
             loading="eager"
             decoding="async"
             fetchPriority="low"
@@ -92,26 +78,27 @@ export default function HeroSection() {
       </div>
 
       <div className="container relative">
-        {/* Urgency badge */}
+        {/* Badge */}
         <div className="flex justify-center mb-7">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-[#e8e8e8]/60"
-            style={{ boxShadow: "0 2px 12px rgba(0,0,0,0.03)" }}
+          <div
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full"
+            style={{
+              border: "1px solid rgba(155,126,219,0.35)",
+              background: "rgba(88,62,141,0.15)",
+            }}
           >
-            <span className="w-2 h-2 rounded-full bg-[#583E8D] animate-pulse" />
-            <span className="text-[13px] text-[#4c4c4c] font-medium">Limited spaces — application required</span>
+            <span className="w-2 h-2 rounded-full bg-[#B394F2] animate-pulse" />
+            <span className="text-[13px] text-[rgba(255,255,255,0.8)] font-medium">Limited spaces — application required</span>
           </div>
         </div>
 
         {/* Headline */}
         <div className="text-center max-w-[820px] mx-auto">
-          <h1 className="font-serif font-bold text-[clamp(36px,5.5vw,68px)] leading-[1.08] tracking-[-0.02em] text-[#17191c] mb-6">
+          <h1 className="font-serif text-[clamp(40px,5.5vw,74px)] leading-[1.04] tracking-[-0.02em] text-white mb-6">
             Build Faster, Test Smarter & Scale With{" "}
-            <span className="relative inline-block">
-              <span className="italic text-[#583E8D]">AI-Powered Ecommerce Mentorship</span>
-              <span className="absolute inset-0 bg-[#583E8D]/8 blur-[20px] rounded-full -z-10" />
-            </span>
+            <span className="italic text-[#B394F2]">AI-Powered Ecommerce Mentorship</span>
           </h1>
-          <p className="text-[16px] md:text-[17px] leading-[1.6] text-[#4c4c4c] max-w-[620px] mx-auto mb-10">
+          <p className="text-[16px] md:text-[17px] leading-[1.6] text-[rgba(255,255,255,0.65)] max-w-[600px] mx-auto mb-10">
             Work directly with experienced ecommerce operators who show you how to use AI across product research, store building, ad creatives, paid ads and operations — with the structure, feedback and accountability to actually build.
           </p>
         </div>
@@ -125,7 +112,7 @@ export default function HeroSection() {
             className="inline-flex items-center gap-2 text-white text-[15px] font-medium px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-[2px]"
             style={{
               background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)",
-              boxShadow: "0 8px 24px rgba(88,62,141,0.2), 0 2px 6px rgba(88,62,141,0.1)",
+              boxShadow: "0 12px 40px rgba(123,91,181,0.45)",
             }}
           >
             Apply For 1-on-1 Mentorship
@@ -133,64 +120,36 @@ export default function HeroSection() {
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </a>
-          <p className="mt-3 text-[13px] text-[#999] font-medium">
+          <p className="mt-3 text-[13px] text-[rgba(255,255,255,0.4)] font-medium">
             Limited spaces available — application required.
           </p>
         </div>
 
-        {/* Proof bar: 3 stats */}
+        {/* Stats bar */}
         <div className="flex flex-row items-center justify-center gap-0 mb-10">
-          {/* Stat 1 */}
-          <div className="flex items-center gap-2 px-3 sm:px-6">
-            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#EDE8F5] flex items-center justify-center flex-shrink-0">
-              <svg className="w-4 h-4 text-[#583E8D]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-              </svg>
-            </div>
-            <div>
-              <p className="text-[14px] sm:text-[16px] font-bold text-[#17191c] leading-tight">600k+</p>
-              <p className="text-[11px] sm:text-[12px] text-[#777b86]">Trusted Entrepreneurs</p>
-            </div>
+          <div className="text-center px-4 sm:px-8">
+            <p className="font-serif text-[24px] sm:text-[30px] text-white leading-tight">600k+</p>
+            <p className="text-[11px] sm:text-[12px] text-[rgba(255,255,255,0.5)]">Trusted Entrepreneurs</p>
           </div>
 
-          <div className="w-px h-8 sm:h-10 bg-[#e8e8e8]" />
+          <div className="w-px h-10 bg-[rgba(255,255,255,0.12)]" />
 
-          {/* Stat 2 */}
-          <div className="flex items-center gap-2 px-3 sm:px-6">
-            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#EDE8F5] flex items-center justify-center flex-shrink-0">
-              <svg className="w-4 h-4 text-[#583E8D]" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-            </div>
-            <div>
-              <p className="text-[14px] sm:text-[16px] font-bold text-[#17191c] leading-tight">4.9/5</p>
-              <p className="text-[11px] sm:text-[12px] text-[#777b86]">Student rating</p>
-            </div>
+          <div className="text-center px-4 sm:px-8">
+            <p className="font-serif text-[24px] sm:text-[30px] text-white leading-tight">4.9/5</p>
+            <p className="text-[11px] sm:text-[12px] text-[rgba(255,255,255,0.5)]">Student rating</p>
           </div>
 
-          <div className="w-px h-8 sm:h-10 bg-[#e8e8e8]" />
+          <div className="w-px h-10 bg-[rgba(255,255,255,0.12)]" />
 
-          {/* Stat 3 */}
-          <div className="flex items-center gap-2 px-3 sm:px-6">
-            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#EDE8F5] flex items-center justify-center flex-shrink-0">
-              <svg className="w-4 h-4 text-[#583E8D]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path d="M12 8v4l3 3" />
-                <circle cx="12" cy="12" r="10" />
-              </svg>
-            </div>
-            <div>
-              <p className="text-[14px] sm:text-[16px] font-bold text-[#17191c] leading-tight">7+ Years</p>
-              <p className="text-[11px] sm:text-[12px] text-[#777b86]">Ecommerce Experience</p>
-            </div>
+          <div className="text-center px-4 sm:px-8">
+            <p className="font-serif text-[24px] sm:text-[30px] text-white leading-tight">7+ Years</p>
+            <p className="text-[11px] sm:text-[12px] text-[rgba(255,255,255,0.5)]">Ecommerce Experience</p>
           </div>
         </div>
 
-        {/* Founder credibility line */}
+        {/* Founder credibility */}
         <div className="text-center">
-          <p className="text-[13px] text-[#999] font-medium">
+          <p className="text-[13px] text-[rgba(255,255,255,0.35)] font-medium">
             Led by Kamil Sattar, founder of The Ecom King — trusted by 600,000+ ecommerce entrepreneurs and built from 7+ years of real ecommerce experience.
           </p>
         </div>

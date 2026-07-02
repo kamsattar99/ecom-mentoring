@@ -8,29 +8,25 @@ export default function LogoBar() {
     { name: "LADbible", style: "font-sans font-black text-[20px] md:text-[24px] tracking-tight" },
   ];
 
-  // Duplicate for seamless infinite scroll
   const allLogos = [...logos, ...logos, ...logos];
 
   return (
     <section
-      className="py-8 md:py-10 relative overflow-hidden rounded-2xl mx-4 md:mx-8 lg:mx-12 my-4"
+      className="py-6 relative overflow-hidden bg-transparent"
       style={{
-        background: "linear-gradient(135deg, #4a2d8a 0%, #5b3a9e 25%, #6b47b2 50%, #5b3a9e 75%, #4a2d8a 100%)",
+        borderTop: "1px solid rgba(255,255,255,0.08)",
+        borderBottom: "1px solid rgba(255,255,255,0.08)",
       }}
     >
-      <p className="text-center text-[11px] text-white/60 font-medium tracking-[0.14em] uppercase mb-5">
-        As Featured In
-      </p>
-
       {/* Marquee container */}
       <div className="relative w-full overflow-hidden">
         {/* Left fade */}
         <div className="absolute left-0 top-0 bottom-0 w-16 md:w-28 z-10 pointer-events-none"
-          style={{ background: "linear-gradient(to right, #4a2d8a 0%, transparent 100%)" }}
+          style={{ background: "linear-gradient(to right, #0F0E13 0%, transparent 100%)" }}
         />
         {/* Right fade */}
         <div className="absolute right-0 top-0 bottom-0 w-16 md:w-28 z-10 pointer-events-none"
-          style={{ background: "linear-gradient(to left, #4a2d8a 0%, transparent 100%)" }}
+          style={{ background: "linear-gradient(to left, #0F0E13 0%, transparent 100%)" }}
         />
 
         {/* Scrolling track */}
@@ -38,8 +34,11 @@ export default function LogoBar() {
           {allLogos.map((logo, i) => (
             <span
               key={`${logo.name}-${i}`}
-              className={`text-white whitespace-nowrap mx-7 md:mx-12 select-none flex-shrink-0 ${logo.style}`}
+              className={`text-[rgba(255,255,255,0.45)] whitespace-nowrap mx-7 md:mx-12 select-none flex-shrink-0 ${logo.style}`}
             >
+              {i === 0 && (
+                <span className="text-[11px] font-sans font-bold uppercase tracking-[0.14em] text-[rgba(255,255,255,0.35)] mr-8">As featured in</span>
+              )}
               {logo.name}
             </span>
           ))}

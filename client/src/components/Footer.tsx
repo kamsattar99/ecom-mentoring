@@ -1,16 +1,6 @@
 export default function Footer() {
   return (
-    <footer
-      className="relative text-white overflow-hidden"
-      style={{
-        background: "linear-gradient(135deg, #3d2475 0%, #4a2d8a 20%, #5b3a9e 45%, #6b47b2 65%, #5b3a9e 85%, #4a2d8a 100%)",
-      }}
-    >
-      {/* Subtle noise texture */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
-        style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")" }}
-      />
-
+    <footer className="relative text-white overflow-hidden bg-[#0F0E13]" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
       {/* Main footer */}
       <div className="container py-14 md:py-18 relative z-10">
         <div className="grid md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-10 md:gap-12 max-w-[1100px]">
@@ -19,9 +9,9 @@ export default function Footer() {
             <div className="flex items-center mb-5">
               <a href="/">
                 <img
-                  src="/manus-storage/ecom-mentoring-footer-logo_6a87be9b.webp"
+                  src="/manus-storage/ecom-mentoring-logo_b617fdab.webp"
                   alt="eMentoring"
-                  className="h-[48px] w-auto"
+                  className="h-[48px] w-auto brightness-0 invert"
                   width={160}
                   height={48}
                   loading="lazy"
@@ -29,7 +19,7 @@ export default function Footer() {
                 />
               </a>
             </div>
-            <p className="text-[13px] text-white/70 leading-[1.75] max-w-[260px] mb-7">
+            <p className="text-[13px] text-[rgba(255,255,255,0.5)] leading-[1.75] max-w-[260px] mb-7">
               Hands-on e-commerce mentorship for serious founders who want structure, feedback and a clear path to scaling.
             </p>
             {/* Social links */}
@@ -40,12 +30,10 @@ export default function Footer() {
                 { href: "https://x.com/kamil_sattar", label: "X", icon: <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/> },
               ].map(({ href, label, icon }) => (
                 <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
-                  className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5 group"
-                  style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.15)" }}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.2)"; (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.3)"; }}
-                  onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.1)"; (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.15)"; }}
+                  className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5"
+                  style={{ border: "1px solid rgba(255,255,255,0.12)" }}
                 >
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="text-white/80 group-hover:text-white transition-colors duration-300">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="text-[rgba(255,255,255,0.5)] hover:text-white transition-colors duration-300">
                     {icon}
                   </svg>
                 </a>
@@ -55,15 +43,15 @@ export default function Footer() {
 
           {/* Mentorship column */}
           <div>
-            <h4 className="text-[11px] font-bold text-white/50 uppercase tracking-[0.12em] mb-5">Mentorship</h4>
+            <h4 className="text-[11px] font-bold text-[rgba(255,255,255,0.35)] uppercase tracking-[0.12em] mb-5">Mentorship</h4>
             <ul className="space-y-3.5">
-              <li><a href="#curriculum" className="text-[13px] text-white/70 hover:text-white transition-colors duration-200">Curriculum</a></li>
-              <li><a href="#whats-included" className="text-[13px] text-white/70 hover:text-white transition-colors duration-200">What's Included</a></li>
-              <li><a href="#reviews" className="text-[13px] text-white/70 hover:text-white transition-colors duration-200">Student Results</a></li>
-              <li><a href="#faqs" className="text-[13px] text-white/70 hover:text-white transition-colors duration-200">FAQs</a></li>
+              <li><a href="#curriculum" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">Curriculum</a></li>
+              <li><a href="#whats-included" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">What's Included</a></li>
+              <li><a href="#reviews" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">Student Results</a></li>
+              <li><a href="#faqs" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">FAQs</a></li>
               <li>
                 <a href="https://e-commercementoring.com/learn-more"
-                  className="inline-flex items-center gap-1.5 text-[13px] font-medium text-white hover:text-white/90 transition-colors duration-200"
+                  className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[#B394F2] hover:text-white transition-colors duration-200"
                 >
                   Apply For Mentorship <span className="text-[11px]">→</span>
                 </a>
@@ -73,40 +61,39 @@ export default function Footer() {
 
           {/* Resources column */}
           <div>
-            <h4 className="text-[11px] font-bold text-white/50 uppercase tracking-[0.12em] mb-5">Resources</h4>
+            <h4 className="text-[11px] font-bold text-[rgba(255,255,255,0.35)] uppercase tracking-[0.12em] mb-5">Resources</h4>
             <ul className="space-y-3.5">
-              <li><a href="https://www.youtube.com/@TheEcomKing" target="_blank" rel="noopener noreferrer" className="text-[13px] text-white/70 hover:text-white transition-colors duration-200">YouTube Channel</a></li>
-              <li><a href="https://youtu.be/TNuXk8TI1Ac" target="_blank" rel="noopener noreferrer" className="text-[13px] text-white/70 hover:text-white transition-colors duration-200">Free Training</a></li>
-
+              <li><a href="https://www.youtube.com/@TheEcomKing" target="_blank" rel="noopener noreferrer" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">YouTube Channel</a></li>
+              <li><a href="https://youtu.be/TNuXk8TI1Ac" target="_blank" rel="noopener noreferrer" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">Free Training</a></li>
             </ul>
           </div>
 
           {/* Legal column */}
           <div>
-            <h4 className="text-[11px] font-bold text-white/50 uppercase tracking-[0.12em] mb-5">Legal</h4>
+            <h4 className="text-[11px] font-bold text-[rgba(255,255,255,0.35)] uppercase tracking-[0.12em] mb-5">Legal</h4>
             <ul className="space-y-3.5">
-              <li><a href="/privacy-policy" className="text-[13px] text-white/70 hover:text-white transition-colors duration-200">Privacy Policy</a></li>
-              <li><a href="/terms-of-service" className="text-[13px] text-white/70 hover:text-white transition-colors duration-200">Terms of Service</a></li>
-              <li><a href="/earnings-disclaimer" className="text-[13px] text-white/70 hover:text-white transition-colors duration-200">Earnings Disclaimer</a></li>
+              <li><a href="/privacy-policy" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">Privacy Policy</a></li>
+              <li><a href="/terms-of-service" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">Terms of Service</a></li>
+              <li><a href="/earnings-disclaimer" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">Earnings Disclaimer</a></li>
             </ul>
           </div>
         </div>
       </div>
 
       {/* Bottom bar */}
-      <div className="relative z-10" style={{ borderTop: "1px solid rgba(255,255,255,0.12)" }}>
+      <div className="relative z-10" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
         <div className="container py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
-              <p className="text-[12px] text-white/50">
+              <p className="text-[12px] text-[rgba(255,255,255,0.35)]">
                 © {new Date().getFullYear()} The Ecom King. All rights reserved.
               </p>
-              <span className="hidden sm:inline text-[12px] text-white/30">·</span>
-              <p className="text-[11px] text-white/40">
+              <span className="hidden sm:inline text-[12px] text-[rgba(255,255,255,0.2)]">·</span>
+              <p className="text-[11px] text-[rgba(255,255,255,0.3)]">
                 Ecom Mentoring is part of The Ecom King.
               </p>
             </div>
-            <p className="text-[11px] text-white/50 max-w-[520px] text-center md:text-right leading-[1.65]">
+            <p className="text-[11px] text-[rgba(255,255,255,0.35)] max-w-[520px] text-center md:text-right leading-[1.65]">
               Earnings Disclaimer: Results are not guaranteed. Any figures referenced are student-reported and individual outcomes vary based on product selection, budget, execution, skill and market conditions.
             </p>
           </div>

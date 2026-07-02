@@ -4,7 +4,7 @@ import LazySection from "@/components/LazySection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden">
+    <div className="min-h-screen bg-[#0F0E13] overflow-x-hidden">
       <HeroSection />
       <LogoBar />
       <LazySection component={() => import("@/components/AtoZSystem")} minHeight="400px" rootMargin="300px" />
