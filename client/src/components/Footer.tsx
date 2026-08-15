@@ -45,7 +45,7 @@ export default function Footer() {
           <div>
             <h4 className="text-[11px] font-bold text-[rgba(255,255,255,0.35)] uppercase tracking-[0.12em] mb-5">Mentorship</h4>
             <ul className="space-y-3.5">
-              <li><a href="#curriculum" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">Curriculum</a></li>
+              <li><a href="/curriculums" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">Curriculums</a></li>
               <li><a href="#whats-included" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">What's Included</a></li>
               <li><a href="#reviews" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">Student Results</a></li>
               <li><a href="#faqs" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">FAQs</a></li>

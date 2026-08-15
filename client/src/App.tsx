@@ -10,6 +10,7 @@ import { useLocation } from "wouter";
 const Apply = lazy(() => import("./pages/Apply"));
 const LearnMore = lazy(() => import("./pages/LearnMore"));
 const Launch = lazy(() => import("./pages/Launch"));
+const Curriculums = lazy(() => import("./pages/Curriculums"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const EarningsDisclaimer = lazy(() => import("./pages/EarningsDisclaimer"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
@@ -36,6 +37,7 @@ function Router() {
           <Route path={"/"} component={Home} />
           <Route path={"/learn-more"} component={LearnMore} />
           <Route path={"/launch"} component={Launch} />
+          <Route path={"/curriculums"} component={Curriculums} />
           <Route path={"/apply"} component={Apply} />
           <Route path={"/privacy-policy"} component={PrivacyPolicy} />
           <Route path={"/earnings-disclaimer"} component={EarningsDisclaimer} />

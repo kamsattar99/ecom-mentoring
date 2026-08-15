@@ -751,7 +751,7 @@ function LaunchHeader() {
 
   const navLinks = [
     { label: "Program", href: "#program" },
-    { label: "Curriculum", href: "#curriculum" },
+    { label: "Curriculums", href: "/curriculums" },
     { label: "FAQs", href: "#faqs" },
   ];
 
@@ -827,7 +827,7 @@ function LaunchFooter() {
           <div>
             <h4 className="text-[11px] font-bold uppercase tracking-[0.12em] mb-5" style={{ color: "rgba(255,255,255,0.35)" }}>Program</h4>
             <ul className="space-y-3.5">
-              <li><a href="#curriculum" className="text-[13px] hover:text-white transition-colors duration-200" style={{ color: "rgba(255,255,255,0.55)" }}>Curriculum</a></li>
+              <li><a href="/curriculums" className="text-[13px] hover:text-white transition-colors duration-200" style={{ color: "rgba(255,255,255,0.55)" }}>Curriculums</a></li>
               <li><a href="#faqs" className="text-[13px] hover:text-white transition-colors duration-200" style={{ color: "rgba(255,255,255,0.55)" }}>FAQs</a></li>
               <li><a href={CONFIG.applyLink} className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[#B394F2] hover:text-white transition-colors duration-200">Apply Now <span className="text-[11px]">→</span></a></li>
             </ul>

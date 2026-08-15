@@ -11,7 +11,7 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { label: "Curriculum", href: "#curriculum" },
+    { label: "Curriculums", href: "/curriculums" },
     { label: "Reviews", href: "#reviews" },
     { label: "FAQs", href: "#faqs" },
   ];
