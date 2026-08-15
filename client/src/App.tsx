@@ -9,6 +9,7 @@ import { useLocation } from "wouter";
 // Lazy load non-critical routes
 const Apply = lazy(() => import("./pages/Apply"));
 const LearnMore = lazy(() => import("./pages/LearnMore"));
+const Launch = lazy(() => import("./pages/Launch"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const EarningsDisclaimer = lazy(() => import("./pages/EarningsDisclaimer"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
@@ -16,7 +17,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 
 function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
-  const hideNavbar = location === "/apply";
+  const hideNavbar = location === "/apply" || location === "/launch";
 
   return (
     <>
@@ -34,6 +35,7 @@ function Router() {
         <Switch>
           <Route path={"/"} component={Home} />
           <Route path={"/learn-more"} component={LearnMore} />
+          <Route path={"/launch"} component={Launch} />
           <Route path={"/apply"} component={Apply} />
           <Route path={"/privacy-policy"} component={PrivacyPolicy} />
           <Route path={"/earnings-disclaimer"} component={EarningsDisclaimer} />
