@@ -160,7 +160,7 @@ export default function Curriculums() {
             <div className="flex items-center gap-4 mb-5">
               <span className="text-white text-[28px] md:text-[32px] font-bold tracking-tight">$5,000</span>
               <div className="w-px h-7" style={{ background: "rgba(255,255,255,0.15)" }} />
-              <span className="text-[14px] font-medium" style={{ color: "rgba(255,255,255,0.5)" }}>Ongoing</span>
+              <span className="text-[14px] font-medium" style={{ color: "rgba(255,255,255,0.5)" }}>6 Weeks</span>
             </div>
 
             {/* Delivery — prominent */}
