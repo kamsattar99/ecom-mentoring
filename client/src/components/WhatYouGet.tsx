@@ -125,7 +125,7 @@ export default function WhatYouGet() {
             {/* CTA */}
             <div className="mt-8">
               <a
-                href="https://e-commercementoring.com/learn-more"
+                href="/curriculums"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-white text-[14px] font-medium px-7 py-3.5 rounded-full transition-all duration-300 hover:-translate-y-0.5"

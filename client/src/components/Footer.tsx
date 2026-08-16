@@ -50,7 +50,7 @@ export default function Footer() {
               <li><a href="#reviews" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">Student Results</a></li>
               <li><a href="#faqs" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">FAQs</a></li>
               <li>
-                <a href="https://e-commercementoring.com/learn-more"
+                <a href="/curriculums"
                   className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[#B394F2] hover:text-white transition-colors duration-200"
                 >
                   Apply For Mentorship <span className="text-[11px]">→</span>

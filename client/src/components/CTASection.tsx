@@ -33,7 +33,7 @@ export default function CTASection() {
 
           {/* CTA Button */}
           <a
-            href="https://e-commercementoring.com/learn-more"
+            href="/curriculums"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 text-white text-[15px] font-semibold px-11 py-[18px] rounded-full transition-all duration-300 hover:-translate-y-[2px]"

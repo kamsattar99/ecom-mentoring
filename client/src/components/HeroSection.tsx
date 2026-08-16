@@ -106,7 +106,7 @@ export default function HeroSection() {
         {/* CTA */}
         <div className="flex flex-col items-center justify-center mb-12">
           <a
-            href="https://e-commercementoring.com/learn-more"
+            href="/curriculums"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-white text-[15px] font-medium px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-[2px]"
