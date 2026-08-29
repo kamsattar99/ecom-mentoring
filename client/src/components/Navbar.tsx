@@ -11,9 +11,10 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { label: "Curriculums", href: "/curriculums" },
-    { label: "Reviews", href: "#reviews" },
-    { label: "FAQs", href: "#faqs" },
+    { label: "Results", href: "/#results" },
+    { label: "Mentors", href: "/#mentors" },
+    { label: "Programmes", href: "/#program" },
+    { label: "FAQs", href: "/#faqs" },
   ];
 
   return (
@@ -58,16 +59,14 @@ export default function Navbar() {
         {/* CTA */}
         <div className="hidden md:flex items-center">
           <a
-            href="/curriculums"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/apply"
             className="inline-flex items-center text-white text-[13px] font-medium px-5 py-2.5 rounded-full transition-all duration-300 hover:-translate-y-[1px]"
             style={{
               background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)",
               boxShadow: "0 8px 24px rgba(123,91,181,0.35)",
             }}
           >
-            Apply Now
+            Apply For A Fit Call
           </a>
         </div>
 
@@ -108,16 +107,14 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="/curriculums"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/apply"
               className="mt-3 inline-flex items-center justify-center text-white text-[14px] font-medium px-6 py-3.5 rounded-full"
               style={{
                 background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)",
                 boxShadow: "0 8px 24px rgba(123,91,181,0.35)",
               }}
             >
-              Apply Now
+              Apply For A Fit Call
             </a>
           </div>
         </div>

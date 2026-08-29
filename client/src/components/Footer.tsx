@@ -20,7 +20,7 @@ export default function Footer() {
               </a>
             </div>
             <p className="text-[13px] text-[rgba(255,255,255,0.5)] leading-[1.75] max-w-[260px] mb-7">
-              Hands-on e-commerce mentorship for serious founders who want structure, feedback and a clear path to scaling.
+              Six-week, hands-on ecommerce mentorship delivered by successful former students and overseen by Kamil Sattar.
             </p>
             {/* Social links */}
             <div className="flex items-center gap-2.5">
@@ -45,15 +45,15 @@ export default function Footer() {
           <div>
             <h4 className="text-[11px] font-bold text-[rgba(255,255,255,0.35)] uppercase tracking-[0.12em] mb-5">Mentorship</h4>
             <ul className="space-y-3.5">
-              <li><a href="/curriculums" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">Curriculums</a></li>
-              <li><a href="#whats-included" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">What's Included</a></li>
-              <li><a href="#reviews" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">Student Results</a></li>
-              <li><a href="#faqs" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">FAQs</a></li>
+              <li><a href="/curriculums" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">Compare Programmes</a></li>
+              <li><a href="/#mentors" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">Meet The Mentors</a></li>
+              <li><a href="/#results" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">Student Interviews</a></li>
+              <li><a href="/#faqs" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">FAQs</a></li>
               <li>
-                <a href="/curriculums"
+                <a href="/apply"
                   className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[#B394F2] hover:text-white transition-colors duration-200"
                 >
-                  Apply For Mentorship <span className="text-[11px]">→</span>
+                  Apply For A Fit Call <span className="text-[11px]">→</span>
                 </a>
               </li>
             </ul>

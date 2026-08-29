@@ -77,13 +77,13 @@ export default function CurriculumSection() {
       <div className="container relative z-10">
         {/* Header */}
         <div className="text-center mb-14">
-          <p className="eyebrow mb-4">Curriculum Overview</p>
+          <p className="eyebrow mb-4">Six-week roadmap</p>
           <h2 className="font-serif text-[clamp(32px,4.5vw,52px)] leading-[1.08] tracking-[-0.02em] text-white max-w-[700px] mx-auto">
-            The 6-Stage AI System Behind{" "}
-            <span className="text-[#B394F2] italic">Profitable Ecommerce Growth</span>
+            From Product Research To{" "}
+            <span className="text-[#B394F2] italic">Repeatable Ecommerce Decisions</span>
           </h2>
           <p className="text-[15px] md:text-[16px] text-[rgba(255,255,255,0.6)] mt-5 max-w-[560px] mx-auto leading-[1.6]">
-            A structured AI-powered framework designed to help you validate products, build your store, launch ads, scale profitably, and create a business with long-term potential.
+            Each stage gives you a clear focus for the week, while your mentor applies the framework to your actual products, store, creatives and data.
           </p>
         </div>
 
@@ -168,7 +168,7 @@ export default function CurriculumSection() {
 
           {/* Trust line below timeline */}
           <p className="text-[13px] text-[rgba(179,148,242,0.7)] italic text-center pt-8">
-            AI-powered systems at every stage. No guesswork.
+            AI helps you execute faster. Your mentor helps you decide what deserves to be executed.
           </p>
         </div>
       </div>

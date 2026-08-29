@@ -11,13 +11,13 @@ const CONFIG = {
   productName: "AI Ecom Command: Launch",
   price: "$2,500",
   duration: "6 Weeks",
-  liveCalls: "5 Live Calls",
-  applyLink: "/apply",
+  liveCalls: "1 Call / Week",
+  applyLink: "https://form.typeform.com/to/p3VexUDU",
   premiumLink: "/learn-more",
   credibility: {
     entrepreneurs: "600,000+",
-    experience: "7+ Years",
-    rating: "4.9/5",
+    mentors: "2",
+    duration: "6 Weeks",
   },
 };
 
@@ -25,7 +25,7 @@ const CURRICULUM = [
   {
     week: "01",
     title: "AI Product Research",
-    delivery: "1 live call",
+    delivery: "End-of-week review call",
     description:
       "Learn to use AI, trend signals, competitor analysis, and validation frameworks to identify products and angles worth testing.",
     outcome:
@@ -34,7 +34,7 @@ const CURRICULUM = [
   {
     week: "02",
     title: "AI Store Building",
-    delivery: "1 live call",
+    delivery: "End-of-week review call",
     description:
       "Build a focused Shopify store using AI-assisted structure, copy, product pages, offer logic, and conversion principles.",
     outcome:
@@ -43,7 +43,7 @@ const CURRICULUM = [
   {
     week: "03",
     title: "AI Creatives & Ad Launch",
-    delivery: "2 live calls",
+    delivery: "End-of-week review call",
     description:
       "Create ad concepts, hooks, scripts, and creatives with AI, then turn them into a structured campaign launch plan.",
     outcome:
@@ -52,7 +52,7 @@ const CURRICULUM = [
   {
     week: "04",
     title: "Scaling Ads Intelligently",
-    delivery: "1 live call",
+    delivery: "End-of-week review call",
     description:
       "Learn how to read the right signals, improve what is working, control spend, and approach ad scaling with a system.",
     outcome:
@@ -61,7 +61,7 @@ const CURRICULUM = [
   {
     week: "05",
     title: "Store Automation Systems",
-    delivery: "Implementation week",
+    delivery: "End-of-week review call",
     description:
       "Set up the foundations for a less chaotic operation using AI and automation across repetitive store and customer workflows.",
     outcome:
@@ -70,7 +70,7 @@ const CURRICULUM = [
   {
     week: "06",
     title: "Building a Real Brand",
-    delivery: "Implementation week",
+    delivery: "End-of-week review call",
     description:
       "Move beyond a disposable store by shaping positioning, trust, creative consistency, and the foundations of a brand customers recognise.",
     outcome:
@@ -138,7 +138,7 @@ const DELIVERABLES = [
 const FAQS = [
   {
     q: "Who is AI Ecom Command: Launch for?",
-    a: "It is designed for beginners and early-stage ecommerce founders who want a structured, live path to build and launch a Shopify store using AI. If you are prepared to implement, test, and take responsibility for execution over six weeks, this program is built for you.",
+    a: "It is designed for beginners and early-stage ecommerce founders who want a structured path to launch without spending $5,000 on three one-to-one calls every week. It is the better-value route if you can follow lessons, implement independently between calls, and use one focused private review at the end of each week.",
   },
   {
     q: "Do I need ecommerce experience?",
@@ -146,23 +146,31 @@ const FAQS = [
   },
   {
     q: "How are the live calls delivered?",
-    a: "Live calls are delivered via Zoom in a small group format. You will receive the schedule and access details after your application is accepted. Calls are recorded for participants who cannot attend live.",
+    a: "One private 1-to-1 call is delivered via Zoom at the end of every week. The purpose is to review what you implemented, check your progress, resolve blockers and set clear priorities for the following week. Calls are recorded so you can revisit the guidance.",
   },
   {
     q: "What happens in Weeks 5 and 6?",
-    a: "Weeks 5 and 6 are implementation-focused modules. There are no live calls in these weeks — instead, you will follow structured implementation guides to set up automation systems and build your brand foundations independently.",
+    a: "Weeks 5 and 6 remain implementation-focused: you follow the structured guides to set up automation systems and build your brand foundations. Telegram support continues, and each week still ends with a private 1-to-1 review call to check the work and set your next priorities.",
   },
   {
     q: "Will I need additional budget for Shopify, apps, products, or advertising?",
-    a: "Yes. Beyond the program fee, you should budget for a Shopify subscription (from $39/month), product samples, and an initial advertising budget to test your campaigns. We recommend having at least $500–$1,000 available for ad testing, though this varies by niche and strategy.",
+    a: "Yes. Tuition does not include the cost of running your business. Beyond the $2,500 programme fee, you should budget for Shopify, apps, product samples and advertising. We recommend keeping at least $500–$1,000 available for initial ad testing, although the amount required varies by product and strategy. If paying the tuition would leave you with no testing budget, you should wait rather than stretch yourself.",
   },
   {
     q: "Is this one-to-one mentoring?",
-    a: "No. AI Ecom Command: Launch is a live group implementation program with structured calls and curriculum. For comprehensive one-to-one mentoring with direct operator feedback, store audits, and personalised guidance, explore the advanced mentorship route.",
+    a: "Yes. Launch includes one private 1-to-1 review call at the end of every week, Telegram support throughout the six weeks, video lessons, recordings and structured resources. The $5,000 route increases the frequency to three one-to-one calls every week and provides more intensive personalised review and accountability.",
   },
   {
-    q: "What is the difference between Launch and the advanced mentorship route?",
-    a: "Launch is a six-week structured group program focused on building and launching your store with AI. The advanced mentorship is a longer, higher-touch engagement with one-to-one operator feedback, store audits, ad reviews, and personalised scaling guidance. Both use AI-integrated methods; the difference is depth of individual support and duration.",
+    q: "Why can Launch be the better option than the $5,000 programme?",
+    a: "Both routes teach the same core AI ecommerce system over six weeks. Launch costs $2,500 and includes one private end-of-week review every week, Telegram support, lessons and structured resources. Premium costs $5,000 because it increases the frequency to three one-to-one calls every week with more intensive personalised reviews. If budget matters and one focused private call per week is enough for you to keep implementing, Launch can be the smarter first investment because it leaves more capital available for the business itself.",
+  },
+  {
+    q: "What am I giving up by choosing Launch?",
+    a: "You are giving up the frequency and privacy of intensive one-to-one mentoring. You will not receive three private calls every week or the same level of ongoing personal review. You are not giving up the six-week roadmap, the implementation curriculum, live guidance, recordings or practical resources.",
+  },
+  {
+    q: "When should I choose the $5,000 Premium programme instead?",
+    a: "Choose Premium if you want close one-to-one accountability, frequent personalised feedback and direct reviews—and paying the higher tuition will not reduce the budget you need to operate and test your store. Premium buys more mentor access; it does not buy guaranteed results.",
   },
   {
     q: "Do you guarantee results?",
@@ -178,7 +186,7 @@ export default function Launch() {
       <LaunchHeader />
       {/* Hero */}
       <HeroSection />
-      {/* Positioning */}
+      {/* Why Launch */}
       <PositioningSection />
       {/* Programme at a glance */}
       <GlanceSection />
@@ -188,7 +196,7 @@ export default function Launch() {
       <DeliverablesSection />
       {/* Who this is for */}
       <QualificationSection />
-      {/* Premium route link */}
+      {/* Honest programme comparison */}
       <PremiumRouteSection />
       {/* Credibility */}
       <CredibilitySection />
@@ -212,7 +220,7 @@ function HeroSection() {
         style={{ background: "radial-gradient(ellipse, rgba(123,91,181,0.22) 0%, transparent 60%)" }}
       />
       <div className="relative max-w-[1100px] mx-auto">
-        <div className="grid lg:grid-cols-[1fr_0.85fr] gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-[1fr_0.85fr] gap-10 lg:gap-16 items-center">
           {/* Left: Copy */}
           <div>
             {/* Pill */}
@@ -226,7 +234,7 @@ function HeroSection() {
                 }}
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-[#9B7EDB] animate-pulse" />
-                Limited spaces — application required
+                The budget-conscious route · $2,500
               </span>
             </div>
 
@@ -235,19 +243,19 @@ function HeroSection() {
               className="text-white mb-6 leading-[1.08]"
               style={{ fontFamily: "'Instrument Serif', serif", fontWeight: 400, fontSize: "clamp(34px, 5vw, 58px)" }}
             >
-              Build, Launch & Automate Your <em className="italic text-[#B394F2]">AI-Powered</em> Ecom Business in 6 Weeks.
+              Get The System. <em className="italic text-[#B394F2]">Keep More Budget</em> For Testing.
             </h1>
 
             {/* Supporting copy */}
             <p className="text-[16px] md:text-[17px] leading-[1.7] mb-8 max-w-[560px]" style={{ color: "rgba(255,255,255,0.6)" }}>
-              {CONFIG.productName} is a live, six-week implementation program for founders who want to use AI to find stronger products, build a Shopify store, create and launch ads, automate the day-to-day, and start building a brand properly.
+              Launch gives you the same core six-week AI ecommerce roadmap at half the tuition of Premium. You get one private 1-to-1 review call at the end of every week, Telegram support, video lessons, recordings and practical resources—ideal if you can implement between sessions and want more capital left for the business itself.
             </p>
 
             {/* Stat block */}
             <div className="flex items-center gap-6 mb-8">
               <div className="text-center">
                 <p className="text-white text-[28px] md:text-[32px] font-bold tracking-tight">{CONFIG.price}</p>
-                <p className="text-[12px] mt-0.5" style={{ color: "rgba(255,255,255,0.45)" }}>Investment</p>
+                <p className="text-[12px] mt-0.5" style={{ color: "rgba(255,255,255,0.45)" }}>Programme tuition</p>
               </div>
               <div className="w-px h-12" style={{ background: "rgba(255,255,255,0.12)" }} />
               <div className="text-center">
@@ -258,49 +266,63 @@ function HeroSection() {
 
             {/* CTA */}
             <div className="flex flex-col sm:flex-row items-start gap-4">
-              <a href={CONFIG.applyLink} className="btn-primary text-[15px]">
-                Apply Now
+              <a href={CONFIG.applyLink} className="btn-primary w-full justify-center text-[15px] sm:w-auto">
+                Apply For Launch
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </a>
             </div>
             <p className="mt-4 text-[13px]" style={{ color: "rgba(255,255,255,0.4)" }}>
-              Application required. Built for people ready to implement.
+              Tuition is separate from business costs. Keep at least $500–$1,000 available for initial ad testing.
             </p>
           </div>
 
-          {/* Right: Abstract dashboard visual */}
-          <div className="hidden lg:block relative">
-            <div className="relative">
-              {/* Floating cards simulating a command dashboard */}
-              <div className="space-y-4">
-                <DashboardCard title="Product Research" value="3 validated" accent />
-                <DashboardCard title="Store Build" value="87% complete" />
-                <DashboardCard title="Ad Creatives" value="12 concepts" accent />
-                <DashboardCard title="Campaign Status" value="Testing phase" />
-                <DashboardCard title="Automation" value="4 workflows active" />
+          {/* Right: Honest price comparison */}
+          <div className="relative">
+            <div
+              className="absolute -inset-5 rounded-[32px] opacity-60 blur-2xl"
+              style={{ background: "linear-gradient(145deg, rgba(123,91,181,0.28), transparent 65%)" }}
+            />
+            <div className="relative overflow-hidden rounded-[24px] border border-white/10 bg-[#15131B] p-5 sm:p-7 shadow-[0_32px_80px_rgba(0,0,0,0.45)]">
+              <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#B394F2]">Choose by support level</p>
+              <h2 className="mt-3 font-serif text-[30px] leading-[1.05] text-white sm:text-[36px]">What the extra $2,500 actually buys.</h2>
+
+              <div className="mt-7 space-y-3">
+                <div className="rounded-[16px] border border-[#9B7EDB]/35 bg-[#583E8D]/18 p-4">
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <p className="text-[12px] font-bold uppercase tracking-[0.1em] text-[#B394F2]">Launch</p>
+                      <p className="mt-1 text-[13px] leading-[1.5] text-white/58">Core system + weekly private 1-to-1 review</p>
+                    </div>
+                    <p className="text-[22px] font-bold text-white">$2,500</p>
+                  </div>
+                </div>
+
+                <div className="rounded-[16px] border border-white/8 bg-white/[0.025] p-4">
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <p className="text-[12px] font-bold uppercase tracking-[0.1em] text-white/46">Premium</p>
+                      <p className="mt-1 text-[13px] leading-[1.5] text-white/46">Intensive one-to-one access and reviews</p>
+                    </div>
+                    <p className="text-[22px] font-bold text-white/68">$5,000</p>
+                  </div>
+                </div>
               </div>
+
+              <div className="mt-5 rounded-[16px] bg-emerald-400/[0.07] p-4 ring-1 ring-inset ring-emerald-400/15">
+                <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-emerald-300">The Launch advantage</p>
+                <p className="mt-2 text-[14px] leading-[1.6] text-white/68">
+                  You pay $2,500 less in tuition, so more of your available capital can stay reserved for Shopify, samples, software and real ad tests.
+                </p>
+              </div>
+
+              <p className="mt-4 text-[10px] leading-[1.5] text-white/34">Operating costs are separate from both programme fees. Neither route guarantees revenue or profit.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function DashboardCard({ title, value, accent }: { title: string; value: string; accent?: boolean }) {
-  return (
-    <div
-      className="flex items-center justify-between px-5 py-4 rounded-xl transition-all duration-300 hover:translate-x-1"
-      style={{
-        background: accent ? "linear-gradient(135deg, rgba(88,62,141,0.2) 0%, rgba(23,21,30,0.9) 100%)" : "#17151E",
-        border: accent ? "1px solid rgba(155,126,219,0.3)" : "1px solid rgba(255,255,255,0.08)",
-      }}
-    >
-      <span className="text-[14px]" style={{ color: "rgba(255,255,255,0.7)" }}>{title}</span>
-      <span className="text-[14px] font-medium text-white">{value}</span>
-    </div>
   );
 }
 
@@ -310,23 +332,23 @@ function PositioningSection() {
     <section className="section-alt section-gap px-4">
       <div className="max-w-[1100px] mx-auto">
         <div className="text-center mb-14">
-          <span className="eyebrow mb-4 block">The AI Advantage</span>
+          <span className="eyebrow mb-4 block">Why Launch Can Be The Smarter Choice</span>
           <h2
             className="text-white mb-5"
             style={{ fontFamily: "'Instrument Serif', serif", fontWeight: 400, fontSize: "clamp(30px, 4vw, 48px)", lineHeight: 1.1 }}
           >
-            This Is Not Another <em className="italic text-[#B394F2]">AI Tool List.</em>
+            Lower Tuition. <em className="italic text-[#B394F2]">Not A Lower-Quality Roadmap.</em>
           </h2>
           <p className="text-body max-w-[620px] mx-auto">
-            The program teaches you how to use AI inside an ecommerce operating system: to research faster, build more intelligently, create stronger ads, make better decisions, and automate repeatable work.
+            The price is lower because the call frequency is leaner. You receive one focused private 1-to-1 review each week, supported by structured lessons, practical resources and Telegram access between calls.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
-              title: "Build Faster",
-              description: "Use AI to move from idea to a credible Shopify store without wasting weeks on random tutorials.",
+              title: "The Same Core System",
+              description: "You still learn product research, store building, creative development, ad testing, automation and brand foundations across six structured weeks.",
               icon: (
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B394F2" strokeWidth="1.5">
                   <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
@@ -334,8 +356,8 @@ function PositioningSection() {
               ),
             },
             {
-              title: "Test Smarter",
-              description: "Use structured research, creative thinking, and ad testing — not guesswork — to make better launch decisions.",
+              title: "More Capital Stays Available",
+              description: "Saving $2,500 on tuition matters when your store still needs samples, software and enough ad budget to generate useful testing data.",
               icon: (
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B394F2" strokeWidth="1.5">
                   <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
@@ -343,8 +365,8 @@ function PositioningSection() {
               ),
             },
             {
-              title: "Systemise Early",
-              description: "Build automation and brand foundations before chaos becomes the default operating model.",
+              title: "Support Without Dependence",
+              description: "A private end-of-week 1-to-1 review plus Telegram support gives you direction and a place to solve blockers, while the lesson-led format builds your ability to make decisions independently.",
               icon: (
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B394F2" strokeWidth="1.5">
                   <rect x="2" y="2" width="20" height="20" rx="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
@@ -373,7 +395,7 @@ function PositioningSection() {
 /* ─── PROGRAMME AT A GLANCE ─── */
 function GlanceSection() {
   return (
-    <section className="section-gap px-4">
+    <section id="program" className="section-gap px-4">
       <div className="max-w-[1100px] mx-auto text-center">
         <span className="eyebrow mb-4 block">Programme Overview</span>
         <h2
@@ -383,24 +405,24 @@ function GlanceSection() {
           Six Weeks. One <em className="italic text-[#B394F2]">AI Ecommerce Operating System.</em>
         </h2>
         <p className="text-body max-w-[600px] mx-auto mb-12">
-          Live calls in Weeks 1–4 give you the system. Weeks 5 and 6 are implementation-focused modules where you build automation and brand foundations independently.
+          Every week ends with a private 1-to-1 review call to check your work, resolve blockers and set clear priorities. Telegram support continues throughout all six weeks, including the implementation-focused automation and branding modules.
         </p>
 
         {/* Stat strip */}
         <div
-          className="inline-flex items-center gap-8 md:gap-12 px-10 py-6 rounded-2xl mx-auto"
+          className="flex flex-col sm:inline-flex sm:flex-row items-center gap-5 sm:gap-8 md:gap-12 px-8 sm:px-10 py-6 rounded-2xl mx-auto"
           style={{ border: "1px solid rgba(255,255,255,0.08)", background: "rgba(23,21,30,0.6)" }}
         >
           <div className="text-center">
             <p className="text-white text-[28px] md:text-[36px] font-bold tracking-tight">{CONFIG.duration}</p>
             <p className="text-[12px] mt-1" style={{ color: "rgba(255,255,255,0.45)" }}>Duration</p>
           </div>
-          <div className="w-px h-12" style={{ background: "rgba(255,255,255,0.12)" }} />
+          <div className="h-px w-16 sm:w-px sm:h-12" style={{ background: "rgba(255,255,255,0.12)" }} />
           <div className="text-center">
             <p className="text-white text-[28px] md:text-[36px] font-bold tracking-tight">{CONFIG.liveCalls}</p>
             <p className="text-[12px] mt-1" style={{ color: "rgba(255,255,255,0.45)" }}>Live Sessions</p>
           </div>
-          <div className="w-px h-12" style={{ background: "rgba(255,255,255,0.12)" }} />
+          <div className="h-px w-16 sm:w-px sm:h-12" style={{ background: "rgba(255,255,255,0.12)" }} />
           <div className="text-center">
             <p className="text-white text-[28px] md:text-[36px] font-bold tracking-tight">{CONFIG.price}</p>
             <p className="text-[12px] mt-1" style={{ color: "rgba(255,255,255,0.45)" }}>Investment</p>
@@ -536,7 +558,7 @@ function QualificationSection() {
             className="text-white"
             style={{ fontFamily: "'Instrument Serif', serif", fontWeight: 400, fontSize: "clamp(30px, 4vw, 48px)", lineHeight: 1.1 }}
           >
-            Built For <em className="italic text-[#B394F2]">Serious Founders</em>
+            Built For <em className="italic text-[#B394F2]">Budget-Conscious Implementers</em>
           </h2>
         </div>
 
@@ -546,10 +568,10 @@ function QualificationSection() {
             <h3 className="text-[#9B7EDB] text-[13px] font-bold uppercase tracking-[0.1em] mb-6">Built For</h3>
             <ul className="space-y-4">
               {[
-                "Serious beginners ready to commit six weeks of focused effort",
-                "Early-stage sellers who need a proper system, not more random content",
-                "Founders willing to test, learn, and iterate based on real data",
-                "People who want to use AI as an operational advantage, not a shortcut",
+                "Beginners who want structure but do not need three private calls every week",
+                "Self-starters who can implement lessons and arrive at calls with focused questions",
+                "Founders who would rather keep more capital available for testing and operations",
+                "People ready to commit six weeks of focused effort—not passively watch content",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-[#9B7EDB] shrink-0 mt-0.5">
@@ -568,8 +590,8 @@ function QualificationSection() {
               {[
                 "People looking for passive income or overnight results",
                 "Anyone expecting a done-for-you store or guaranteed profits",
-                "Founders who want to watch videos without implementing",
-                "People unwilling to invest time, budget, or effort into testing",
+                "People who need daily one-to-one accountability to take action",
+                "Anyone whose tuition payment would leave no money to operate or test the store",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="shrink-0 mt-0.5" style={{ color: "rgba(255,255,255,0.3)" }}>
@@ -586,20 +608,96 @@ function QualificationSection() {
   );
 }
 
-/* ─── PREMIUM ROUTE ─── */
+/* ─── HONEST PROGRAMME COMPARISON ─── */
 function PremiumRouteSection() {
   return (
-    <section className="py-12 px-4">
-      <div className="max-w-[700px] mx-auto text-center">
-        <p className="text-[14px]" style={{ color: "rgba(255,255,255,0.45)" }}>
-          Need more comprehensive operator-level support?{" "}
-          <a
-            href={CONFIG.premiumLink}
-            className="text-[#B394F2] underline underline-offset-4 decoration-[#B394F2]/40 hover:decoration-[#B394F2] transition-colors"
+    <section id="comparison" className="section-gap px-4">
+      <div className="max-w-[1050px] mx-auto">
+        <div className="text-center mb-12">
+          <span className="eyebrow mb-4 block">Launch vs Premium</span>
+          <h2
+            className="text-white mb-5"
+            style={{ fontFamily: "'Instrument Serif', serif", fontWeight: 400, fontSize: "clamp(30px, 4vw, 48px)", lineHeight: 1.1 }}
           >
-            Explore the advanced mentorship route.
-          </a>
-        </p>
+            Choose Based On The Support You Need. <em className="italic text-[#B394F2]">Not The Highest Price.</em>
+          </h2>
+          <p className="text-body max-w-[670px] mx-auto">
+            Premium is not automatically the better decision. Both routes cover the core six-week system; the meaningful difference is how much direct access, personal review and accountability you want.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-5">
+          <div className="relative overflow-hidden rounded-[24px] border border-[#9B7EDB]/40 bg-gradient-to-br from-[#241B34] to-[#15131B] p-6 sm:p-8 shadow-[0_24px_70px_rgba(72,47,112,0.22)]">
+            <span className="inline-flex rounded-full bg-[#B394F2] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-[#17111F]">Better value for self-starters</span>
+            <div className="mt-6 flex items-end justify-between gap-4">
+              <div>
+                <p className="text-[13px] font-semibold text-white/54">AI Ecom Command: Launch</p>
+                <p className="mt-1 font-serif text-[42px] leading-none text-white">$2,500</p>
+              </div>
+              <p className="text-right text-[12px] leading-[1.5] text-[#C7AFF8]">6 weeks<br />1 private call / week</p>
+            </div>
+
+            <ul className="mt-7 space-y-3.5">
+              {[
+                "The core AI ecommerce operating system",
+                "1 private 1-to-1 review call at the end of every week",
+                "Telegram mentor support throughout all 6 weeks",
+                "Clear priorities set after every weekly review",
+                "Video lessons, recordings and practical resources",
+                "Best when you can implement independently between calls",
+                "$2,500 less tuition than Premium",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-[14px] leading-[1.55] text-white/68">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#B394F2]/15 text-[#C7AFF8]">✓</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+
+            <a href={CONFIG.applyLink} className="btn-primary mt-8 w-full justify-center text-[15px]">
+              Apply For Launch
+            </a>
+          </div>
+
+          <div className="rounded-[24px] border border-white/8 bg-[#15131B] p-6 sm:p-8">
+            <span className="inline-flex rounded-full border border-white/10 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-white/44">Higher-touch support</span>
+            <div className="mt-6 flex items-end justify-between gap-4">
+              <div>
+                <p className="text-[13px] font-semibold text-white/44">Premium 1-to-1 Mentorship</p>
+                <p className="mt-1 font-serif text-[42px] leading-none text-white/72">$5,000</p>
+              </div>
+              <p className="text-right text-[12px] leading-[1.5] text-white/38">6 weeks<br />3 private calls / week</p>
+            </div>
+
+            <ul className="mt-7 space-y-3.5">
+              {[
+                "Three private one-to-one calls every week",
+                "Direct operator chat and personalised reviews",
+                "Closer accountability and more frequent feedback",
+                "Best when you need high-touch guidance",
+                "Higher tuition does not guarantee a better result",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-[14px] leading-[1.55] text-white/52">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/[0.05] text-white/45">✓</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href={CONFIG.premiumLink}
+              className="mt-8 inline-flex w-full items-center justify-center rounded-full border border-white/10 px-6 py-4 text-[14px] font-semibold text-white/58 transition-colors hover:border-white/20 hover:text-white"
+            >
+              See Premium Details
+            </a>
+          </div>
+        </div>
+
+        <div className="mt-5 rounded-[18px] border border-amber-300/15 bg-amber-300/[0.05] p-5 text-center">
+          <p className="text-[13px] leading-[1.65] text-white/58">
+            <strong className="text-amber-200/85">Important:</strong> if the $2,500 tuition would leave you without money for Shopify, samples, software and advertising, neither programme is the right move yet. Build your operating budget first.
+          </p>
+        </div>
       </div>
     </section>
   );
@@ -610,15 +708,15 @@ function CredibilitySection() {
   return (
     <section className="section-alt py-16 md:py-20 px-4">
       <div className="max-w-[900px] mx-auto text-center">
-        <span className="eyebrow mb-4 block">Led By</span>
+        <span className="eyebrow mb-4 block">Programme leadership</span>
         <h2
           className="text-white mb-4"
           style={{ fontFamily: "'Instrument Serif', serif", fontWeight: 400, fontSize: "clamp(26px, 3.5vw, 40px)", lineHeight: 1.15 }}
         >
-          Kamil Sattar / <em className="italic text-[#B394F2]">The Ecom King</em>
+          Designed By Kamil Sattar / <em className="italic text-[#B394F2]">Delivered By Proven Former Students</em>
         </h2>
         <p className="text-body max-w-[560px] mx-auto mb-10">
-          Built from real ecommerce experience. Not theory, not hype — operator-led systems that work.
+          Kamil builds the system, trains the mentors and reviews the quality of their work. Live calls are delivered by the mentor team, including Inder and Nail—former students who each went on to build seven-figure dropshipping businesses.
         </p>
 
         {/* Stats */}
@@ -638,9 +736,9 @@ function CredibilitySection() {
               className="text-white leading-none tracking-tight"
               style={{ fontFamily: "'Instrument Serif', serif", fontWeight: 400, fontSize: "clamp(28px, 4vw, 40px)" }}
             >
-              {CONFIG.credibility.experience}
+              {CONFIG.credibility.mentors}
             </p>
-            <p className="text-[12px] mt-2" style={{ color: "rgba(255,255,255,0.45)" }}>Ecommerce Experience</p>
+            <p className="text-[12px] mt-2" style={{ color: "rgba(255,255,255,0.45)" }}>Seven-Figure Mentors</p>
           </div>
           <div className="w-px h-12" style={{ background: "rgba(255,255,255,0.12)" }} />
           <div className="text-center">
@@ -648,9 +746,9 @@ function CredibilitySection() {
               className="text-white leading-none tracking-tight"
               style={{ fontFamily: "'Instrument Serif', serif", fontWeight: 400, fontSize: "clamp(28px, 4vw, 40px)" }}
             >
-              {CONFIG.credibility.rating}
+              {CONFIG.credibility.duration}
             </p>
-            <p className="text-[12px] mt-2" style={{ color: "rgba(255,255,255,0.45)" }}>Student Rating</p>
+            <p className="text-[12px] mt-2" style={{ color: "rgba(255,255,255,0.45)" }}>Programme Duration</p>
           </div>
         </div>
       </div>
@@ -669,7 +767,7 @@ function FAQsSection() {
             className="text-white"
             style={{ fontFamily: "'Instrument Serif', serif", fontWeight: 400, fontSize: "clamp(30px, 4vw, 48px)", lineHeight: 1.1 }}
           >
-            Common Questions
+            Price, Support & Fit Questions
           </h2>
         </div>
 
@@ -710,10 +808,10 @@ function FinalCTASection() {
           className="text-white mb-5"
           style={{ fontFamily: "'Instrument Serif', serif", fontWeight: 400, fontSize: "clamp(32px, 5vw, 52px)", lineHeight: 1.1 }}
         >
-          Stop Watching AI Change Ecommerce. <em className="italic text-[#B394F2]">Start Using It.</em>
+          Start With The System. <em className="italic text-[#B394F2]">Keep Capital For The Business.</em>
         </h2>
         <p className="text-body max-w-[520px] mx-auto mb-8">
-          {CONFIG.productName} is for people ready to build, launch, and operate with a sharper system. Six weeks. One focused implementation path.
+          Choose Launch if you want a complete six-week implementation path and live guidance without paying for intensive one-to-one access you may not need.
         </p>
 
         {/* Price + duration */}
@@ -725,14 +823,14 @@ function FinalCTASection() {
 
         {/* CTA */}
         <a href={CONFIG.applyLink} className="btn-primary text-[16px] mb-5 inline-flex">
-          Apply Now
+          Apply For Launch
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
         </a>
 
         <p className="text-[13px] mt-4" style={{ color: "rgba(255,255,255,0.4)" }}>
-          Limited spaces — application required.
+          Application required · Tuition is separate from operating and advertising costs
         </p>
       </div>
     </section>
@@ -750,26 +848,26 @@ function LaunchHeader() {
   }, []);
 
   const navLinks = [
-    { label: "Program", href: "#program" },
-    { label: "Curriculums", href: "/curriculums" },
+    { label: "Programme", href: "#program" },
+    { label: "Compare", href: "#comparison" },
     { label: "FAQs", href: "#faqs" },
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4 px-4">
       <div
-        className={`w-full max-w-[1080px] flex items-center justify-between rounded-full transition-all duration-500 ${
+        className={`w-full max-w-[1080px] flex items-center justify-between rounded-full px-3 py-2 sm:py-2.5 sm:pl-7 sm:pr-3 transition-all duration-500 ${
           scrolled
             ? "bg-[rgba(10,10,15,0.85)] border border-[rgba(255,255,255,0.1)]"
             : "bg-[rgba(10,10,15,0.4)] border border-[rgba(255,255,255,0.06)]"
         }`}
-        style={{ backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)", padding: "10px 12px 10px 28px" }}
+        style={{ backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)" }}
       >
         <a href="/" className="flex items-center">
           <img
             src="/manus-storage/ecom-mentoring-footer-logo_6a87be9b.webp"
             alt="eMentoring"
-            className="h-[40px] w-auto"
+            className="h-[32px] w-auto sm:h-[40px]"
             width={140}
             height={40}
           />
@@ -792,7 +890,8 @@ function LaunchHeader() {
           className="inline-flex items-center text-white text-[13px] font-medium px-5 py-2.5 rounded-full transition-all duration-300 hover:-translate-y-[1px]"
           style={{ background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)", boxShadow: "0 8px 24px rgba(123,91,181,0.35)" }}
         >
-          Apply Now
+          <span className="sm:hidden">Apply</span>
+          <span className="hidden sm:inline">Apply For Launch</span>
         </a>
       </div>
     </nav>

@@ -22,11 +22,11 @@ export default function ForYouSection() {
         <div className="text-center max-w-[640px] mx-auto mb-14">
           <p className="eyebrow mb-4">Who this is for</p>
           <h2 className="font-serif text-[clamp(32px,4vw,50px)] leading-[1.1] tracking-[-0.015em] text-white">
-            Built For Serious Founders,{" "}
-            <span className="italic text-[#B394F2]">Not Passive Course Collectors</span>
+            The Programme Works Best When{" "}
+            <span className="italic text-[#B394F2]">The Fit Is Honest</span>
           </h2>
           <p className="text-[14px] md:text-[15px] text-[rgba(255,255,255,0.5)] mt-4 max-w-[500px] mx-auto leading-[1.7]">
-            This is not another passive course you buy and forget about. It is a hands-on mentorship for people ready to build, test, get feedback and execute consistently.
+            This is hands-on support for people ready to build, test, receive direct feedback and implement consistently—not a promise of automatic results.
           </p>
         </div>
 
@@ -79,22 +79,20 @@ export default function ForYouSection() {
             If the left side sounds like you, the next step is to apply.
           </p>
           <a
-            href="/curriculums"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/apply"
             className="inline-flex items-center gap-2 text-white text-[14px] font-medium px-7 py-3.5 rounded-full transition-all duration-300 hover:-translate-y-0.5"
             style={{
               background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)",
               boxShadow: "0 12px 40px rgba(123,91,181,0.45)",
             }}
           >
-            Apply For 1-on-1 Mentorship
+            Apply For A Fit Call
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </a>
           <p className="text-[11px] text-[rgba(255,255,255,0.3)] mt-4">
-            Applications are reviewed before calls are booked. Limited mentor capacity.
+            Applications are reviewed before calls are booked.
           </p>
         </div>
       </div>

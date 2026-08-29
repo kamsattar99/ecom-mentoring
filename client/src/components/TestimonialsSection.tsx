@@ -1,158 +1,109 @@
-const testimonials = [
+const caseStudies = [
   {
-    name: "Jack",
-    context: "Dropshipping entrepreneur · Product-led store",
-    quote: "I finally broke through and scaled past $100K in sales. The biggest difference was having structure, accountability and a clear plan instead of guessing every week.",
-    badge: "$100K+ In Sales",
+    outcome: "$886,513.93",
+    timeframe: "in 10 months",
+    name: "George",
+    videoId: "ZfX9pP9USYc",
+    duration: "29 min interview",
     featured: true,
   },
   {
-    name: "Rivers",
-    context: "Dropshipping entrepreneur · First store",
-    quote: "After testing two products, I finally hit my first $1,000 month. The mentoring helped me understand what to fix and what to focus on next.",
-    badge: "First $1K Month",
-    featured: false,
+    outcome: "$125,393.34",
+    timeframe: "in 90 days",
+    name: "Student case study",
+    videoId: "bIjuWVoDh3c",
+    duration: "30 min interview",
   },
   {
-    name: "MB",
-    context: "Dropshipping entrepreneur · Scaling phase",
-    quote: "Even after Facebook disabled my account right before $100K, I still crossed $98,968 in sales. The knowledge and support helped me keep going when things got difficult.",
-    badge: "$98,968 In Sales",
-    featured: false,
+    outcome: "€10,183.44",
+    timeframe: "in 30 days",
+    name: "Kevin",
+    videoId: "h1UJkS8wao0",
+    duration: "20 min interview",
   },
   {
-    name: "Eric",
-    context: "Dropshipping entrepreneur · High-ticket store",
-    quote: "I hit $100K in two months and made $10K profit in 11 days. The biggest win was knowing what to test, what to cut and when to scale.",
-    badge: "$100K In 2 Months",
-    featured: true,
+    outcome: "$5,906.88",
+    timeframe: "in 16 days",
+    name: "Student case study",
+    videoId: "Iflz2wBStEE",
+    duration: "14 min interview",
+  },
+  {
+    outcome: "£615.05",
+    timeframe: "in 9 days",
+    name: "Student case study",
+    videoId: "lCtricipmDk",
+    duration: "11 min interview",
   },
 ];
 
+const PlayIcon = () => (
+  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#17151E] shadow-xl transition-transform duration-300 group-hover:scale-105" aria-hidden="true">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M8 5v14l11-7z" />
+    </svg>
+  </span>
+);
+
 export default function TestimonialsSection() {
   return (
-    <section id="reviews" className="py-[80px] md:py-[110px] relative overflow-hidden bg-[#0F0E13]">
-      <div className="container relative z-10">
-        {/* Section header */}
-        <div className="text-center max-w-[640px] mx-auto mb-12">
-          <p className="eyebrow mb-4">Student Results</p>
-          <h2 className="font-serif text-[clamp(32px,4vw,50px)] leading-[1.1] tracking-[-0.015em] text-white">
-            Results From Founders Using{" "}
-            <span className="italic text-[#B394F2]">The AI System</span>
-          </h2>
-          <p className="text-[14px] text-[rgba(255,255,255,0.5)] mt-4 max-w-[520px] mx-auto leading-[1.7]">
-            These results come from students who applied the AI-powered system, received feedback, and executed consistently. Results vary, but the process is built to create clarity, accountability and faster decisions.
-          </p>
-          {/* Trust microcopy */}
-          <div className="flex flex-wrap items-center justify-center gap-4 mt-5">
-            <span className="text-[11px] text-[rgba(179,148,242,0.6)] font-medium flex items-center gap-1.5">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6L9 17l-5-5" /></svg>
-              Student-reported results
-            </span>
-            <span className="text-[11px] text-[rgba(179,148,242,0.6)] font-medium flex items-center gap-1.5">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6L9 17l-5-5" /></svg>
-              No inflated claims
-            </span>
-            <span className="text-[11px] text-[rgba(179,148,242,0.6)] font-medium flex items-center gap-1.5">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6L9 17l-5-5" /></svg>
-              Screenshots available on request
-            </span>
+    <section id="results" className="relative overflow-hidden bg-[#F2EEF8] py-[82px] text-[#17131E] md:py-[112px]">
+      <div className="container max-w-[1180px]">
+        <div className="mb-12 grid items-end gap-7 md:grid-cols-[1fr_0.7fr]">
+          <div>
+            <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.15em] text-[#6C4AA9]">Student evidence</p>
+            <h2 className="max-w-[700px] font-serif text-[clamp(38px,5vw,62px)] leading-[1.02] tracking-[-0.025em]">
+              Watch The Students <span className="italic text-[#6C4AA9]">Tell You Themselves.</span>
+            </h2>
           </div>
+          <p className="max-w-[470px] text-[15px] leading-[1.75] text-[#514A5B] md:justify-self-end">
+            Not anonymous one-line reviews. These are long-form conversations with students at different stages—from their first sales to six-figure growth.
+          </p>
         </div>
 
-        {/* Masonry-style grid */}
-        <div className="grid md:grid-cols-2 gap-5 max-w-[960px] mx-auto">
-          {testimonials.map((t) => (
-            <div
-              key={t.name}
-              className="group relative rounded-[22px] p-7 md:p-8 transition-all duration-300 hover:-translate-y-1"
-              style={{
-                background: t.featured
-                  ? "linear-gradient(140deg, rgba(88,62,141,0.35) 0%, rgba(23,21,30,0.9) 55%)"
-                  : "#17151E",
-                border: t.featured
-                  ? "1px solid rgba(155,126,219,0.25)"
-                  : "1px solid rgba(255,255,255,0.08)",
-              }}
+        <div className="grid gap-5 lg:grid-cols-2">
+          {caseStudies.map((study, index) => (
+            <a
+              key={study.videoId}
+              href={`https://www.youtube.com/watch?v=${study.videoId}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`group relative overflow-hidden rounded-[24px] bg-[#17151E] shadow-[0_24px_60px_rgba(31,22,45,0.14)] ${index === 0 ? "lg:row-span-2" : ""}`}
+              aria-label={`Watch ${study.name}: ${study.outcome} ${study.timeframe}`}
             >
-              {/* Badge */}
-              <div className="flex items-center gap-3 mb-5">
-                <div
-                  className="inline-flex px-3.5 py-1.5 rounded-full"
-                  style={{
-                    background: t.featured ? "rgba(155,126,219,0.15)" : "rgba(255,255,255,0.05)",
-                    border: t.featured ? "1px solid rgba(155,126,219,0.3)" : "1px solid rgba(255,255,255,0.1)",
-                  }}
-                >
-                  <span className={`text-[13px] font-bold tracking-tight ${t.featured ? "text-[#B394F2]" : "text-white"}`}>
-                    {t.badge}
+              <div className={`relative overflow-hidden ${index === 0 ? "h-[330px] lg:h-[560px]" : "h-[255px]"}`}>
+                <img
+                  src={`https://i.ytimg.com/vi/${study.videoId}/hqdefault.jpg`}
+                  alt=""
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#17151E] via-[#17151E]/20 to-transparent" />
+                <div className="absolute left-5 top-5">
+                  <span className="rounded-full border border-white/15 bg-black/35 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.13em] text-white/75 backdrop-blur-md">
+                    Full student interview
                   </span>
                 </div>
-                <span className="text-[10px] font-medium uppercase tracking-wider text-[rgba(255,255,255,0.3)]">
-                  Verified
-                </span>
-              </div>
-
-              {/* Stars */}
-              <div className="flex gap-0.5 mb-4">
-                {[...Array(5)].map((_, s) => (
-                  <svg key={s} width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" opacity={0.9}>
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                ))}
-              </div>
-
-              {/* Quote */}
-              <p className="text-[14px] md:text-[15px] leading-[1.7] text-[rgba(255,255,255,0.75)] mb-7">
-                "{t.quote}"
-              </p>
-
-              {/* Author row */}
-              <div className="flex items-center gap-3">
-                <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center shrink-0"
-                  style={{
-                    background: t.featured
-                      ? "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)"
-                      : "rgba(255,255,255,0.08)",
-                    border: t.featured ? "none" : "1px solid rgba(255,255,255,0.1)",
-                  }}
-                >
-                  <span className="text-[13px] font-bold text-white">{t.name[0]}</span>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <PlayIcon />
                 </div>
-                <div>
-                  <p className="text-[13px] font-semibold text-white">{t.name}</p>
-                  <p className="text-[11px] text-[rgba(255,255,255,0.4)]">{t.context}</p>
+                <div className="absolute inset-x-0 bottom-0 p-6 md:p-7">
+                  <p className="text-[12px] font-medium text-white/52">{study.name} · {study.duration}</p>
+                  <p className="mt-2 font-serif text-[34px] leading-none text-white md:text-[39px]">{study.outcome}</p>
+                  <p className="mt-2 text-[14px] font-medium text-[#C4A8FF]">{study.timeframe}</p>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
-        {/* Disclaimer */}
-        <p className="text-[11px] text-[rgba(255,255,255,0.3)] text-center mt-6 max-w-[400px] mx-auto">
-          Results vary by product, market and execution. These are student-reported outcomes, not guarantees.
-        </p>
-
-        {/* CTA */}
-        <div className="text-center mt-12">
-          <p className="text-[15px] text-[rgba(255,255,255,0.6)] mb-5 font-medium">
-            Want this level of clarity and AI-powered growth inside your own store?
+        <div className="mt-8 flex flex-col gap-3 rounded-[18px] border border-[#6C4AA9]/15 bg-white/55 p-5 md:flex-row md:items-center md:justify-between md:px-6">
+          <p className="max-w-[800px] text-[12px] leading-[1.7] text-[#645C6C]">
+            These videos feature students from Kamil Sattar's ecommerce mentoring programmes. Programme structures have changed over time. Figures discussed are sales unless profit is explicitly stated, and they are not guarantees of future performance.
           </p>
-          <a
-            href="/curriculums"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-white text-[14px] font-medium px-7 py-3.5 rounded-full transition-all duration-300 hover:-translate-y-0.5"
-            style={{
-              background: "linear-gradient(135deg, #583E8D 0%, #7B5BB5 100%)",
-              boxShadow: "0 12px 40px rgba(123,91,181,0.45)",
-            }}
-          >
-            Apply For 1-on-1 Mentorship
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
+          <a href="/earnings-disclaimer" className="shrink-0 text-[12px] font-bold text-[#6C4AA9] hover:underline">
+            Read earnings disclaimer →
           </a>
         </div>
       </div>

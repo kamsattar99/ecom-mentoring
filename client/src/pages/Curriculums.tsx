@@ -22,7 +22,7 @@ export default function Curriculums() {
             <em className="italic text-[#B394F2]">Learn & Launch.</em>
           </h1>
           <p className="text-[16px] md:text-[17px] leading-[1.7] max-w-[660px] mx-auto" style={{ color: "rgba(255,255,255,0.6)" }}>
-            Both programmes teach the same AI-powered ecommerce system. The difference is how you get there: an accelerated crash course with done-for-you resources, or a deep-skill mentorship where you learn to build everything yourself.
+            Both programmes teach the same AI-powered ecommerce system. The difference is how you get there: a guided launch with one private 1-to-1 review call at the end of every week, Telegram support and lessons, or intensive mentorship with three one-to-one calls every week.
           </p>
         </div>
 
@@ -41,19 +41,19 @@ export default function Curriculums() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B394F2" strokeWidth="2" className="shrink-0">
                   <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                 </svg>
-                <span className="text-[14px] text-white font-medium">Accelerated & Done-For-You</span>
+                <span className="text-[14px] text-white font-medium">Guided & Implementation-Led</span>
               </div>
               <div className="flex items-center justify-center gap-2.5">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B394F2" strokeWidth="2" className="shrink-0">
                   <path d="M15 10l-4 4l6 6l4-16l-18 7l4 2l2 6l3-4" />
                 </svg>
-                <span className="text-[14px] text-white font-medium">1-on-1 Calls + Video Lessons</span>
+                <span className="text-[14px] text-white font-medium">Weekly 1-to-1 Review + Telegram Support</span>
               </div>
               <div className="flex items-center justify-center gap-2.5">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B394F2" strokeWidth="2" className="shrink-0">
                   <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
                 </svg>
-                <span className="text-[14px] text-white font-medium">Proven Resources Provided</span>
+                <span className="text-[14px] text-white font-medium">Research Resources Provided</span>
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@ export default function Curriculums() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B394F2" strokeWidth="2" className="shrink-0">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
                 </svg>
-                <span className="text-[14px] text-white font-medium">Exclusively 1-on-1 Live</span>
+                <span className="text-[14px] text-white font-medium">3 Live 1-to-1 Calls Every Week</span>
               </div>
               <div className="flex items-center justify-center gap-2.5">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B394F2" strokeWidth="2" className="shrink-0">
@@ -106,7 +106,7 @@ export default function Curriculums() {
                 className="px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-[0.08em]"
                 style={{ background: "rgba(88,62,141,0.15)", border: "1px solid rgba(155,126,219,0.25)", color: "#c4a8ff" }}
               >
-                Best Value — Accelerated Launch
+                Best Value — Weekly Live Support
               </span>
             </div>
 
@@ -125,12 +125,12 @@ export default function Curriculums() {
             {/* Delivery — prominent */}
             <div className="mb-5 py-3 px-4 rounded-xl" style={{ background: "rgba(88,62,141,0.1)", border: "1px solid rgba(155,126,219,0.2)" }}>
               <p className="text-[11px] font-bold uppercase tracking-[0.12em] mb-1" style={{ color: "rgba(255,255,255,0.4)" }}>How You Learn</p>
-              <p className="text-[15px] md:text-[16px] font-semibold text-white">1-on-1 calls + video lessons + done-for-you resources</p>
+              <p className="text-[15px] md:text-[16px] font-semibold text-white">1 private end-of-week 1-to-1 review every week + Telegram support + lessons</p>
             </div>
 
             {/* Description */}
             <p className="text-[14px] leading-[1.7] mb-5" style={{ color: "rgba(255,255,255,0.6)" }}>
-              An accelerated crash course designed to get you launched fast. You receive proven winning products we've found and verified, done-for-you resources, structured video lessons, and weekly 1-on-1 calls for guidance. Everything is built to remove guesswork and compress your path to a live, revenue-generating store.
+              A guided launch programme designed to help you move from research to a live store. You receive structured product-research examples, practical resources, video lessons, Telegram support and one private 1-to-1 review call at the end of every week. The focus is better validation and execution—not a promise that one product pick will automatically succeed.
             </p>
 
             {/* Ideal for — visual comparison */}
@@ -139,7 +139,7 @@ export default function Curriculums() {
               <ul className="space-y-2.5">
                 {[
                   "You're a complete beginner and want a fast, structured path to launch",
-                  "You prefer learning through video lessons with 1-on-1 support alongside",
+                  "You prefer learning through video lessons with a weekly private 1-to-1 review and Telegram support alongside",
                   "You want proven resources handed to you so you can move faster",
                   "You want exceptional value at an accessible investment",
                 ].map((item) => (
@@ -170,7 +170,7 @@ export default function Curriculums() {
 
             {/* CTA */}
             <a
-              href="/launch"
+              href="https://form.typeform.com/to/p3VexUDU"
               className="btn-primary text-center justify-center w-full text-[15px]"
             >
               Apply for Launch
@@ -214,7 +214,7 @@ export default function Curriculums() {
             {/* Delivery — prominent */}
             <div className="mb-5 py-3 px-4 rounded-xl" style={{ background: "rgba(88,62,141,0.15)", border: "1px solid rgba(155,126,219,0.25)" }}>
               <p className="text-[11px] font-bold uppercase tracking-[0.12em] mb-1" style={{ color: "rgba(255,255,255,0.4)" }}>How You Learn</p>
-              <p className="text-[15px] md:text-[16px] font-semibold text-white">3 live 1-on-1 calls every week · no video lessons</p>
+              <p className="text-[15px] md:text-[16px] font-semibold text-white">3 live 1-on-1 calls every week with Inder or Nail · no video lessons</p>
             </div>
 
             {/* Description */}
@@ -259,7 +259,7 @@ export default function Curriculums() {
 
             {/* CTA */}
             <a
-              href="/learn-more"
+              href="/apply"
               className="btn-primary text-center justify-center w-full text-[15px]"
             >
               Apply for Mentorship

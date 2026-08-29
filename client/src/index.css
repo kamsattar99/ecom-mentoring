@@ -243,6 +243,13 @@
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 104px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #C4A8FF;
+  outline-offset: 4px;
 }
 
 /* Selection styling */
