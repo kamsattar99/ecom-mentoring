@@ -1,0 +1,7 @@
+- [x] Locate and validate `ecom-mentoring-latest-source.zip` or `ecom-mentoring-latest-changes.patch`.
+- [ ] Save a protective checkpoint of the current GitHub-synced project state.
+- [ ] Restore the exact canonical source described in `HANDOFF.md`.
+- [ ] Confirm the restored source tree matches `e7b02c17403d6f901ca1b4648ece3fca78de9d93` when applicable.
+- [ ] Run dependency installation, type checks, and production build.
+- [ ] Verify the homepage, `/curriculums`, `/launch`, `/learn-more`, and application flows.
+- [ ] Save and deliver a new restored-project checkpoint.
