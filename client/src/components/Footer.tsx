@@ -1,104 +1,28 @@
-export default function Footer() {
+/** Shared footer. The homepage variant increases rhythm and mobile tap targets. */
+export default function Footer({ variant = "default" }: { variant?: "home" | "default" }) {
+  const isHome = variant === "home";
+  const linkClass = `${isHome ? "inline-flex min-h-11 items-center text-[13.5px]" : "text-[13px]"} text-white/55 transition-colors duration-200 hover:text-white`;
+  const socialLinks = [
+    { href: "https://www.youtube.com/@TheEcomKing", label: "YouTube", icon: <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /> },
+    { href: "https://www.instagram.com/e_commercementoring/", label: "Instagram", icon: <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" /> },
+    { href: "https://x.com/kamil_sattar", label: "X", icon: <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /> },
+  ];
+
   return (
-    <footer className="relative text-white overflow-hidden bg-[#0F0E13]" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
-      {/* Main footer */}
-      <div className="container py-14 md:py-18 relative z-10">
-        <div className="grid md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-10 md:gap-12 max-w-[1100px]">
-          {/* Brand column */}
+    <footer data-home-footer={isHome ? "true" : undefined} className={`relative overflow-hidden border-t border-white/[0.06] bg-[#0F0E13] text-white ${isHome ? "pb-[86px] md:pb-0" : ""}`}>
+      <div className={`${isHome ? "home-wrap py-16" : "container py-14 md:py-18"} relative z-10`}>
+        <div className={`grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr] ${isHome ? "max-w-[1100px] md:gap-12" : "max-w-[1100px] md:gap-12"}`}>
           <div>
-            <div className="flex items-center mb-5">
-              <a href="/">
-                <img
-                  src="/manus-storage/ecom-mentoring-footer-logo_6a87be9b.webp"
-                  alt="eMentoring"
-                  className="h-[48px] w-auto"
-                  width={160}
-                  height={48}
-                  loading="lazy"
-                  decoding="async"
-                />
-              </a>
-            </div>
-            <p className="text-[13px] text-[rgba(255,255,255,0.5)] leading-[1.75] max-w-[260px] mb-7">
-              Six-week, hands-on ecommerce mentorship delivered by successful former students and overseen by Kamil Sattar.
-            </p>
-            {/* Social links */}
-            <div className="flex items-center gap-2.5">
-              {[
-                { href: "https://www.youtube.com/@TheEcomKing", label: "YouTube", icon: <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/> },
-                { href: "https://www.instagram.com/e_commercementoring/", label: "Instagram", icon: <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/> },
-                { href: "https://x.com/kamil_sattar", label: "X", icon: <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/> },
-              ].map(({ href, label, icon }) => (
-                <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
-                  className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5"
-                  style={{ border: "1px solid rgba(255,255,255,0.12)" }}
-                >
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="text-[rgba(255,255,255,0.5)] hover:text-white transition-colors duration-300">
-                    {icon}
-                  </svg>
-                </a>
-              ))}
-            </div>
+            <a href="/" aria-label="eMentoring home" className="inline-flex min-h-11 items-center"><img src="/manus-storage/ecom-mentoring-footer-logo_6a87be9b.webp" alt="eMentoring" className="h-11 w-auto" width={160} height={48} loading="lazy" decoding="async" /></a>
+            <p className="mb-6 mt-5 max-w-[280px] text-[13px] leading-[1.75] text-white/50">Six-week, hands-on ecommerce mentorship delivered by successful former students and overseen by Kamil Sattar.</p>
+            <div className="flex items-center gap-2.5">{socialLinks.map(({ href, label, icon }) => <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className={`${isHome ? "h-11 w-11" : "h-9 w-9"} flex items-center justify-center rounded-full border border-white/12 text-white/50 transition-[transform,color,border-color] duration-200 hover:-translate-y-0.5 hover:border-white/30 hover:text-white`}><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">{icon}</svg></a>)}</div>
           </div>
-
-          {/* Mentorship column */}
-          <div>
-            <h4 className="text-[11px] font-bold text-[rgba(255,255,255,0.35)] uppercase tracking-[0.12em] mb-5">Mentorship</h4>
-            <ul className="space-y-3.5">
-              <li><a href="/curriculums" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">Compare Programmes</a></li>
-              <li><a href="/#mentors" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">Meet The Mentors</a></li>
-              <li><a href="/#results" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">Student Interviews</a></li>
-              <li><a href="/#faqs" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">FAQs</a></li>
-              <li>
-                <a href="/apply"
-                  className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[#B394F2] hover:text-white transition-colors duration-200"
-                >
-                  Apply For A Fit Call <span className="text-[11px]">→</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Resources column */}
-          <div>
-            <h4 className="text-[11px] font-bold text-[rgba(255,255,255,0.35)] uppercase tracking-[0.12em] mb-5">Resources</h4>
-            <ul className="space-y-3.5">
-              <li><a href="https://www.youtube.com/@TheEcomKing" target="_blank" rel="noopener noreferrer" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">YouTube Channel</a></li>
-              <li><a href="https://youtu.be/TNuXk8TI1Ac" target="_blank" rel="noopener noreferrer" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">Free Training</a></li>
-            </ul>
-          </div>
-
-          {/* Legal column */}
-          <div>
-            <h4 className="text-[11px] font-bold text-[rgba(255,255,255,0.35)] uppercase tracking-[0.12em] mb-5">Legal</h4>
-            <ul className="space-y-3.5">
-              <li><a href="/privacy-policy" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">Privacy Policy</a></li>
-              <li><a href="/terms-of-service" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">Terms of Service</a></li>
-              <li><a href="/earnings-disclaimer" className="text-[13px] text-[rgba(255,255,255,0.55)] hover:text-white transition-colors duration-200">Earnings Disclaimer</a></li>
-            </ul>
-          </div>
+          <div><h4 className="mb-[18px] text-[11px] font-bold uppercase tracking-[0.12em] text-white/35">Mentorship</h4><ul><li><a href="/curriculums" className={linkClass}>Compare Programmes</a></li><li><a href="/#mentors" className={linkClass}>Meet The Mentors</a></li><li><a href="/#results" className={linkClass}>Student Interviews</a></li><li><a href="/#faqs" className={linkClass}>FAQs</a></li><li><a href="/apply" className={`${linkClass} gap-1.5 font-semibold !text-[#B394F2] hover:!text-white`}>Apply For A Fit Call <span className="text-[11px]">→</span></a></li></ul></div>
+          <div><h4 className="mb-[18px] text-[11px] font-bold uppercase tracking-[0.12em] text-white/35">Resources</h4><ul><li><a href="https://www.youtube.com/@TheEcomKing" target="_blank" rel="noopener noreferrer" className={linkClass}>YouTube Channel</a></li><li><a href="https://youtu.be/TNuXk8TI1Ac" target="_blank" rel="noopener noreferrer" className={linkClass}>Free Training</a></li></ul></div>
+          <div><h4 className="mb-[18px] text-[11px] font-bold uppercase tracking-[0.12em] text-white/35">Legal</h4><ul><li><a href="/privacy-policy" className={linkClass}>Privacy Policy</a></li><li><a href="/terms-of-service" className={linkClass}>Terms of Service</a></li><li><a href="/earnings-disclaimer" className={linkClass}>Earnings Disclaimer</a></li></ul></div>
         </div>
       </div>
-
-      {/* Bottom bar */}
-      <div className="relative z-10" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
-        <div className="container py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
-              <p className="text-[12px] text-[rgba(255,255,255,0.35)]">
-                © {new Date().getFullYear()} The Ecom King. All rights reserved.
-              </p>
-              <span className="hidden sm:inline text-[12px] text-[rgba(255,255,255,0.2)]">·</span>
-              <p className="text-[11px] text-[rgba(255,255,255,0.3)]">
-                Ecom Mentoring is part of The Ecom King.
-              </p>
-            </div>
-            <p className="text-[11px] text-[rgba(255,255,255,0.35)] max-w-[520px] text-center md:text-right leading-[1.65]">
-              Earnings Disclaimer: Results are not guaranteed. Any figures referenced are student-reported and individual outcomes vary based on product selection, budget, execution, skill and market conditions.
-            </p>
-          </div>
-        </div>
-      </div>
+      <div className="border-t border-white/[0.06]"><div className={`${isHome ? "home-wrap" : "container"} flex flex-col gap-3 py-[22px] md:flex-row md:items-center md:justify-between md:gap-8`}><div className="flex flex-col gap-1.5 sm:flex-row sm:items-center sm:gap-3.5"><p className="text-[12px] text-white/35">© {new Date().getFullYear()} The Ecom King. All rights reserved.</p><p className="text-[11px] text-white/30">Ecom Mentoring is part of The Ecom King.</p></div><p className="max-w-[520px] text-[11px] leading-[1.65] text-white/35 md:text-right">Earnings Disclaimer: Results are not guaranteed. Any figures referenced are student-reported and individual outcomes vary based on product selection, budget, execution, skill and market conditions.</p></div></div>
     </footer>
   );
 }

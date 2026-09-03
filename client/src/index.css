@@ -320,3 +320,230 @@ button:focus-visible {
     animation: none;
   }
 }
+
+/*
+ * Homepage visual direction: cinematic commerce environment, luminous lilac
+ * glass, editorial serif headlines, and motion that never blocks content.
+ */
+.homepage-upgrade {
+  --home-bg: #0f0e13;
+  --home-alt: #131118;
+  --home-card: #17151e;
+  --home-light: #f2eef8;
+  --home-purple: #7b5bb5;
+  --home-lilac: #b394f2;
+  --home-deep: #583e8d;
+  --home-text: #f5f3f8;
+  --home-dark-text: #17131e;
+  --home-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  color: var(--home-text);
+  background: var(--home-bg);
+  isolation: isolate;
+}
+
+.homepage-upgrade .home-wrap {
+  width: min(calc(100% - 40px), 1180px);
+  margin-inline: auto;
+}
+
+.homepage-upgrade .home-wrap-narrow {
+  width: min(calc(100% - 40px), 1080px);
+  margin-inline: auto;
+}
+
+.homepage-upgrade .home-section {
+  padding-block: clamp(80px, 9vw, 120px);
+}
+
+.homepage-upgrade .home-kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  color: var(--home-lilac);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.homepage-upgrade .home-kicker::before {
+  width: 28px;
+  height: 1px;
+  content: "";
+  background: color-mix(in srgb, var(--home-lilac) 52%, transparent);
+}
+
+.homepage-upgrade .home-section-title {
+  margin: 0;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(36px, 4.5vw, 60px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.homepage-upgrade .home-section-title em {
+  color: var(--home-lilac);
+  font-style: italic;
+}
+
+.homepage-upgrade .btn-primary,
+.homepage-upgrade .btn-ghost,
+.homepage-upgrade .home-sticky-cta {
+  transition:
+    transform 250ms var(--home-ease),
+    background 250ms var(--home-ease),
+    border-color 250ms var(--home-ease),
+    box-shadow 250ms var(--home-ease);
+}
+
+.homepage-upgrade .btn-primary {
+  background: linear-gradient(135deg, var(--home-deep), var(--home-purple));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 12px 32px rgba(123, 91, 181, 0.35);
+}
+
+.homepage-upgrade .btn-primary:hover {
+  background: linear-gradient(135deg, #65499b, #8a6bc4);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 18px 40px rgba(123, 91, 181, 0.45);
+}
+
+.homepage-upgrade .btn-primary:active,
+.homepage-upgrade .btn-ghost:active,
+.homepage-upgrade .home-sticky-cta:active {
+  transform: scale(0.97);
+}
+
+.homepage-upgrade.home-motion-ready [data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  transition:
+    opacity 900ms var(--home-ease) var(--reveal-delay, 0ms),
+    transform 900ms var(--home-ease) var(--reveal-delay, 0ms);
+}
+
+.homepage-upgrade.home-motion-ready [data-reveal].is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.homepage-upgrade .home-grid-overlay {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 70% 50% at 50% 28%, #000 8%, transparent 72%);
+}
+
+.homepage-upgrade .home-grain {
+  opacity: 0.07;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.homepage-upgrade .home-glass {
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow:
+    0 40px 90px rgba(10, 8, 16, 0.5),
+    0 0 80px rgba(123, 91, 181, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(24px) saturate(1.15);
+}
+
+.homepage-upgrade .hero-entry,
+.homepage-upgrade .hero-line,
+.homepage-upgrade .hero-banner-entry {
+  opacity: 0;
+  transition:
+    opacity 1s var(--home-ease),
+    transform 1s var(--home-ease);
+}
+
+.homepage-upgrade .hero-entry {
+  transform: translate3d(0, 20px, 0);
+}
+
+.homepage-upgrade .hero-line {
+  display: block;
+  transform: translate3d(0, 110%, 0);
+}
+
+.homepage-upgrade .hero-banner-entry {
+  transform: translate3d(0, 70px, 0) scale(0.94) rotateX(14deg);
+  transform-origin: 50% 100%;
+  transition-duration: 1.15s;
+}
+
+.homepage-upgrade .hero-entry.is-entered,
+.homepage-upgrade .hero-line.is-entered,
+.homepage-upgrade .hero-banner-entry.is-entered {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1) rotateX(0deg);
+}
+
+@keyframes home-status-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(149, 191, 71, 0.52); }
+  70% { box-shadow: 0 0 0 9px rgba(149, 191, 71, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(149, 191, 71, 0); }
+}
+
+@keyframes home-scroll-pulse {
+  0%, 100% { opacity: 0.35; transform: scaleY(0.65); }
+  50% { opacity: 1; transform: scaleY(1); }
+}
+
+@keyframes curriculum-icon-in {
+  from { opacity: 0; transform: translate3d(0, 14px, 0) scale(0.92); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@keyframes home-cta-drift {
+  0%, 100% { transform: translate3d(-50%, 0, 0) scale(1); }
+  50% { transform: translate3d(-50%, -2%, 0) scale(1.04); }
+}
+
+.homepage-upgrade .home-cta-glow {
+  animation: home-cta-drift 14s ease-in-out infinite;
+}
+
+.homepage-upgrade .home-status-pulse {
+  animation: home-status-pulse 2.4s ease-out infinite;
+}
+
+.homepage-upgrade .home-scroll-pulse {
+  transform-origin: bottom;
+  animation: home-scroll-pulse 2.4s ease-in-out infinite;
+}
+
+@media (max-width: 860px) {
+  .homepage-upgrade .home-wrap,
+  .homepage-upgrade .home-wrap-narrow {
+    width: min(calc(100% - 32px), 1180px);
+  }
+
+  .homepage-upgrade .home-desktop-only {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homepage-upgrade *,
+  .homepage-upgrade *::before,
+  .homepage-upgrade *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .homepage-upgrade [data-reveal],
+  .homepage-upgrade [data-enter] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

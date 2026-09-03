@@ -19,12 +19,13 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
   const hideNavbar = location === "/apply" || location === "/launch";
+  const isHome = location === "/";
 
   return (
     <>
-      {!hideNavbar && <Navbar />}
+      {!hideNavbar && <Navbar variant={isHome ? "home" : "default"} />}
       {children}
-      {!hideNavbar && <Footer />}
+      {!hideNavbar && <Footer variant={isHome ? "home" : "default"} />}
     </>
   );
 }

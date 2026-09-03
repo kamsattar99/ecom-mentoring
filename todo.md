@@ -1,0 +1,9 @@
+- [x] Inspect the supplied prototype archive and inventory the visual assets.
+- [x] Upload the hero environments, 3D icons, mentor photos, and Shopify proof image to persistent WebDev storage.
+- [x] Add scoped homepage design tokens, reveal utilities, motion flags, and reduced-motion handling.
+- [x] Rebuild the homepage navigation and layered hero with the Shopify glass banner.
+- [x] Upgrade Results, Mentors, and Programme/Pricing sections without changing copy or links.
+- [x] Refactor Curriculum into a desktop pinned roadmap with a linear mobile fallback.
+- [x] Upgrade For You, FAQ, final CTA, and homepage footer presentation.
+- [x] Validate content integrity, keyboard accessibility, reduced motion, 390/768/1280 layouts, and route regressions.
+- [x] Run type checks and production build, then save the final checkpoint.
