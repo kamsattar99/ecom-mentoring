@@ -21,18 +21,34 @@ export default function CurriculumSection() {
   const rowRefs = useRef<Array<HTMLElement | null>>([]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (visible) setActiveIndex(Number((visible.target as HTMLElement).dataset.stageIndex ?? 0));
-      },
-      { rootMargin: "-22% 0px -42% 0px", threshold: [0.15, 0.35, 0.6] },
-    );
+    let frame = 0;
 
-    rowRefs.current.forEach((row) => row && observer.observe(row));
-    return () => observer.disconnect();
+    const updateActiveStage = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => {
+        frame = 0;
+        const readingLine = Math.min(window.innerHeight * 0.44, 430);
+        let nextIndex = 0;
+
+        rowRefs.current.forEach((row, index) => {
+          if (!row) return;
+          const rect = row.getBoundingClientRect();
+          if (rect.top <= readingLine) nextIndex = index;
+        });
+
+        setActiveIndex((current) => current === nextIndex ? current : nextIndex);
+      });
+    };
+
+    updateActiveStage();
+    window.addEventListener("scroll", updateActiveStage, { passive: true });
+    window.addEventListener("resize", updateActiveStage);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveStage);
+      window.removeEventListener("resize", updateActiveStage);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
   }, []);
 
   const active = stages[activeIndex];
@@ -46,10 +62,10 @@ export default function CurriculumSection() {
           <p className="mt-[22px] max-w-[620px] text-[15px] leading-[1.75] text-white/55 md:text-[16px]">Each stage gives you a clear focus for the week, while your mentor applies the framework to your actual products, store, creatives and data.</p>
         </div>
 
-        <div className="grid items-start gap-12 lg:grid-cols-[minmax(0,1fr)_360px] xl:gap-20">
+        <div className="grid items-start gap-12 min-[900px]:grid-cols-[minmax(0,1fr)_320px] min-[1180px]:grid-cols-[minmax(0,1fr)_360px] min-[1180px]:gap-20">
           <div className="relative">
-            <div className="absolute bottom-0 left-7 top-0 hidden w-px bg-[linear-gradient(180deg,rgba(179,148,242,0.55),rgba(179,148,242,0.08))] lg:block" />
-            <div className="space-y-4 lg:space-y-8">
+            <div className="absolute bottom-0 left-7 top-0 hidden w-px bg-[linear-gradient(180deg,rgba(179,148,242,0.55),rgba(179,148,242,0.08))] min-[900px]:block" />
+            <div className="space-y-4 min-[900px]:space-y-8">
               {stages.map((stage, index) => {
                 const activeRow = activeIndex === index;
                 return (
@@ -57,17 +73,16 @@ export default function CurriculumSection() {
                     key={stage.title}
                     ref={(node) => { rowRefs.current[index] = node; }}
                     data-stage-index={index}
-                    data-reveal
-                    className={`group relative grid gap-5 rounded-[24px] border bg-[#17151E] p-5 transition-[opacity,transform,border-color,background] duration-500 lg:grid-cols-[56px_minmax(0,1fr)_84px] lg:items-start lg:bg-transparent lg:p-0 lg:pr-1 ${activeRow ? "border-[#B394F2]/35 lg:opacity-100" : "border-white/[0.08] lg:border-transparent lg:opacity-[0.38]"}`}
-                    style={{ "--reveal-delay": `${index * 45}ms` } as React.CSSProperties}
+                    aria-current={activeRow ? "step" : undefined}
+                    className={`group relative grid gap-5 rounded-[24px] border bg-[#17151E] p-5 transition-[opacity,transform,border-color,background] duration-500 min-[900px]:grid-cols-[56px_minmax(0,1fr)_84px] min-[900px]:items-start min-[900px]:bg-transparent min-[900px]:p-0 min-[900px]:pr-1 ${activeRow ? "border-[#B394F2]/35 min-[900px]:opacity-100" : "border-white/[0.08] min-[900px]:border-transparent min-[900px]:opacity-[0.38]"}`}
                   >
                     <div className={`relative z-10 flex h-14 w-14 items-center justify-center rounded-full border bg-[#17151E] font-serif text-[18px] transition-colors duration-500 ${activeRow ? "border-[#B394F2]/55 text-[#C4A8FF]" : "border-white/15 text-white/55"}`}>
                       {String(index + 1).padStart(2, "0")}
                     </div>
-                    <div className="min-w-0 lg:py-1">
+                    <div className="min-w-0 min-[900px]:py-1">
                       <div className="flex flex-wrap items-start justify-between gap-3">
                         <h3 className="max-w-[520px] text-[19px] font-semibold text-white md:text-[21px]">{stage.title}</h3>
-                        <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.1em] text-[#B394F2] lg:hidden">{stage.week}</span>
+                        <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.1em] text-[#B394F2] min-[900px]:hidden">{stage.week}</span>
                       </div>
                       <p className="mt-3 max-w-[610px] text-[14px] leading-[1.7] text-white/58">{stage.description}</p>
                       <div className="mt-4 grid gap-2 sm:grid-cols-2">
@@ -83,7 +98,7 @@ export default function CurriculumSection() {
             </div>
           </div>
 
-          <aside data-reveal className="sticky top-[130px] hidden overflow-hidden rounded-[26px] border border-[#B394F2]/20 bg-[linear-gradient(150deg,rgba(88,62,141,0.35),#17151E_62%)] p-7 shadow-[0_30px_80px_rgba(0,0,0,0.38)] lg:block" aria-live="polite">
+          <aside data-reveal className="sticky top-[110px] hidden overflow-hidden rounded-[26px] border border-[#B394F2]/20 bg-[linear-gradient(150deg,rgba(88,62,141,0.35),#17151E_62%)] p-6 shadow-[0_30px_80px_rgba(0,0,0,0.38)] min-[900px]:block min-[1180px]:p-7" aria-live="polite">
             <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-white/40">You are looking at</p>
             <div className="mt-3 flex items-end justify-between gap-4">
               <div>

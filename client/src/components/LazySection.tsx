@@ -20,18 +20,50 @@ export default function LazySection({ component, rootMargin = "200px", minHeight
     const el = ref.current;
     if (!el || isVisible) return;
 
-    const observer = new IntersectionObserver(
+    let activated = false;
+    let frame = 0;
+    let observer: IntersectionObserver | null = null;
+    const preloadDistance = Number.parseInt(rootMargin, 10) || 0;
+
+    const activate = () => {
+      if (activated) return;
+      activated = true;
+      setIsVisible(true);
+      observer?.disconnect();
+      window.removeEventListener("scroll", checkPosition);
+      window.removeEventListener("resize", checkPosition);
+    };
+
+    const checkPosition = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => {
+        frame = 0;
+        const rect = el.getBoundingClientRect();
+
+        // IntersectionObserver can miss a short placeholder during a fast jump.
+        // Once the viewport has reached or passed it, load it unconditionally.
+        if (rect.top <= window.innerHeight + preloadDistance) activate();
+      });
+    };
+
+    observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
+        if (entry.isIntersecting) activate();
       },
       { rootMargin }
     );
 
     observer.observe(el);
-    return () => observer.disconnect();
+    window.addEventListener("scroll", checkPosition, { passive: true });
+    window.addEventListener("resize", checkPosition);
+    checkPosition();
+
+    return () => {
+      observer?.disconnect();
+      window.removeEventListener("scroll", checkPosition);
+      window.removeEventListener("resize", checkPosition);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
   }, [isVisible, rootMargin]);
 
   useEffect(() => {
