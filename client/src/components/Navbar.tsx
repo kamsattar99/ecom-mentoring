@@ -4,7 +4,11 @@ import { useEffect, useState } from "react";
  * Homepage visual direction: a compact floating glass pill that becomes more
  * substantial over light sections, while shared subpages retain the same links.
  */
-export default function Navbar({ variant = "default" }: { variant?: "home" | "default" }) {
+export default function Navbar({
+  variant = "default",
+}: {
+  variant?: "home" | "default";
+}) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const isHome = variant === "home";
@@ -16,6 +20,14 @@ export default function Navbar({ variant = "default" }: { variant?: "home" | "de
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMobileOpen(false);
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, []);
+
   const links = [
     { label: "Results", href: "/#results" },
     { label: "Mentors", href: "/#mentors" },
@@ -24,7 +36,18 @@ export default function Navbar({ variant = "default" }: { variant?: "home" | "de
   ];
 
   return (
-    <nav className={`fixed inset-x-0 top-0 z-50 flex justify-center px-4 transition-[padding] duration-500 ${isHome ? (scrolled ? "pt-3" : "pt-[18px]") : "pt-6"}`}>
+    <nav
+      aria-label="Main navigation"
+      className={`fixed inset-x-0 top-0 z-50 flex justify-center px-4 transition-[padding] duration-500 ${isHome ? (scrolled ? "pt-3" : "pt-[18px]") : "pt-6"}`}
+    >
+      {isHome && (
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[70] focus:rounded-lg focus:bg-white focus:p-3 focus:text-black"
+        >
+          Skip to content
+        </a>
+      )}
       <div
         className={`flex w-full items-center justify-between rounded-full border transition-all duration-500 ${
           isHome ? "max-w-[1100px]" : "max-w-[1080px]"
@@ -36,7 +59,11 @@ export default function Navbar({ variant = "default" }: { variant?: "home" | "de
         style={{
           backdropFilter: "blur(14px)",
           WebkitBackdropFilter: "blur(14px)",
-          padding: isHome ? (scrolled ? "7px 10px 7px 22px" : "10px 12px 10px 26px") : "10px 12px 10px 28px",
+          padding: isHome
+            ? scrolled
+              ? "7px 10px 7px 22px"
+              : "10px 12px 10px 26px"
+            : "10px 12px 10px 28px",
           transitionTimingFunction: "cubic-bezier(0.22,1,0.36,1)",
         }}
       >
@@ -52,7 +79,7 @@ export default function Navbar({ variant = "default" }: { variant?: "home" | "de
         </a>
 
         <div className="hidden items-center gap-0.5 md:flex">
-          {links.map((link) => (
+          {links.map(link => (
             <a
               key={link.label}
               href={link.href}
@@ -72,26 +99,55 @@ export default function Navbar({ variant = "default" }: { variant?: "home" | "de
 
         <button
           type="button"
-          onClick={() => setMobileOpen((open) => !open)}
+          onClick={() => setMobileOpen(open => !open)}
           className="flex h-11 w-11 items-center justify-center rounded-full text-white/80 transition-colors hover:bg-white/[0.06] hover:text-white md:hidden"
-          aria-label="Menu"
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          aria-controls="mobile-navigation"
           aria-expanded={mobileOpen}
         >
           {mobileOpen ? (
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            >
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
           ) : (
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M4 7h16" /><path d="M4 12h16" /><path d="M4 17h16" /></svg>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            >
+              <path d="M4 7h16" />
+              <path d="M4 12h16" />
+              <path d="M4 17h16" />
+            </svg>
           )}
         </button>
       </div>
 
       <div
+        id="mobile-navigation"
+        inert={!mobileOpen}
+        aria-hidden={!mobileOpen}
         className={`absolute left-4 right-4 top-full mt-2 overflow-hidden rounded-[20px] border border-white/10 bg-[#131118]/95 shadow-[0_30px_80px_rgba(0,0,0,0.5)] backdrop-blur-xl transition-all duration-200 md:hidden ${
-          mobileOpen ? "max-h-[430px] translate-y-0 opacity-100" : "pointer-events-none max-h-0 -translate-y-2 opacity-0"
+          mobileOpen
+            ? "max-h-[430px] translate-y-0 opacity-100"
+            : "pointer-events-none max-h-0 -translate-y-2 opacity-0"
         }`}
       >
         <div className="flex flex-col gap-0.5 p-3">
-          {links.map((link) => (
+          {links.map(link => (
             <a
               key={link.label}
               href={link.href}
